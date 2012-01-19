@@ -120,4 +120,13 @@
         </div>
         <div class="bottom"></div>
     </section>
+    <div class="right">
+        <div class="boxen">
+            <?php get_sidebar('calc') ?>
+        </div>
+        <div class="blog-gree">
+            <?php get_sidebar('blog') ?>
+        </div>
+    </div>
+</section>
 <?php get_footer();?>

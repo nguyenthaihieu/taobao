@@ -52,6 +52,7 @@
                     <a href="#" class="item2">Зарегистрироваться</a>
                 </div>
             </div>
+<<<<<<< HEAD
 				
             <div class="box">
                 <div class="number">
@@ -74,6 +75,11 @@
                         <p>Столько человек уже воспользовались <br/> услугами нашего сервиса</p>
                     </div>
                 </div>
+=======
+		    <div class="box">
+                <div id="counter" class="number">
+				</div>
+>>>>>>> 188b4034f70bbb8c23508d8f21cdb0f4c37078ae
                 <div class="time">
                     <div id="alarm"></div>
 

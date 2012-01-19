@@ -5,7 +5,6 @@ $one="комментарий - 1";
 $more="комментариев - %";
 $onenumber="1";
 $morenumber="%";
-
 ?>
 
 <section id="container">
@@ -26,10 +25,8 @@ $morenumber="%";
 					<a href="<?php the_permalink();?>">Есть решение!</a>
 				</p>
             <div class="article">
-			
-			
                 <span class="label"><?php the_tags('', ', ', '<br />'); ?></span>
-                <a class="com"><?php comments_number("0",$one,$more);?></a>
+                <a class="com"><?php comments_number("0",$onenumber,$morenumber);?></a>
                 <span class="data"><?php the_time('d.m.Y');?></span>
 				 <?php endwhile;?>
 				 <?php wp_reset_query();?>
@@ -71,9 +68,7 @@ $morenumber="%";
                 <div class="line-title">
 					<?php if ( function_exists('wp_tag_cloud') ) : ?>
                     <h2 class="tegi">Поиск статей по тегам</h2>
-					
-					
-					<span><a href="#" class="rig">все статьи</a> →</span>
+					<span><a href="<?php echo '?page_id=2717'; ?>" class="rig">все статьи</a> →</span>
                 </div>
                 <div class="tegs">                   
 					<?php wp_tag_cloud( 'smallest=8&largest=22&number=25' ); ?>
@@ -82,6 +77,7 @@ $morenumber="%";
             </div>
             <div class="all">
                 <h2 class="video">Это интересно</h2>
+                <?php require_once "functions/slider-video-blog.php"; ?>
                 <ul class="video">
                     <li>
                         <div class="foto"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/video.gif" alt="" title="" /></a></div>
@@ -109,43 +105,32 @@ $morenumber="%";
                 </div>
                 <div class="left-box">
                     <ul>
+                    <?php query_posts('post_type=video_slider&order=ASC');  $numberPosts = 1; ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                    <?php if($numberPosts) { ?>
                         <li>
-                            <p><a href="#">В долине кукол</a></p>
+                            <p><a href="#"><?php the_title(); ?></a></p>
+                            <?php $numberPosts=$numberPosts-1; ?>
                         </li>
-                        <li>
-                            <p><a href="#">Пуловер. Достоин мужского внимания</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Информация для покупателей: вес вещей</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">В чём встречать Новый 2012 год?</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Какие цвета актуальны в этом сезоне?</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Какие цвета актуальны в этом сезоне?</a></p>
-                        </li>
+                            <?php }else{ ?>
+                            <?php $numberPosts=$numberPosts+1;} ?>
+                        <?php endwhile; ?>
+                        <?php wp_reset_query(); ?>
                     </ul>
                 </div>
                 <div class="left-box right-box">
                     <ul>
+                        <?php query_posts('post_type=video_slider&order=ASC');  $numberPosts = 0; ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                        <?php if($numberPosts) { ?>
                         <li>
-                            <p><a href="#">Первые шаги на Таобао. Что такое Таобао? Справочная информация о компании, предлагаемых услугах.</a></p>
+                            <p><a href="#"><?php the_title(); ?></a></p>
+                            <?php $numberPosts=$numberPosts-1; ?>
                         </li>
-                        <li>
-                            <p><a href="#">Первые шаги на таобао. Как искать вещи?</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Как правильно выбирать продавца? Все доступно и с картинками.</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Как правильно выбирать продавца? Все доступно и с картинками.</a></p>
-                        </li>
-                        <li>
-                            <p><a href="#">Как правильно выбирать продавца? Все доступно и с картинками.</a></p>
-                        </li>
+                            <?php }else{ ?>
+                            <?php $numberPosts=$numberPosts+1;} ?>
+                        <?php endwhile; ?>
+                        <?php wp_reset_query(); ?>
                     </ul>
                 </div>
             </div>
@@ -153,58 +138,14 @@ $morenumber="%";
     </div>
     <div class="bottom"></div>
 </section>
-<div class="right">
-    <div class="boxen">
-        <h2>Внутренний курс <span>Taobao.ru.com:</span></h2>
-        <span class="calcul">5,3</span>
-        <div class="calcul">
-            <a href="#">Калькулятор</a>
-            <p>Рассчитать стоимость товаров с учетом доставки.</p>
+    <div class="right">
+        <div class="boxen">
+            <?php get_sidebar('calc') ?>
         </div>
-        <div class="top-s"></div>
-        <div class="body-s">
-            <h2>Русский поиск <span>на Taobao.com:</span></h2>
-            <form action="" method="post">
-                <div class="item">
-                    <label>Введите слово или фразу на <br/> русском языке и нажмите <br/> кнопку “Перевести” </label>
-                    <input type="text" class="text" />
-                    <input type="submit" class="sub" value="Перевести" />
-                </div>
-                <div class="item">
-                    <label>Затем нажмите "Поиск на <br/> Taobao" и у вас откроется <br/> страница с результатами поиска.</label>
-                    <input type="text" class="text" />
-                    <input type="submit" class="sub" value="Поиск на Taobao.com" />
-                </div>
-                <div class="item">
-                    <a href="#">Видеоинструкция</a>
-                </div>
-            </form>
-        </div>
-        <div class="bottom-s"></div>
         <div class="blog-gree">
-            <div class="blog">
-                <h2>Новое в блоге</h2>
-                <ul>
-                    <li>
-                        <p><span class="data">02.11.2011</span> <span class="com">15</span></p>
-                        <p><b>В чём встречать Новый 2012 год?</b></p>
-                        <p>По восточному календарю покровителем наступающего года будет <a href="#">чёрный водяной Дракон.</a></p>
-                    </li>
-                    <li>
-                        <p><span class="data">02.11.2011</span> <span class="com">15</span></p>
-                        <p><b>В чём встречать Новый 2012 год?</b></p>
-                        <p>По восточному календарю покровителем наступающего года будет <a href="#">чёрный водяной Дракон.</a></p>
-                    </li>
-                    <li>
-                        <p><span class="data">02.11.2011</span> <span class="com">15</span></p>
-                        <p><b>В чём встречать Новый 2012 год?</b></p>
-                        <p>По восточному календарю покровителем наступающего года будет <a href="#">чёрный водяной Дракон.</a></p>
-                    </li>
-                </ul>
-            </div>
+            <?php get_sidebar('blog') ?>
         </div>
     </div>
-</div>
 </section>
 </div>
 
