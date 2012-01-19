@@ -5,7 +5,6 @@ $one="комментарий - 1";
 $more="комментариев - %";
 $onenumber="1";
 $morenumber="%";
-
 ?>
 
 <section id="container">
@@ -27,7 +26,7 @@ $morenumber="%";
 				</p>
             <div class="article">
                 <span class="label"><?php the_tags('', ', ', '<br />'); ?></span>
-                <a class="com"><?php comments_number("0",$one,$more);?></a>
+                <a class="com"><?php comments_number("0",$onenumber,$morenumber);?></a>
                 <span class="data"><?php the_time('d.m.Y');?></span>
 				 <?php endwhile;?>
 				 <?php wp_reset_query();?>
@@ -69,7 +68,7 @@ $morenumber="%";
                 <div class="line-title">
 					<?php if ( function_exists('wp_tag_cloud') ) : ?>
                     <h2 class="tegi">Поиск статей по тегам</h2>
-					<span><a href="#" class="rig">все статьи</a> →</span>
+					<span><a href="<?php echo '?page_id=2718'; ?>" class="rig">все статьи</a> →</span>
                 </div>
                 <div class="tegs">                   
 					<?php wp_tag_cloud( 'smallest=8&largest=22&number=25' ); ?>
