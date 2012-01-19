@@ -113,5 +113,39 @@ return '<span class="block"><a href="'. get_permalink($post->ID) . '">' . ' Чи
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function get_Hours()
+{
+    $time = date_i18n(get_option('time_format'));
+    $times = explode(":", $time);
+    echo $times[0];
+}
+
+function get_Minutes()
+{
+    $time = date_i18n(get_option('time_format'));
+    $times = explode(":", $time);
+    echo $times[1];
+}
+function getViews($b){
+
+//Function for counting number of viewers of site <Made by Vladislav Fedorischev><assist Alexandr Kuciy>
+	$vis = StatPress_Print("%totalpageviews%");
+	$visi=(int)$vis+616908;
+	$visit="$visi";
+	$a=array();
+	$j=strlen($visit);
+		for($i=0;$i<$j;$i++){
+		$a[]=$visit{$i};
+	} 	  
+	$reverse=array_reverse($a,false);
+	$count=count($reverse);
+	for($count;$count<9;$count++){
+		$reverse[]="0";
+	}
+	$normal=array_reverse($reverse,false);
+	
+	return $normal[$b];
+}
+
 
 

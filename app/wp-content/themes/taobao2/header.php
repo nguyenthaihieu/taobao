@@ -1,37 +1,3 @@
-<?php function get_Hours()
-{
-    $time = date_i18n(get_option('time_format'));
-    $times = explode(":", $time);
-    echo $times[0];
-}
-
-function get_Minutes()
-{
-    $time = date_i18n(get_option('time_format'));
-    $times = explode(":", $time);
-    echo $times[1];
-}
-function getViews($b){
-
-//Function for counting number of viewers of site <Made by Vladislav Fedorischev><assist Alexandr Kuciy>
-	$vis = StatPress_Print("%totalpageviews%");
-	$visi=(int)$vis+616908;
-	$visit="$visi";
-	$a=array();
-	$j=strlen($visit);
-		for($i=0;$i<$j;$i++){
-		$a[]=$visit{$i};
-	} 	  
-	$reverse=array_reverse($a,false);
-	$count=count($reverse);
-	for($count;$count<9;$count++){
-		$reverse[]="0";
-	}
-	$normal=array_reverse($reverse,false);
-	
-	return $normal[$b];
-}
-?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html lang="ru" class="no-js ie6"> <![endif]-->
@@ -86,9 +52,7 @@ function getViews($b){
                     <a href="#" class="item2">Зарегистрироваться</a>
                 </div>
             </div>
-				<script>				
-					setInterval(,1000);
-				</script>
+				
             <div class="box">
                 <div class="number">
                     <div class="left-num">
