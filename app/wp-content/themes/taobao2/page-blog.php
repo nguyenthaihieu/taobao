@@ -68,7 +68,7 @@ $morenumber="%";
                 <div class="line-title">
 					<?php if ( function_exists('wp_tag_cloud') ) : ?>
                     <h2 class="tegi">Поиск статей по тегам</h2>
-					<span><a href="<?php echo '?page_id=2718'; ?>" class="rig">все статьи</a> →</span>
+					<span><a href="<?php echo '?page_id=2717'; ?>" class="rig">все статьи</a> →</span>
                 </div>
                 <div class="tegs">                   
 					<?php wp_tag_cloud( 'smallest=8&largest=22&number=25' ); ?>
