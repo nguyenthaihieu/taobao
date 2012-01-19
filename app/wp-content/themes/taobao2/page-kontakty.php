@@ -128,4 +128,5 @@
             <?php get_sidebar('blog') ?>
         </div>
     </div>
+</section>
 <?php get_footer();?>

@@ -1,17 +1,3 @@
-<?php function get_Hours()
-{
-    $time = date_i18n(get_option('time_format'));
-    $times = explode(":", $time);
-    echo $times[0];
-}
-
-function get_Minutes()
-{
-    $time = date_i18n(get_option('time_format'));
-    $times = explode(":", $time);
-    echo $times[1];
-}
-?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html lang="ru" class="no-js ie6"> <![endif]-->

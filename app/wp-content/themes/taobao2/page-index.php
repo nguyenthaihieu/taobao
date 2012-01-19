@@ -89,9 +89,7 @@
                    <?php endwhile; ?>
              <?php endif;?>
         </div>
-        <div class="blog">
-            <?php get_sidebar('news-blog') ?>
-        </div>
+            <?php get_sidebar('blog') ?>
     </section>
 </section>
 <div class="last">

@@ -26,8 +26,6 @@ $morenumber="%";
 					<a href="<?php the_permalink();?>">Есть решение!</a>
 				</p>
             <div class="article">
-			
-			
                 <span class="label"><?php the_tags('', ', ', '<br />'); ?></span>
                 <a class="com"><?php comments_number("0",$one,$more);?></a>
                 <span class="data"><?php the_time('d.m.Y');?></span>
@@ -71,8 +69,6 @@ $morenumber="%";
                 <div class="line-title">
 					<?php if ( function_exists('wp_tag_cloud') ) : ?>
                     <h2 class="tegi">Поиск статей по тегам</h2>
-					
-					
 					<span><a href="#" class="rig">все статьи</a> →</span>
                 </div>
                 <div class="tegs">                   
@@ -113,7 +109,6 @@ $morenumber="%";
                     <?php query_posts('post_type=video_slider&order=ASC');  $numberPosts = 1; ?>
                     <?php while (have_posts()) : the_post(); ?>
                     <?php if($numberPosts) { ?>
-
                         <li>
                             <p><a href="#"><?php the_title(); ?></a></p>
                             <?php $numberPosts=$numberPosts-1; ?>
@@ -139,9 +134,6 @@ $morenumber="%";
                         <?php wp_reset_query(); ?>
                     </ul>
                 </div>
-
-
-
             </div>
         </div>
     </div>
