@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92466b9e-31b4-46af-a915-4a136fde74c9" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/adminerl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/online-consultation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/documents/.~lock.Home-all-TZ.doc#" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitgnore" afterPath="$PROJECT_DIR$/.gitgnore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-martyshko.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-martyshko.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/style.css" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/style.css" />
     </list>
     <ignored path="taobao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +32,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="timer.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="1" selection-start="2469" selection-end="2469" vertical-scroll-proportion="1.4597094">
+            <state line="35" column="6" selection-start="2289" selection-end="2289" vertical-scroll-proportion="-5.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions-sergey-korkyshko.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="1" selection-start="194" selection-end="194" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timer1.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="73" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.25891677">
               <folding />
             </state>
           </provider>
@@ -51,11 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-preimushhestva.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-post2.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-otzyvy.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-optovikam.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kontakty.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kalkulyator.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kak-zakazat.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php" />
@@ -63,17 +81,22 @@
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/sidebar-blog.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/single.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-martyshko.php" />
+        <option value="$PROJECT_DIR$/.gitgnore" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/style.css" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/online-consultation.js" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer1.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="155" />
-    <option name="y" value="70" />
+    <option name="x" value="62" />
+    <option name="y" value="267" />
     <option name="width" value="1717" />
     <option name="height" value="935" />
   </component>
@@ -103,6 +126,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,35 +255,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taobao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taobao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taobao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,15 +311,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="155" y="70" width="1717" height="935" extended-state="0" />
-    <editor active="false" />
+    <frame x="62" y="267" width="1717" height="935" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3395321" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34913018" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -331,6 +327,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -388,114 +385,96 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="48" selection-start="3337" selection-end="3337" vertical-scroll-proportion="-51.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-post2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="31" selection-start="5720" selection-end="5720" vertical-scroll-proportion="-20.76923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kak-zakazat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="31" selection-start="1973" selection-end="1973" vertical-scroll-proportion="-21.26923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5802817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="27" selection-start="6115" selection-end="6115" vertical-scroll-proportion="0.64705884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="39" selection-start="12095" selection-end="12095" vertical-scroll-proportion="0.69916433">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="10" selection-start="3200" selection-end="3200" vertical-scroll-proportion="0.55813956">
-          <folding />
-        </state>
+        <state line="223" column="39" selection-start="12095" selection-end="12095" vertical-scroll-proportion="0.69916433" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kalkulyator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="342" column="27" selection-start="16944" selection-end="16944" vertical-scroll-proportion="0.7228412">
-          <folding />
-        </state>
+        <state line="342" column="27" selection-start="16944" selection-end="16944" vertical-scroll-proportion="0.7228412" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kontakty.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="3" selection-start="8180" selection-end="8383" vertical-scroll-proportion="0.7841226">
-          <folding />
-        </state>
+        <state line="122" column="3" selection-start="8180" selection-end="8383" vertical-scroll-proportion="0.7841226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-optovikam.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="31" selection-start="8210" selection-end="8210" vertical-scroll-proportion="0.7228412">
-          <folding />
-        </state>
+        <state line="129" column="31" selection-start="8210" selection-end="8210" vertical-scroll-proportion="0.7228412" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-otzyvy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="31" selection-start="4854" selection-end="4854" vertical-scroll-proportion="0.7228412">
-          <folding />
-        </state>
+        <state line="84" column="31" selection-start="4854" selection-end="4854" vertical-scroll-proportion="0.7228412" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-vladislav-fedorischev.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="18" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.3488372">
+        <state line="36" column="18" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.3488372" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-martyshko.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.044914134" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao/category-blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="1.2785516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="10" selection-start="3200" selection-end="3200" vertical-scroll-proportion="0.57865936" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitgnore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="7" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="21" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="15" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.87582564">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="65" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.4735376">
+        <state line="35" column="6" selection-start="2289" selection-end="2289" vertical-scroll-proportion="-5.1923075">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.4266843">
+        <state line="9" column="1" selection-start="194" selection-end="194" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-martyshko.php">
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.044914134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="1" selection-start="2469" selection-end="2469" vertical-scroll-proportion="1.4597094">
+        <state line="44" column="73" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.25891677">
           <folding />
         </state>
       </provider>

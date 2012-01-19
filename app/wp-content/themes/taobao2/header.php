@@ -15,14 +15,12 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.0.6.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-    <!--<script src="<?php bloginfo('template_directory'); ?>/js/online-consultation.js"></script>-->
+
 
     <script type="text/javascript">
-        var serverHours = parseInt("<?php echo get_Hours(); ?>");
-        var serverMinutes = parseInt("<?php echo get_Minutes(); ?>");
         var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
     </script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/timer.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/timer1.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/geoip.js"></script>
     <!-- test runner files -->
     <script src="<?php bloginfo('template_directory'); ?>/js/qunit.js"></script>
