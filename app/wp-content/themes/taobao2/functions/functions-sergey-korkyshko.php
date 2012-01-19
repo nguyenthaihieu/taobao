@@ -15,3 +15,16 @@ function get_Minutes()
     $times = explode(":", $time);
     return $times[1];
 }
+
+add_action('init','get_js_Hours_Minutes');
+
+function get_js_Hours_Minutes()
+{?>
+    <script type="text/javascript">
+        var serverHours = parseInt("<?php echo get_Hours(); ?>");
+        var serverMinutes = parseInt("<?php echo get_Minutes(); ?>");
+	</script>
+<?php
+    return true;
+
+}

@@ -39,31 +39,28 @@ function appZero(i) {
 
 function timer(newClientHours, newClientMinutes, startOfWork, endOfWork) {
     if ((newClientHours > startOfWork) && (newClientHours < endOfWork)) {
-        timeLeft(newClientHours, newClientMinutes, endOfWork);
-    } else {
-        timeLeft1(newClientHours, newClientMinutes, startOfWork);
-    }
-    function timeLeft1(newClientHours, newClientMinutes, hoursTo) {
+        var hoursLeft = endOfWork - newClientHours - 1;
+        var minutesLeft = 59 - newClientMinutes;
+        var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
+        var cssClass = 'work';
 
-        var hoursLeft = 23 - newClientHours + hoursTo;
+    }
+    if((newClientHours>0)&&(newClientHours<startOfWork)) {
+        var hoursLeft = startOfWork - newClientHours - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
-        minutesLeft = appZero(minutesLeft);
-        hoursLeft = appZero(hoursLeft);
-        var hours = "<span class='time'>" + hoursLeft + ":" + minutesLeft + "</span>";
-        $("#alarm").html(str + hours);
-        $("#alarm").attr('class', cssClass);
+            }
+    if(newClientHours>endOfWork) {
+        var hoursLeft = 23 - newClientHours + startOfWork;
+        var minutesLeft = 59 - newClientMinutes;
+        var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
+        var cssClass = 'suspend';
+
     }
-    function timeLeft(newClientHours, newClientMinutes, hoursTo) {
-            var hoursLeft = hoursTo - newClientHours - 1;
-            var minutesLeft = 59 - newClientMinutes;
-            var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
-            var cssClass = 'work';
-        minutesLeft = appZero(minutesLeft);
-        hoursLeft = appZero(hoursLeft);
-        var hours = "<span class='time'>" + hoursLeft + ":" + minutesLeft + "</span>";
-        $("#alarm").html(str + hours);
-        $("#alarm").attr('class', cssClass);
-    }
+    minutesLeft = appZero(minutesLeft);
+    hoursLeft = appZero(hoursLeft);
+    var hours = "<span class='time'>" + hoursLeft + ":" + minutesLeft + "</span>";
+    $("#alarm").html(str + hours);
+    $("#alarm").attr('class', cssClass);
 }
