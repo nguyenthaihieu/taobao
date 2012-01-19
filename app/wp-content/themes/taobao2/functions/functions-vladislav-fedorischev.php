@@ -51,7 +51,7 @@ function ajaxCall(){?>
 		$(function(){
 			function myFunction(){				
 				
-				$('.number').load('/?timer');
+				$('#counter').load('/?timer');
 				
 			}
 			setInterval(myFunction, 1000);
