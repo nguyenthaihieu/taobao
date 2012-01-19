@@ -43,7 +43,7 @@
         <p><b>Происходит оплата в 3 этапа:</b></p>
         <ul>
             <li>
-                <span class="number">1</span>
+                <span class="number2">1</span>
 
                 <div class="txt">
                     <p>Оплата выбранных вещей и доставки по Китаю с учетом нашей комиссии (15 % от стоимости товара на
@@ -53,7 +53,7 @@
                 </div>
             </li>
             <li>
-                <span class="number">2</span>
+                <span class="number2">2</span>
 
                 <div class="txt">
                     <p>Оплата за доставку из Китая в Россию (г.Благовещенск) по тарифу от <b>300 руб/1 кг.</b></p>
@@ -67,7 +67,7 @@
                 </div>
             </li>
             <li>
-                <span class="number">3</span>
+                <span class="number2">3</span>
 
                 <div class="txt">
                     <p>Оплата за перевозку по России производится согласно тарифам транспортных компаний</p>
