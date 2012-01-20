@@ -54,7 +54,7 @@ function ajaxCall(){?>
 		$(function(){
 			function myFunction(){				
 				
-				$('#counter').load('/?timer');
+				$('#counter').load('<?php bloginfo('url'); ?>/?timer');
 				
 			}
 			setInterval(myFunction, 1000);
