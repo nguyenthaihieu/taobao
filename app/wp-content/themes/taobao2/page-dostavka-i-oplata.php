@@ -101,62 +101,9 @@
 							<p>- если заказчик находится в другом городе России, срок доставки до Вашего города определяется транспортной компанией. Оплата за перевозку по России может быть как в Благовещенске, так и на месте получения!</p>
 							<p><i>Отправляем всеми транспортными компаниями, кроме «Почты России».</i></p>
 						</div>
-						<div class="boxer-text">
-							<p><b>Оптимальная доставка транспортными компаниями:</b></p>
-							<dl class="tabs">
-								<dt class="t1"><a href="#">По территории РФ</a></dt>
-								<dt class="t2"><a href="#">Амурская область</a></dt>
-								<dt class="t3"><a href="#">Дальний Восток</a></dt>
-							</dl>
-							<div class="t1">
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>								
-							</div>
-							<div class="t2">
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>								
-							</div>
-							<div class="t3">
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>
-								<div class="it-line">
-									<div class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.gif" alt="" title="" /></a></div>
-									<div class="description">
-										<p><b>«АЛТАН»</b> - занимается ежедневной отправкой мелкого груза по территории Дальнего Востока. Уже более 10 лет компания специализируется в области перевозки сборного груза от 1 кг. </p>
-										<p class="url"><a href="#">http://www.tkaltan.ru</a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree1.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree-2.gif" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/gree3.gif" alt="" title="" /></a></p>
-									</div>
-								</div>								
-							</div>
-						</div>						
+
+                        <?php require_once "functions/transport-companies.php"; ?>
+
 					</div>
 					<div class="minus">
 						<form action="" method="post" class="color">
