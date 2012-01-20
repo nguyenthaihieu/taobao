@@ -1,0 +1,32 @@
+.fb-container{  /* Container widget */
+}
+
+.fbf-text { /* intro texto */
+
+}
+
+
+#fbf-widget{ /*form */
+ margin:10px 0
+}
+
+#fb-counter-img {  /* counter img container*/
+  margin:0 auto;
+ text-align: center; width:1px;display:table;clear:both;height:1px
+}
+
+
+#subscription_email{ /* e-mail field */
+ padding:5px;
+ text-align: center;
+ width:70%
+}
+
+#subscription_btn{ /*btn  */
+
+}
+
+p.fb-credits a, .fb-credits{
+ color:#ccc;font-size:10px;text-decoration:none;text-align:center
+ margin:0 auto; font-family:arial;
+}

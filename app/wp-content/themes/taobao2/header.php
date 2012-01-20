@@ -53,7 +53,7 @@
                 </div>
             </div>
 		    <div class="box">
-                <div class="number">
+                <div id="counter" class="number">
 				</div>
                 <div class="time">
                     <div id="alarm"></div>

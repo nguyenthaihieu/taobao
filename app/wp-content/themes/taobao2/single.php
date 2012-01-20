@@ -39,7 +39,9 @@ function catch_that_image() {
 						<div class="soc"><img src="img/soc.gif" alt="" title="" /></div>	
 						<div class="comentars">
 							<h3>Комментарии</h3>
-							<form action="" method="post">
+							<?php get_template_part( 'content', 'single' ); ?>
+							<?php comments_template( '', true ); ?>
+							<!--<form action="" method="post">
 								<div class="item">
 									<div class="ava"><a href="#"><img src="img/ava.gif" alt="" title="" /></a></div>
 									<textarea></textarea>
@@ -65,9 +67,10 @@ function catch_that_image() {
 										<p>Здравствуйте! Хотела бы заказать 5 брендовых курточек (одной модели), не будет ли проблем с таможней? Обычно многие поставщики не советуют заказывать более 4-х шт.  одной модели?</p>
 									</div>
 								</div>
-							</form>
+							</form>-->
+							
 							<ul class="rss">
-								<li><a href="#" class="rss">RSS</a></li>
+								<li><a href="<?php bloginfo('rss2_url'); ?>" class="rss">RSS</a></li>
 								<li><a href="#" class="mail">Подписаться по e-mail</a></li>
 							</ul>
 						</div>			
@@ -85,45 +88,4 @@ function catch_that_image() {
             </div>
 		</section>
 	</div>
-	<footer id="footer">
-		<div class="box">
-			<div class="block">
-				<ul>
-					<li><a href="#"><img src="img/icon.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon1.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon2.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon3.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon4.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon5.jpg" alt="" title="" /></a></li>
-					<li><a href="#"><img src="img/icon6.jpg" alt="" title="" /></a></li>
-				</ul>
-				<p>Сервис покупок в Китае taobao.ru.com <br/> PANDA TRADE CO.,LTD <br/> Амурская область, г.Благовещенск ул.Чайковского 7, офис 204</p>
-			</div>
-			<div class="contact">
-						<div class="left">
-							<div class="fone">
-								<em>розничный отдел</em>
-								<strong><span>8 (4162)</span> 218-718</strong>
-							</div>
-							<ul class="contact">
-								<li class="qip">611 250 763</li>
-								<li class="mail"><a href="mailto:zakaz@taobao.ru.com">zakaz@taobao.ru.com</a></li>
-								<li class="skype">taobao.ru.com</li>
-							</ul>
-						</div>
-						<div class="left right">
-							<div class="fone">
-								<em>розничный отдел</em>
-								<strong><span>8 (4162)</span> 218-718</strong>
-							</div>
-							<ul class="contact">
-								<li class="qip">611 250 763</li>
-								<li class="mail"><a href="mailto:zakaz@taobao.ru.com">zakaz@taobao.ru.com</a></li>
-								<li class="skype">taobao.ru.com</li>
-							</ul>
-						</div>
-					</div>
-		</div>			
-	</footer>
-</body>
-</html>
+<?php get_footer(); ?>

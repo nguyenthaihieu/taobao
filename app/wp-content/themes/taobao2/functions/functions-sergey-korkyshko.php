@@ -16,8 +16,6 @@ function get_Minutes()
     return $times[1];
 }
 
-add_action('init','get_js_Hours_Minutes');
-
 function get_js_Hours_Minutes()
 {?>
     <script type="text/javascript">
@@ -28,3 +26,4 @@ function get_js_Hours_Minutes()
     return true;
 
 }
+add_action('wp_enqueue_scripts', 'get_js_Hours_Minutes');
