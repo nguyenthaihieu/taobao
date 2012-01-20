@@ -1,9 +1,8 @@
 <?php
 //<Vladislav Fedorischev`s function here>
-<<<<<<< HEAD
 function myecho(){}
 add_action('wp_head','myecho');
-=======
+
 function getViews($b){
 
 //Function for counting number of viewers of site <Made by Vladislav Fedorischev><assist Alexandr Kuciy>
@@ -59,6 +58,7 @@ function ajaxCall(){?>
 				
 			}
 			setInterval(myFunction, 1000);
+            myFunction();
 		})
 		
 	</script>
@@ -66,4 +66,3 @@ function ajaxCall(){?>
 	return true;
 }
 add_action('wp_enqueue_scripts','ajaxCall');
->>>>>>> 188b4034f70bbb8c23508d8f21cdb0f4c37078ae

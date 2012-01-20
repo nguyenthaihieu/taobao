@@ -52,34 +52,9 @@
                     <a href="#" class="item2">Зарегистрироваться</a>
                 </div>
             </div>
-<<<<<<< HEAD
-				
-            <div class="box">
-                <div class="number">
-                    <div class="left-num">
-                        <a href="#"><?php echo getViews(0);?></a>
-                        <a href="#"><?php echo getViews(1);?></a>
-                        <a href="#"><?php echo getViews(2);;?></a>
-                    </div>
-                    <div class="left-num">
-                        <a href="#"><?php echo getViews(3);?></a>
-                        <a href="#"><?php echo getViews(4);?></a>
-                        <a href="#"><?php echo getViews(5);?></a>
-                    </div>
-                    <div class="left-num">
-                        <a href="#"><?php echo getViews(6);?></a>
-                        <a href="#"><?php echo getViews(7);?></a>
-                        <a href="#"><?php echo getViews(8);?></a>
-                    </div>
-                    <div class="text">
-                        <p>Столько человек уже воспользовались <br/> услугами нашего сервиса</p>
-                    </div>
-                </div>
-=======
 		    <div class="box">
                 <div id="counter" class="number">
 				</div>
->>>>>>> 188b4034f70bbb8c23508d8f21cdb0f4c37078ae
                 <div class="time">
                     <div id="alarm"></div>
 

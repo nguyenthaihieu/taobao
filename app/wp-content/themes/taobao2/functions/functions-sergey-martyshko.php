@@ -1,7 +1,6 @@
 <?php
 //<Sergey Martyshko`s function here>
 
-<<<<<<< HEAD
 function mytheme_comment($comment, $args, $depth){
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
@@ -24,6 +23,3 @@ function mytheme_comment($comment, $args, $depth){
      </div>
 <?php
 }
-
-=======
->>>>>>> 188b4034f70bbb8c23508d8f21cdb0f4c37078ae
