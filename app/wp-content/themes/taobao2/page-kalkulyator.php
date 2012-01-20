@@ -239,7 +239,6 @@
         <div class="item">
             <label>Вес посылки (кг.)</label>
             <input type="text" class="text"/>
-            <a href="#" class="info"></a>
         </div>
         <div class="item">
             <label>Ваше местоположение</label>

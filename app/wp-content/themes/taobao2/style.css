@@ -1401,25 +1401,36 @@ div.blog-gree div.blog{
 	line-height:20px;
 }
 
-#content div.pagenawi a.prev{
+#content div.pagenawi a.prev,#content div.pagenawi a.previouspostslink{
 	background:url(./img/1prev.gif) no-repeat;
 	float:left;
 	width:18px;
 	height:17px;
 	text-decoration:none;
+	text-indent:-9999px;
+}
+
+#content div.pagenawi span.current{
+ background:url(./img/activ-ww.gif)  no-repeat;
+ float:left;
+ height:22px;
+ color:#fff;
+ width:22px;
+ text-decoration:none;
 }
 
 #content div.padding{
 	padding:25px 25px 0;
 }
 
-#content div.pagenawi a.next{
+#content div.pagenawi a.next,#content div.pagenawi a.nextpostslink{
 	background:url(./img/1next.gif) no-repeat;
 	float:left;
 	height:15px;
 	width:17px;
 	text-decoration:none;
 	margin:0 0 0 7px;
+	text-indent:-9999px;
 }
 
 #content div.pagenawi a{
@@ -2483,4 +2494,8 @@ div.contact ul.contact li img{
 
 #content div.all div.tegs a{
  color:#000;
+}
+
+#content div.pagenawi span.pages{
+	display:none;
 }

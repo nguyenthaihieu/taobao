@@ -47,7 +47,7 @@ function _pagenavi_init() {
 		'num_larger_page_numbers' => 3,
 		'larger_page_numbers_multiple' => 10,
 		'always_show' => false,
-		'use_pagenavi_css' => true,
+		'use_pagenavi_css' => false,
 		'style' => 1,
 	) );
 

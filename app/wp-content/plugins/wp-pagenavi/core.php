@@ -150,7 +150,7 @@ function wp_pagenavi( $args = array() ) {
 			$out .= "</form>\n";
 			break;
 	}
-	$out = $before . "<div class='wp-pagenavi'>\n$out\n</div>" . $after;
+	$out = $before . "\n$out\n" . $after;
 
 	echo apply_filters( 'wp_pagenavi', $out );
 }

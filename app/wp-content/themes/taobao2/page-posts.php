@@ -14,7 +14,7 @@ $morenumber="%";
 				<span class="post">Всего записей: 137</span>
 				<div class="top"></div>
 				<div class="body">
-					<?php query_posts('posts_per_page=10&category_name=blog');?>
+					<?php query_posts( array( 'cat' => 4, 'paged' => get_query_var('paged') ) );?>
 					<div class="allbox padding">
 						<?php while(have_posts()) : the_post(); global $post;?>
 						<div class="post">
@@ -28,26 +28,10 @@ $morenumber="%";
 							</div>
 						</div>
 						<?php endwhile;?>
-					<?php wp_reset_query();?>
 						<div class="pagenawi">
-							<a href="#" class="prev"></a>
-							<a href="#">1</a>
-							<a href="#">2</a>
-							<span class="activ">3</span>
-							<a href="#">4</a>
-							<a href="#">5</a>
-							<a href="#">6</a>
-							<a href="#">7</a>
-							<a href="#">8</a>
-							<a href="#">9</a>
-							<span>....</span>
-							<a href="#">78</a>
-							<a href="#">79</a>
-							<a href="#">80</a>
-							<a href="#">81</a>
-							<a href="#">82</a>
-							<a href="#" class="next"></a>
+							<?php wp_pagenavi();?>
 						</div>	
+						<?php wp_reset_query();?>
 					</div>
 				</div>
 				<div class="bottom"></div>
