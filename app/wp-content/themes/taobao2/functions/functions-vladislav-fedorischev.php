@@ -4,10 +4,9 @@
  * Counting number of viewers of site
  * @author Vladislav Fedorischev <vlad_graf@mail.ru>
  *
- * @param integer $digitNumber what position of number of viewers to get
- * @return integer
+ * @return array
  */
-function getViews($digitNumber)
+function getViews()
 {
     $visit = strval((int)StatPress_Print("%totalpageviews%") + 616908);
     $resultArray = array();
@@ -22,7 +21,7 @@ function getViews($digitNumber)
     }
     $normal = array_reverse($reverse, false);
 
-    return $normal[$digitNumber];
+    return $normal;
 }
 
 /**
@@ -33,21 +32,22 @@ function viewsRefresh()
 {
     if (isset($_GET['timer'])) :
         header('Content-Type: text/html; charset=utf-8');
+        $views = getViews();
         ?>
     <div class="left-num">
-        <a href="#"><?php echo getViews(0);?></a>
-        <a href="#"><?php echo getViews(1);?></a>
-        <a href="#"><?php echo getViews(2);;?></a>
+        <a href="#"><?php echo $views[0];?></a>
+        <a href="#"><?php echo $views[1];?></a>
+        <a href="#"><?php echo $views[2];?></a>
     </div>
     <div class="left-num">
-        <a href="#"><?php echo getViews(3);?></a>
-        <a href="#"><?php echo getViews(4);?></a>
-        <a href="#"><?php echo getViews(5);?></a>
+        <a href="#"><?php echo $views[3];?></a>
+        <a href="#"><?php echo $views[4];?></a>
+        <a href="#"><?php echo $views[5];?></a>
     </div>
     <div class="left-num">
-        <a href="#"><?php echo getViews(6);?></a>
-        <a href="#"><?php echo getViews(7);?></a>
-        <a href="#"><?php echo getViews(8);?></a>
+        <a href="#"><?php echo $views[6];?></a>
+        <a href="#"><?php echo $views[7];?></a>
+        <a href="#"><?php echo $views[8];?></a>
     </div>
     <div class="text">
         <p>Столько человек уже воспользовались <br/> услугами нашего сервиса</p>
