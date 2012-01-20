@@ -7,6 +7,7 @@ function clientHoursMinusServerHours(date) {
     var client = date;
     var clientHours = client.getHours();
     clientHours = parseInt(clientHours.toString());
+    console.log("serverHours="+serverHours);
     var differenceHours = serverHours - clientHours;
     return differenceHours;
 }

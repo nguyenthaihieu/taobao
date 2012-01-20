@@ -1,40 +1,40 @@
 <?php
 //<Sergey Korkishko`s function here>
 
-function get_Hours()
+function getHours()
 {
     $time = date_i18n(get_option('time_format'));
     $times = explode(":", $time);
-    echo $times[0];
+    //echo $times[0];
     return $times[0];
 }
-add_action('init','get_Hours');
+add_action('init','getHours');
 
-add_action('init','get_Minutes');
-function get_Minutes()
+function getMinutes()
 {
     $time = date_i18n(get_option('time_format'));
     $times = explode(":", $time);
-    echo $times[1];
+    //echo $times[1];
     return $times[1];
 }
-add_action('init','get_Minutes');
+add_action('init','getMinutes');
 
 
-function get_js_Hours_Minutes()
-{?>
+function initServerTime()
+{
+    echo getHours();?>
     <script type="text/javascript">
-        var serverHours = parseInt("<?php echo get_Hours(); ?>");
-        var serverMinutes = parseInt("<?php echo get_Minutes(); ?>");
+        var serverHours = parseInt("<?php echo getHours(); ?>");
+        var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
+        console.log("serverHours="+serverHours);
 	</script>
 <?php
     return true;
-
 }
-add_action('init','get_js_Hours_Minutes');
+add_action('wp_enqueue_scripts','initServerTime');
 
 
-function online_consultation()
+function onlineConsultation()
 {?>
 <script type="text/javascript">
     var liveTex = true,
@@ -54,4 +54,4 @@ function online_consultation()
     return true;
 
 }
-add_action('init','online_consultation');
+add_action('wp_enqueue_scripts','onlineConsultation');
