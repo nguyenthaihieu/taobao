@@ -7,6 +7,7 @@ function clientHoursMinusServerHours(date) {
     var client = date;
     var clientHours = client.getHours();
     clientHours = parseInt(clientHours.toString());
+    console.log("serverHours="+serverHours);
     var differenceHours = serverHours - clientHours;
     return differenceHours;
 }
@@ -27,23 +28,26 @@ function getCurrentTime(date,differenceHours, differenceMinutes) {
     var clientMinutes = parseInt(clientMinutes.toString());
     var newClientHours = clientHours + differenceHours;
     var newClientMinutes = clientMinutes + differenceMinutes;
-    timer(newClientHours, newClientMinutes, 10, 19);
+    timer2(newClientHours, newClientMinutes, 10, 19);
 }
 
 function appZero(i) {
-    if (i < 10) {
-        i = "0" + i;
+    if ((i < 10) && (i > 0)) {
+        if (i = 0) {
+            i = "00"
+        } else {
+            i = "0" + i;
+        }
     }
     return i;
 }
 
-function timer(newClientHours, newClientMinutes, startOfWork, endOfWork) {
+function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
     if ((newClientHours > startOfWork) && (newClientHours < endOfWork)) {
         var hoursLeft = endOfWork - newClientHours - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
         var cssClass = 'work';
-
     }
     if((newClientHours>0)&&(newClientHours<startOfWork)) {
         var hoursLeft = startOfWork - newClientHours - 1;
@@ -57,6 +61,9 @@ function timer(newClientHours, newClientMinutes, startOfWork, endOfWork) {
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
 
+    }else{
+        var str = '<strong><i>error</i> До начала <br/> рабочего дня осталось:</strong>';
+        var cssClass = 'suspend';
     }
     minutesLeft = appZero(minutesLeft);
     hoursLeft = appZero(hoursLeft);

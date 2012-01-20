@@ -237,18 +237,20 @@ div.width{
 
 #liveTexButton_2272{
 	cursor:pointer;
-	background:none !important;
+    background:  no-repeat !important;
 	font-size:14px;
 	color:#231f20;
 	width:189px !important;
 	line-height:32px;
-	height:34px;
+    height: 68px !important;
 	padding:0 0 0 31px;
 	text-decoration:underline;
 }
 
 #liveTexButton_2272:hover{
+    height: 33px !important;
 	text-decoration:none;
+    background: no-repeat 0 100% !important;
 }
 
 
