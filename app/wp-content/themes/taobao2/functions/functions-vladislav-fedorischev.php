@@ -26,6 +26,7 @@ function getViews($b){
 
 function viewsRefresh(){
 	if (isset( $_GET['timer'] ) ) :
+        header('Content-Type: text/html; charset=utf-8');
 ?> 				    <div class="left-num">
                         <a href="#"><?php echo getViews(0);?></a>
                         <a href="#"><?php echo getViews(1);?></a>
