@@ -59,7 +59,7 @@
             </div>
             <nav class="block-menu">
                 <ul>
-                    <li class="item1"><a href="#">Первый раз на сайте?</a></li>
+                    <li class="item1"><a href="<?php echo get_option('omr_tracking_first');?>">Первый раз на сайте?</a></li>
                     <li class="item2"><div id="liveTexButton_2272">Онлайн консультант</div></li>
                     <li class="item3"><a href="http://zingaya.com/widget/8f1f898b96da893919493f889553ecd3" onclick="window.open(this.href+'?referrer='+escape(window.location.href), '_blank', 'width=236,height=220,resizable=no,toolbar=no,menubar=no,location=no,status=no'); return false" class="zingaya_button">Бесплатный звонок</a></li>
                     <li class="item4 activ"><a href="#">Скачать форму заказа</a></li>
@@ -116,7 +116,7 @@
                         <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post();  ?>
                             <li>
-                                <p> <?php the_content(); ?></p>
+                                <?php the_content(); ?>
                             </li>
                             <?php endwhile; ?>
                         <?php endif;?>

@@ -24,7 +24,12 @@ function my_custom_submenu_page_callback() {
 
                 <tr valign="top">
                     <th scope="row">Адрес в футере</th>
-                    <td><textarea style="width:400px; height:100px;" name="omr_tracking_code"><?php echo get_option('omr_tracking_code');?></textarea>
+                   		<td><textarea style="width:400px; height:100px;" name="omr_tracking_code"><?php echo get_option('omr_tracking_code');?></textarea>
+                    </td>
+                </tr>
+				 <tr valign="top">
+                    <th scope="row">Первый раз на сайте?</th>
+                    	<td><textarea style="width:400px; height:25px;" name="omr_tracking_first"><?php echo get_option('omr_tracking_first');?></textarea>
                     </td>
                 </tr>
 

@@ -22,6 +22,7 @@
     <div class="right">
         <div class="boxen">
             <?php get_sidebar('calc') ?>
+		</div>	
     </div>
 </section>
 <div id="bg-wraper">
@@ -45,32 +46,25 @@
             </ul>
         </div>
         <div class="report">
-            <h2>Новые отзывы <a href="#">все отзывы</a></h2>
-            <ul>
-                <li>
-                    <p><strong>Александр</strong><span>, Белгород, 01.11.2011</span></p>
-
-                    <p><a href="#">Получил посылку ))) все запечатано все цело !) Очень оперативно работа и внимание к
-                        клиенту! Теперь...</a></p>
-                </li>
-                <li>
-                    <p><strong>Александр</strong><span>, Белгород, 01.11.2011</span></p>
-
-                    <p><a href="#">Получил посылку ))) все запечатано все цело !) Очень оперативно работа и внимание к
-                        клиенту! Теперь...</a></p>
-                </li>
-                <li>
-                    <p><strong>Александр</strong><span>, Белгород, 01.11.2011</span></p>
-
-                    <p><a href="#">Получил посылку ))) все запечатано все цело !) Очень оперативно работа и внимание к
-                        клиенту! Теперь...</a></p>
-                </li>
-                <li>
-                    <p><strong>Александр</strong><span>, Белгород, 01.11.2011</span></p>
-
-                    <p><a href="#">Получил посылку ))) все запечатано все цело !) Очень оперативно работа и внимание к
-                        клиенту! Теперь...</a></p>
-                </li>
+            <h2><span>Новые отзывы</span> <a href="http://taobao/app/?page_id=982">все отзывы</a></h2>
+            <ul>                
+				  <?php 
+					  $comments = get_comments('post_id=982&number=4');
+					  foreach($comments as $comment) :
+					  	echo "<li>"; ?>
+						 <p> <strong><?php printf(__('%s'), get_comment_author_link()) ?></strong> <span class="date"><?php printf(__('%1$s'), get_comment_date()) ?> 
+					 	<?php
+							$author = get_comment_author_url();
+							echo substr_replace($author, "", 0, 7);
+						?>
+					 </span> <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a></p> 
+				      <?php if ($comment->comment_approved == '0') : ?>
+				         <p><?php _e('Your comment is awaiting moderation.') ?></p>
+				      <?php endif; ?>
+				      <p><a href="<?php the_permalink() ?>"><?php comment_text(); ?></a></p> <?php 
+					  endforeach;
+					  echo "<li>";
+				  ?>
             </ul>
         </div>
     </div>

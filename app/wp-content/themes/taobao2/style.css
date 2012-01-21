@@ -498,7 +498,17 @@ div.slaider-box div.slaide a{
 
 div.slaider-box div.slaide p{
 	color:#000;
+	margin:0;
 	font-size:11px;
+}
+
+div.slaider-box div.slaide span{
+	font-size:18px;
+	color:#00BDEF;
+}
+
+div.slaider-box div.slaide h3{
+	margin:0 0 5px;
 }
 
 #container{
@@ -763,7 +773,7 @@ h2 a{
 	float:left;
 	width:245px;
 	color:#000;
-	margin:0 43px 0 7px;
+	margin:0 43px 6px 7px;
 	font-size:11px;
 }
 
@@ -2583,4 +2593,25 @@ div.contact ul.contact li img{
 
 #content div.pagenawi span.pages{
 	display:none;
+}
+
+#wraper div.report h2 a{
+	float:left;
+	font-size:13px;
+	line-height:29px;
+	color:#006DCA;
+}
+
+#wraper div.report h2{
+	overflow:hidden;
+}
+
+#wraper div.report h2 span{
+	font-size:24px;
+}
+
+
+#wraper div.report h2 span{
+	float:left;
+	margin:0 15px 0 0;
 }
