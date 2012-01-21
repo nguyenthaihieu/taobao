@@ -1355,6 +1355,16 @@ div.blog-gree div.blog{
 	border-bottom:1px dotted #000;
 }
 
+#content div.page blockquote{
+	width:100%;
+	overflow:hidden;
+	padding:10px 0 6px;
+	border-top:1px dotted #000;
+	margin:15px 0 0;
+	border-bottom:1px dotted #000;
+	display:block;
+}
+
 #content div.article span.label{
 	background:url(./img/tegs.gif) no-repeat 0 4px;
 	float:left;
@@ -1391,6 +1401,8 @@ div.blog-gree div.blog{
 	cursor:pointer;
 	line-height:24px;
 }
+
+
 
 #content div.article a.com:hover{
 	background:url(./img/com.png) no-repeat 0 100%;

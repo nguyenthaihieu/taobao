@@ -46,12 +46,12 @@
 				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2" class="text" />				
 			</div>		 
 			<div class="item">				
-				<label for="url"><?php _e('Ссылка'); ?></label>
-				<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="28" tabindex="3" class="text" />
+				<label for="url"><?php _e('Город'); ?></label>
+				<input type="text" name="url" id="url" value="" size="28" tabindex="3" class="text" />
 			</div>		 
 			<?php endif; ?>		 
 				<div class="item">
-					<label for="comment"><?php _e('Your Comment'); ?></label>
+					<label for="comment"><?php _e('Коментарий'); ?></label>
 					<textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea"></textarea>
 				</div>		 
 				<div class="item">
