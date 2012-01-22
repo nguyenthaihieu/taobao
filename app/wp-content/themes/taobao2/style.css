@@ -529,6 +529,7 @@ div.slaider-box div.slaide h3{
 	width:688px;	
 	padding:7px 0 0 9px;
 	display:inline-block;
+	height:269px;
 }
 
 #container div.pager{
@@ -2614,4 +2615,27 @@ div.contact ul.contact li img{
 #wraper div.report h2 span{
 	float:left;
 	margin:0 15px 0 0;
+}
+
+#liveTextLabel_2323{
+	display:none;
+}
+
+div.soc{
+	background:url(img/soc.png) no-repeat;
+	width:49px;
+	height:294px;
+	overflow:hidden;
+	position:fixed;
+	top:352px;
+	left:0;
+}
+
+div.soc ul li{
+	margin:9px 0 0 7px;
+	overflow:hidden;
+}
+
+#container div.slider ul li{
+	display:none;
 }

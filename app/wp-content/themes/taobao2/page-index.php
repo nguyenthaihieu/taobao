@@ -3,14 +3,15 @@
 <section id="container">
     <div class="left">
         <div class="slider">
-            <ul>
-                <?php query_posts('post_type=baner_slider&order=ASC'); ?>
-                <?php while (have_posts()) : the_post(); ?>
-                <li><a href="#">
-                    <?php the_post_thumbnail(); ?>
-                </a></li>
-                <?php endwhile; ?>
-                <?php wp_reset_query(); ?>
+            <ul>  
+				<?php for($i=0; get_post_meta(2701,'_simple_fields_fieldGroupID_5_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+				{?>					
+				<li>
+					<a href="<?=get_post_meta(2701,'_simple_fields_fieldGroupID_5_fieldID_2_numInSet_'.$i,true); ?>">
+		               <img src="<?=wp_get_attachment_url(get_post_meta(2701,'_simple_fields_fieldGroupID_5_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" />
+		            </a>
+				</li>
+				<?php }?>               
             </ul>
             <div class="pager"></div>
         </div>

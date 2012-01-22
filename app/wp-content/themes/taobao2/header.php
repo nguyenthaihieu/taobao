@@ -34,6 +34,18 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<div class="soc">
+	<ul>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i1.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_3_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/pen.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_4_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i3.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_5_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i4.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_6_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i5.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_7_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i6.gif" alt="" title="" /></a></li>
+		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_8_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i7.gif" alt="" title="" /></a></li>
+	</ul>
+</div>
 <div class="width">
     <section id="header">
         <header class="top">
@@ -62,7 +74,7 @@
                     <li class="item1"><a href="<?php echo get_option('omr_tracking_first');?>">Первый раз на сайте?</a></li>
                     <li class="item2"><div id="liveTexButton_2272">Онлайн консультант</div></li>
                     <li class="item3"><a href="http://zingaya.com/widget/8f1f898b96da893919493f889553ecd3" onclick="window.open(this.href+'?referrer='+escape(window.location.href), '_blank', 'width=236,height=220,resizable=no,toolbar=no,menubar=no,location=no,status=no'); return false" class="zingaya_button">Бесплатный звонок</a></li>
-                    <li class="item4 activ"><a href="#">Скачать форму заказа</a></li>
+                    <li class="item4 activ"><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_4_fieldID_2_numInSet_0',true);?>">Скачать форму заказа</a></li>
                 </ul>
             </nav>
             <div class="box">
