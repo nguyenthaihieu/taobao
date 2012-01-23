@@ -72,7 +72,7 @@
             <nav class="block-menu">
                 <ul>
                     <li class="item1"><a href="<?php echo get_option('omr_tracking_first');?>">Первый раз на сайте?</a></li>
-                    <li class="item2"><div id="liveTexButton_2272">Онлайн консультант</div></li>
+                    <li class="item2"><div id="liveTexButton_4988">Онлайн консультант</div></li>
                     <li class="item3"><a href="http://zingaya.com/widget/8f1f898b96da893919493f889553ecd3" onclick="window.open(this.href+'?referrer='+escape(window.location.href), '_blank', 'width=236,height=220,resizable=no,toolbar=no,menubar=no,location=no,status=no'); return false" class="zingaya_button">Бесплатный звонок</a></li>
                     <li class="item4 activ"><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_4_fieldID_2_numInSet_0',true);?>">Скачать форму заказа</a></li>
                 </ul>
