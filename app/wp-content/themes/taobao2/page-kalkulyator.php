@@ -675,18 +675,18 @@ $final_price_jde = ceil($_POST['cost_china']*$koefficient*$kurs_yuanya + $_POST[
         <h3>Удачных покупок и быстрой доставки!</h3>
     </div>
 </div>
-</div>
+
 <div class="bottom"></div>
 </section>
 <div class="right">
     <div class="boxen">
-        <?php get_sidebar('calc') ?>
+        <?php get_sidebar('calc'); ?>
     </div>
     <div class="blog-gree">
-        <?php get_sidebar('blog') ?>
+        <?php get_sidebar('blog'); ?>
     </div>
 </div>
 </section>
-</div>
+
 
 <?php get_footer(); ?>
