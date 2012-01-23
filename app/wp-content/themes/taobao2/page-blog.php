@@ -83,7 +83,7 @@ $morenumber="%";
             </div>
             <div class="all">
                 <div class="line-title">
-                    <h2 class="list">Видеоинструкции</h2> <span><a href="<?php bloginfo('url') ?>/?page_id=2734 " class="rig">все видео</a> →</span>
+                    <h2 class="list">Видеоинструкции</h2> <span><a href="<?php bloginfo('url') ?>/?page_id=2733 " class="rig">все видео</a> →</span>
                 </div>
                 <div class="left-box">
                     <ul>
