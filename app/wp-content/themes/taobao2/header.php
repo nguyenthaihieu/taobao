@@ -31,7 +31,9 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
-    <?php wp_head(); ?>
+	<!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
+   <?php wp_head(); ?>
+	
 </head>
 <body>
 <div class="soc">
