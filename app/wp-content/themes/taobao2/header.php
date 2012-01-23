@@ -15,7 +15,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.0.6.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-
+	<script src="<?php bloginfo('template_directory'); ?>/js/translate.js"></script>
 
     <script type="text/javascript">
         var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
