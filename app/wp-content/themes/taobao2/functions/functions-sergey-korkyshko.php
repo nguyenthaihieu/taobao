@@ -1,11 +1,16 @@
 <?php
-//<Sergey Korkishko`s function here>
+
+/**
+ * Counting number of viewers of site
+ * @author Sergey Korkishko <Spiritvoin88@gmail.com>
+ *
+ * @return array
+ */
 
 function getHours()
 {
     $time = date_i18n(get_option('time_format'));
     $times = explode(":", $time);
-    //echo $times[0];
     return $times[0];
 }
 add_action('init','getHours');
@@ -14,19 +19,16 @@ function getMinutes()
 {
     $time = date_i18n(get_option('time_format'));
     $times = explode(":", $time);
-    //echo $times[1];
     return $times[1];
 }
 add_action('init','getMinutes');
 
 
 function initServerTime()
-{
-//    echo getHours();?>
+{?>
     <script type="text/javascript">
         var serverHours = parseInt("<?php echo getHours(); ?>");
         var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
-//        console.log("serverHours="+serverHours);
 	</script>
 <?php
     return true;
@@ -51,7 +53,7 @@ function onlineConsultation()
 <!--    })();-->
 <!--</script>-->
 <?php
-    return true;
+//    return true;
 
 }
 add_action('wp_enqueue_scripts','onlineConsultation');
