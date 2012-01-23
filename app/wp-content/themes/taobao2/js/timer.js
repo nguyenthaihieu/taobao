@@ -1,6 +1,7 @@
 var date = new Date();
 var hours = clientHoursMinusServerHours(date);
 var minutes = clientMinutesMinusServerMinutes(date);
+var dot;
 var interval = setInterval("getCurrentTime(date,hours,minutes)", 1000);
 
 function clientHoursMinusServerHours(date) {
@@ -32,9 +33,10 @@ function getCurrentTime(date,differenceHours, differenceMinutes) {
 }
 
 function appZero(i) {
-    if ((i < 10) && (i > 0)) {
-        if (i = 0) {
-            i = "00"
+    if ((i < 10) ) {
+
+        if (i == 0) {
+            i = '0'+1;
         } else {
             i = "0" + i;
         }
@@ -49,7 +51,7 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
         var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
         var cssClass = 'work';
     }
-    if((newClientHours>0)&&(newClientHours<startOfWork)) {
+    if((newClientHours<startOfWork)) {
         var hoursLeft = startOfWork - newClientHours - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
@@ -61,13 +63,13 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
 
-    }else{
-        var str = '<strong><i>error</i> До начала <br/> рабочего дня осталось:</strong>';
-        var cssClass = 'suspend';
     }
+
+
     minutesLeft = appZero(minutesLeft);
     hoursLeft = appZero(hoursLeft);
-    var hours = "<span class='time'>" + hoursLeft + ":" + minutesLeft + "</span>";
+    if(dot==":"){dot=" "}else{dot=":"}
+    var hours = "<span class='time'>" + hoursLeft + dot + minutesLeft + "</span>";
     $("#alarm").html(str + hours);
     $("#alarm").attr('class', cssClass);
 }
