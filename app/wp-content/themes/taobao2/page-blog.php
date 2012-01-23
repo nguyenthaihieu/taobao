@@ -77,39 +77,27 @@ $morenumber="%";
             </div>
             <div class="all">
                 <h2 class="video">Это интересно</h2>
+
                 <?php require_once "functions/slider-video-blog.php"; ?>
-                <ul class="video">
-                    <li>
-                        <div class="foto"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/video.gif" alt="" title="" /></a></div>
-                        <div class="text-video">
-                            <p><a href="#">Регистрация на сайте Taobao.ru.com</a></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="foto"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/video.gif" alt="" title="" /></a></div>
-                        <div class="text-video">
-                            <p><a href="#">Регистрация на сайте Taobao.ru.com</a></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="foto"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/video.gif" alt="" title="" /></a></div>
-                        <div class="text-video">
-                            <p><a href="#">Регистрация на сайте Taobao.ru.com</a></p>
-                        </div>
-                    </li>
-                </ul>
+
             </div>
             <div class="all">
                 <div class="line-title">
-                    <h2 class="list">Видеоинструкции</h2> <span><a href="#" class="rig">все видео</a> →</span>
+                    <h2 class="list">Видеоинструкции</h2> <span><a href="<?php bloginfo('url') ?>/?page_id=2734 " class="rig">все видео</a> →</span>
                 </div>
                 <div class="left-box">
                     <ul>
                     <?php query_posts('post_type=video_slider&order=ASC');  $numberPosts = 1; ?>
                     <?php while (have_posts()) : the_post(); ?>
                     <?php if($numberPosts) { ?>
+                            <?php $youtube = false;
+                            if($url = get_post_meta($post->ID, "Youtube", true)) {
+                                preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
+                            }
+                            ?>
                         <li>
-                            <p><a href="#"><?php the_title(); ?></a></p>
+                            <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
+                                  rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
                             <?php $numberPosts=$numberPosts-1; ?>
                         </li>
                             <?php }else{ ?>
@@ -123,8 +111,14 @@ $morenumber="%";
                         <?php query_posts('post_type=video_slider&order=ASC');  $numberPosts = 0; ?>
                         <?php while (have_posts()) : the_post(); ?>
                         <?php if($numberPosts) { ?>
+                            <?php $youtube = false;
+                            if($url = get_post_meta($post->ID, "Youtube", true)) {
+                                preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
+                            }
+                            ?>
                         <li>
-                            <p><a href="#"><?php the_title(); ?></a></p>
+                            <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
+                                  rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
                             <?php $numberPosts=$numberPosts-1; ?>
                         </li>
                             <?php }else{ ?>
