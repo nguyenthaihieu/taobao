@@ -23,7 +23,7 @@
                         <a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
                            rel="wp-video-lightbox" title=""><img
                             src="//i2.ytimg.com/vi/<?php echo $youtube[1]; ?>/default.jpg"
-                            alt="YouTube" width="60" /></a <?php
+                            alt="YouTube" width="60" /></a><?php
 
                         } elseif($vimeo) { ?>
 
