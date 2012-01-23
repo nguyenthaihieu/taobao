@@ -2621,7 +2621,7 @@ div.contact ul.contact li img{
 	display:none;
 }
 
-div.soc{
+div.soce{
 	background:url(img/soc.png) no-repeat;
 	width:49px;
 	height:294px;
@@ -2631,11 +2631,15 @@ div.soc{
 	left:0;
 }
 
-div.soc ul li{
+div.soce ul li{
 	margin:9px 0 0 7px;
 	overflow:hidden;
 }
 
 #container div.slider ul li{
 	display:none;
+}
+
+#content div.commentlist ul.children div.boxer{
+	width:496px;
 }
