@@ -36,7 +36,7 @@
 	
 </head>
 <body>
-<div class="soc">
+<div class="soce">
 	<ul>
 		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i.gif" alt="" title="" /></a></li>
 		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i1.gif" alt="" title="" /></a></li>
@@ -136,6 +136,7 @@
                         <?php endif;?>
 						<?php wp_reset_query();?>
                     </ul>
+					<div class="pagers"></div>
                 </div>
             </div>
         </header>

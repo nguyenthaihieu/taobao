@@ -5,13 +5,6 @@ $(window).load(function(){
 });
 
  function initCarousel(){
-$("div.slaider-box div.slaide").jCarouselLite({
-    btnNext: "div.slaider-box span.next",
-    btnPrev: "div.slaider-box span.prev",
-    speed: 400,
-	visible: 1,
-	circular: false
-});
 $("div.slaider-video").jCarouselLite({
     btnNext: "div.videos span.next",
     btnPrev: "div.videos span.prev",
@@ -26,6 +19,15 @@ $('.slider ul').cycle({
         fx:     'fade',
         timeout: 5000,
         pager:  '.pager'
+});
+$('div.slaide ul').cycle({
+        fx:     'fade',
+		next: 'div.slaider-box span.next',
+		prev: 'div.slaider-box span.prev',
+        timeout: 5000,
+        pager:  '.pagers'
+
+   	
 });
 }
 
