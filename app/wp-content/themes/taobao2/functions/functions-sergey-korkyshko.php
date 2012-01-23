@@ -51,7 +51,7 @@ function onlineConsultation()
 <!--    })();-->
 <!--</script>-->
 <?php
-    return true;
+//    return true;
 
 }
 add_action('wp_enqueue_scripts','onlineConsultation');
