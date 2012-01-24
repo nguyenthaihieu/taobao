@@ -25,7 +25,7 @@
             <input type="submit" class="sub" value="Поиск на Taobao.com"/>
         </div>
         <div class="item">
-            <a href="#">Видеоинструкция</a>
+            <a href="<?php bloginfo('url') ?>/?page_id=2733">Видеоинструкция</a>
         </div>
     </form>
 </div>

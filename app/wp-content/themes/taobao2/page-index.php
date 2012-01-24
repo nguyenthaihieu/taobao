@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="report">
-            <h2><span>Новые отзывы</span> <a href="http://taobao/app/?page_id=982">все отзывы</a></h2>
+            <h2><span>Новые отзывы</span> <a href="<?php bloginfo('url') ?>/?page_id=982">все отзывы</a></h2>
             <ul>                
 				  <?php 
 					  $comments = get_comments('post_id=982&number=4');
