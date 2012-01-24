@@ -65,11 +65,11 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
 
     }
 
-
+	
     minutesLeft = appZero(minutesLeft);
     hoursLeft = appZero(hoursLeft);
     if(dot==":"){dot=" "}else{dot=":"}
-    var hours = "<span class='time'>" + hoursLeft + dot + minutesLeft + "</span>";
+    var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
     $("#alarm").html(str + hours);
     $("#alarm").attr('class', cssClass);
 }

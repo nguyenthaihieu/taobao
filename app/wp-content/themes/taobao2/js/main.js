@@ -1,7 +1,7 @@
 $(window).load(function(){		
 	initCarousel();	
 	initSlider();
-	initTabs();
+	
 });
 
  function initCarousel(){
@@ -10,6 +10,14 @@ $("div.slaider-video").jCarouselLite({
     btnPrev: "div.videos span.prev",
     speed: 400,
 	visible: 3,
+	circular: false
+});
+
+$("div.slaide-page").jCarouselLite({
+    btnNext: "div.slaider-box-page span.next",
+    btnPrev: "div.slaider-box-page span.prev",
+    speed: 400,
+	visible: 1,
 	circular: false
 });
 }
@@ -32,15 +40,39 @@ $('div.slaide ul').cycle({
 }
 
 function initTabs(){
- $('.tabs dt').click(function(){
- var thisClass = this.className.slice(0,2);
- $('div.t1').hide();
- $('div.t2').hide();
- $('div.t3').hide();
- $('div.' + thisClass).show();
- $('.tabs dt').removeClass('tab-current');
- $(this).addClass('tab-current');
- return false;
- });
- $('dt.t1').click();
-}
+    jQuery('ul.tabs li').click(function(){
+    var thisClass = this.className.slice(0,2);
+    jQuery('div.t1').hide();
+    jQuery('div.t2').hide();
+    jQuery('div.t3').hide();
+    jQuery('div.t4').hide();
+    jQuery('div.' + thisClass).show();
+    jQuery('ul.tabs li').removeClass('activ');
+    jQuery(this).addClass('activ');
+    return false;
+    });
+    jQuery('li.t4').click();
+    }
+
+
+    function initTabs2() {
+    jQuery('dl.tabs dt').click(function() {
+    var thisClass = this.className.slice(0,3);
+    jQuery('div.ta1').hide();
+    jQuery('div.ta2').hide();
+    jQuery('div.ta3').hide();
+     jQuery('div.ta4').hide();
+    jQuery('div.' + thisClass).show();
+    jQuery('dl.tabs dt').removeClass('tab-current');
+    jQuery(this).addClass('tab-current');
+    return false;
+    });
+    jQuery('dt.ta1').click();
+    }
+
+
+    jQuery(document).ready(function(){
+
+    initTabs();
+    initTabs2();
+})

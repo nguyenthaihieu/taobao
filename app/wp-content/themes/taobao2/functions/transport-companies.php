@@ -1,11 +1,11 @@
 <div class="boxer-text">
     <p><b>Оптимальная доставка транспортными компаниями:</b></p>
     <dl class="tabs">
-        <dt class="t1"><a href="#">По территории РФ</a></dt>
-        <dt class="t2"><a href="#">Амурская область</a></dt>
-        <dt class="t3"><a href="#">Дальний Восток</a></dt>
+        <dt class="ta1"><a href="#" onclick="return false;">По территории РФ</a></dt>
+        <dt class="ta2"><a href="#" onclick="return false;">Амурская область</a></dt>
+        <dt class="ta3"><a href="#" onclick="return false;">Дальний Восток</a></dt>
     </dl>
-    <div class="t1">
+    <div class="ta1">
     <?php query_posts('post_type=transport_com&transport_com-category=t1&order=ASC'); ?>
     <?php while (have_posts()) : the_post(); ?>
 
@@ -29,7 +29,7 @@
         <?php wp_reset_query(); ?>
     </div>
 
-    <div class="t2">
+    <div class="ta2">
 
         <?php query_posts('post_type=transport_com&transport_com-category=t2&order=ASC'); ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -55,7 +55,7 @@
 
     </div>
 
-            <div class="t3">
+            <div class="ta3">
 
                 <?php query_posts('post_type=transport_com&transport_com-category=t3&order=ASC'); ?>
                 <?php while (have_posts()) : the_post(); ?>

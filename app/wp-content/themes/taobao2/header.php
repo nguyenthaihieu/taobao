@@ -9,7 +9,6 @@
     <title><?php wp_title() ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.7.1.min.js"></script>
     <!-- reference your own javascript files here -->
 
     <script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.0.6.min.js"></script>
@@ -27,6 +26,28 @@
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jcarousellite_1.0.1.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.cycle.all.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/form.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/cusel.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jScrollPane.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.mousewheel.js"></script>
+	<script type="text/javascript">
+	<!--
+	
+		
+	jQuery(document).ready(function(){
+	
+	var params = {
+			changedEl: "#search_country",
+			visRows: 5,
+			scrollArrows: true
+		}
+	
+		cuSel(params);
+		
+	
+	});
+	
+	-->
+	</script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
@@ -54,7 +75,8 @@
                 <div class="contru">
                     <span class="left">Доставляем товары по всей России, привезем и вам, в</span>
 						<span class="val_left">
-							<span id="city" class="val">Город не определен.</span>
+							<!--<span id="city" class="val">Город не определен.</span>-->							
+								<select class="wid100" id="search_country" name="search_country"><option value="0" selected="selected">Все страны</option><option value="13">Австралия</option><option value="15">Австрия</option><option value="6">Азербайджан</option><option value="8">Армения</option><option value="30">Беларусь</option><option value="22">Бельгия</option><option value="36">Болгария</option><option value="241">Великобритания</option><option value="109">Венгрия</option><option value="250">Вьетнам</option><option value="89">Гана</option><option value="94">Германия</option><option value="104">Гонконг</option><option value="98">Греция</option><option value="88">Грузия</option><option value="61">Дания</option><option value="67">Египет</option><option value="117">Израиль</option><option value="113">Индия</option><option value="111">Индонезия</option><option value="116">Иран</option><option value="68">Ирландия</option><option value="216">Испания</option><option value="118">Италия</option><option value="261">Йемен</option><option value="136">Казахстан</option><option value="40">Канада</option><option value="60">Кипр</option><option value="46">Китай</option><option value="57">Куба</option><option value="129">Кыргызстан</option><option value="139">Латвия</option><option value="140">Литва</option><option value="146">Люксембург</option><option value="167">Малайзия</option><option value="151">Молдова</option><option value="174">Нигерия</option><option value="175">Нидерланды (Голландия)</option><option value="183">Новая Зеландия</option><option value="177">Норвегия</option><option value="3">О.А.Э.</option><option value="189">Пакистан</option><option value="186">Перу</option><option value="190">Польша</option><option value="192">Португалия</option><option value="202">Россия</option><option value="199">Румыния</option><option value="214">Сингапур</option><option value="142">Словакия</option><option value="211">Словения</option><option value="243">США</option><option value="227">Таджикистан</option><option value="226">Таиланд</option><option value="237">Тайвань</option><option value="233">Тунис</option><option value="235">Турция</option><option value="246">Узбекистан</option><option value="242">Украина</option><option value="200">Филиппины</option><option value="77">Финляндия</option><option value="84">Франция</option><option value="108">Хорватия</option><option value="75" id="test">Чехия</option><option value="223">Швейцария</option><option value="220">Швеция</option><option value="70">Эстония</option><option value="133">Южная Корея</option><option value="121">Япония</option></select>
 						</span>
                 </div>
                 <div class="righ-box">
