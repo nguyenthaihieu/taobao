@@ -20,7 +20,6 @@
     <script type="text/javascript">
         var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
     </script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/timer.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/geoip.js"></script>
     <!-- test runner files -->
     <script src="<?php bloginfo('template_directory'); ?>/js/qunit.js"></script>
