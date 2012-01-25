@@ -3,7 +3,6 @@
 <section id="container">
     <section id="content">
         <h2 class="title">Оптовые закупки с Taobao.ru.com</h2>
-
         <div class="top"></div>
         <div class="body">
             <div class="allbox padding">
@@ -21,7 +20,7 @@
                         <ul>
                             <?php query_posts('post_type=messages_slider&messages-slider-category=dostavka-i-oplata')?>
                             <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post();  ?>
+                            <?php while (have_posts()) : the_post(); ?>
                                 <li>
                                     <?php the_content(); ?>
                                 </li>
@@ -31,17 +30,46 @@
                         </ul>
                     </div>
                 </div>
-                <?php wp_reset_query(); ?>
-                <?php rewind_posts(); ?>
                 <?php  while (have_posts()) : the_post(); ?>
                 <?php the_content(); ?>
                 <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
             </div>
-            <?php query_posts('post_parent=dostavka-i-oplata&post_type=page&numberposts=1');?>
+            <?php query_posts('post_parent=12&post_type=page&numberposts=1');?>
             <?php while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>
             <?php endwhile;?>
             <?php wp_reset_query();?>
+            <div class="block">
+                <?php query_posts('page_id=2737');?>
+                <?php while (have_posts()) : the_post(); ?>
+                <?php the_content(); ?>
+                <?php endwhile;?>
+                <?php wp_reset_query();?>
+                <?php echo do_shortcode('[transportation]') ?>
+            </div>
+
+            <div class="thanks">
+                <h2>Наш режим работы</h2>
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                        <td>Понедельник - пятница</td>
+                        <td><span>10:00 – 19:00</span></td>
+                    </tr>
+                    <tr>
+                        <td>Суббота - воскресенье</td>
+                        <td><span>выходной</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="center">
+
+                    Если у вас появились вопросы – <a href="#">задайте их менеджеру!</a> Работаем мы – улыбаетесь вы! :)
+                    <h3>Удачных покупок и быстрой доставки!</h3>
+                </div>
+            </div>
+            <?php //require_once"functions/transport-companies.php" ?>
         </div>
         <div class="bottom"></div>
     </section>
