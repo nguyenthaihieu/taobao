@@ -19,8 +19,3 @@ function translate_bing(text, sl, tl, success, complete){
         complete: complete
     });
 }
-$(function(){
-$('#do').click(function(){
-translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
-})
-})

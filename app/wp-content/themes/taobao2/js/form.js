@@ -203,7 +203,7 @@ function style_forms(el) {
 
 
 
-$(document).ready(function(){ 
+jQuery(function($){
 
     if ($('#rightbar').length) $('#content').addClass('with_right');
     if ($('#leftbar1').length) $('#content').addClass('with_left1');
