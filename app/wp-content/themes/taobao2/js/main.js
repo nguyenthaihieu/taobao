@@ -52,6 +52,21 @@ function initTabs(){
     return false;
     });
     jQuery('li.t4').click();
+	
+	$('ul.tabs li').click(function(){
+	 var thisClass = this.className.slice(0,2);	
+	 $('div.t5').hide();	
+	 $('div.t6').hide();	
+	 $('div.t7').hide();
+	 $('div.t8').hide();	
+	 $('div.' + thisClass).show();	
+	 $('ul.tabs li').removeClass('tab-current');	
+	 $(this).addClass('tab-current');	
+	 return false;	
+	 });
+	
+	 $('li.t5').click();
+	
     }
 
 

@@ -5,6 +5,16 @@
         <div class="top"></div>
         <div class="body">
             <div class="allbox">
+				<ul class="tabs">
+					<li class="t5"><span>г. Благовещенск</span></li>
+					<li class="t6"><span>г. Хабаровск</span></li>
+					<li class="t7"><span>г. Москва</span></li>
+					<li class="t8"><span>Китай, г. Хэй-Хэ</span></li>
+				</ul>
+				<div class="t5">1</div>
+				<div class="t6">2</div>
+				<div class="t7">3</div>
+				<div class="t8">4</div>
                 <div class="contact-list">
                     <h2>Центральный офис в Благовещенске</h2>
                     <p><span>Амурская область, г.Благовещенск <br/> ул.Чайковского 7, офис 204</span> <a href="#" class="button">Напишите нам</a></p>
