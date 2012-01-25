@@ -57,7 +57,7 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
             }
-    if(newClientHours>endOfWork) {
+    if(newClientHours>=endOfWork) {
         var hoursLeft = 23 - newClientHours + startOfWork;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
