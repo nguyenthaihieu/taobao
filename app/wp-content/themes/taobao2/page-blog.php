@@ -71,7 +71,7 @@ $morenumber="%";
 					<span><a href="<?php echo '?page_id=2717'; ?>" class="rig">все статьи</a> →</span>
                 </div>
                 <div class="tegs">                   
-					<?php wp_tag_cloud( 'smallest=8&largest=22&number=25' ); ?>
+					<?php wp_tag_cloud( 'smallest=8&largest=22&number=25&taxonomy=post_tag' ); ?>
                 <?php endif; ?>
 				</div>
             </div>
