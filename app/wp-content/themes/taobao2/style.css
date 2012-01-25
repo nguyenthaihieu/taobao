@@ -132,20 +132,12 @@ div.width{
 #header div.contru{
 	width:540px;
 	float:left;
-	overflow:hidden;
 }
 
 #header div.contru span.left{
 	color:#929292;
 	float:left;
 	font-size:11px;
-}
-
-#header div.contru span.val_left{
-	float:left;
-	margin:0 0 0 8px;
-	padding:0 12px 0 0;
-	background:url(./img/arow.png) no-repeat 100% 6px;
 }
 
 #header div.contru span.val{
@@ -223,7 +215,7 @@ div.width{
 #header div.work{
     overflow: hidden;
     padding: 0 0 0 34px;
-    width: 270px;
+    width: 290px;
 	background:url(img/time.png) no-repeat 0 3px;
 }
 
@@ -232,7 +224,7 @@ div.width{
 	float: right;
     overflow: hidden;
     padding: 0 0 0 34px;
-    width: 270px;
+    width: 290px;
 }
 
 #liveTexButton_4988{
@@ -270,6 +262,13 @@ div.width{
 	float:left;
 	line-height:31px;
 	font-size:31px;
+}
+
+#header div.time span.dot{
+	width:20px;
+	display:block;
+	height:25px;
+	text-align:center;
 }
 
 #header div.time strong{
@@ -514,14 +513,14 @@ div.slaider-box div.slaide h3{
 #container{
 	width:970px;
 	overflow:hidden;
-	margin:20px auto;
+	margin:0 auto;
 }
 
 #container div.left{
 	width:700px;
 	overflow:hidden;
 	float:left;
-	margin:36px 0 0;
+	margin:15px 0 0;
 }
 
 #container div.slider{
@@ -532,7 +531,7 @@ div.slaider-box div.slaide h3{
 	height:269px;
 }
 
-#container div.pager{
+#container div.pager,div.pagers{
 	width:100%;
 	overflow:hidden;
 	margin:16px 0 0;
@@ -541,11 +540,15 @@ div.slaider-box div.slaide h3{
 	text-align:center;
 }
 
-#container div.pager a.activeSlide {
+div.pagers{
+	margin:28px 0 0;
+}
+
+#container div.pager a.activeSlide,div.pagers a.activeSlide{
     background: url("./img/activ.png") no-repeat scroll 0 0 transparent;
 }
 
-#container div.pager a {
+#container div.pager a,div.pagers a {
     background: url("./img/pager.png") no-repeat scroll 0 0 transparent;
     display: inline-block;
     height: 12px;
@@ -615,7 +618,7 @@ div.slaider-box div.slaide h3{
 
 #container div.right{
 	float:right;
-	margin:28px 0 0;
+	margin:15px 0 0;
 	width:240px;
 }
 
@@ -638,6 +641,7 @@ div.slaider-box div.slaide h3{
 	padding:7px 0 0 80px;
 	height:77px;
 	margin:0 0 15px;
+	margin:0 0 6px 6px;
 }
 
 #container div.right div.calcul:hover{
@@ -2174,6 +2178,10 @@ div.slaide-page li{
 	text-decoration:none;
 }
 
+#content div.slaide-page{
+	width:539px !important;
+}
+
 #content div.it-line{
 	width:100%;
 	overflow:hidden;
@@ -2199,6 +2207,14 @@ div.slaide-page li{
 	padding:20px 0 0;
 	display:none;
 }
+
+#content div.ta1,#content div.ta2,#content div.ta3{
+	width:100%;
+	overflow:hidden;
+	padding:20px 0 0;
+	display:none;
+}
+
 
 #content div.it-line div.description p.url a{
 	margin:0 5px 0 0;
@@ -2643,3 +2659,234 @@ div.soce ul li{
 #content div.commentlist ul.children div.boxer{
 	width:496px;
 }
+
+div.cuselText{
+    color: #FFF;
+    display: block;
+    font-size: 11px;
+	float:left;
+	padding:0 12px 0 0;
+	margin:1px 0 0 6px;
+	background:url(./img/arow.png) no-repeat 100% 6px;
+}
+
+div.cusel-scroll-pane{
+	width:100%;
+	overflow:hidden;
+	height:346px;
+}
+
+div.lineForm{
+	float:left;
+	margin:0 0 0 5px;
+}
+
+.cusel .jScrollPaneContainer{
+	background:url(img/list.png) no-repeat;
+	width:224px;
+	height:346px;
+}
+
+div.cusel-scroll-wrap{
+	display: block;
+    left: 0;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+	height:100px;
+    width: auto;
+}
+
+div.cusel-scroll-wrap span{
+	display:block;
+	width:100%;
+	overflow:hidden;
+}
+
+div.wid100{
+	position:relative;
+}
+
+
+/*
+	styles for select
+*/
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background: url(../images/selects-2.png) no-repeat;
+}
+.cusel { /* общий вид селекта включая стрелку справа */
+	height: 26px;
+	background-position: left top;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	z-index: 1;
+}
+.cuselFrameRight { /* левая чсть селект. обыно скругление и левая граница */
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 42px;
+	background-position: right top;
+}
+
+.cuselText { /* контейнер для отображенного текста селект */
+	height: 14px;
+	padding: 6px 0 0 7px; /* подбираем отступы и высоту для видимого текста в селекте */
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	font: 12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; /* шрифты */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+* html .cuselText { /* высота блока для текста для ие6 */
+	height: 22px;
+}
+.cusel span { /* оформление оптиона */
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 15px 2px 5px; /* паддинг справа - это отступ текста от ползунка */
+	zoom: 1;
+}
+.cusel span:hover,
+.cusel .cuselOptHover { /* реакция оптиона на наведение */
+	background: #003399;
+	color: #fff;
+}
+.cusel .cuselActive { /* оформление активного оптиона в списке */
+	background: #CC0000;
+	color: #fff;
+	cursor: default;
+}
+
+/*
+	styles for focus and hover
+*/
+.cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight {
+	background-image: url(../images/selects-focus.png);
+}
+
+.cuselOpen {
+	z-index: 999;
+}
+
+/*
+	styles for disabled select
+*/
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background-image: url(../images/selects-2-dis.png) !important;
+	cursor: default;
+	color: #ccc;
+}
+.classDisCusel .cuselText {
+	cursor: default;
+}
+
+
+/*
+	styles for scrollbar
+*/
+.cusel .cusel-scroll-wrap { /* контейнер для блока с прокруткой */
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #fff; /* фон выпадающего списка */
+	min-width: 100%;
+	width: auto;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	border: 1px solid #999; /* границы выпадающего спиcка */
+}
+
+.cusel .jScrollPaneTrack { /* трек для ползунка прокрутки */
+	height: 100%;
+	width: 7px !important;
+	background: #ccc;
+	position: absolute;
+	top: 0;
+	right: 4px;
+}
+.cusel .jScrollPaneDrag { /* ползунок */
+	position: absolute;
+	background-position: -40px -26px;
+	cursor: pointer;
+	width: 15px !important;
+	height: 27px !important;
+	right: -4px;
+	
+}
+
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollArrowUp { /* стрелка вверх */
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 26px;
+	height: 12px;
+	cursor: pointer;
+	background-position: -2px -26px;
+	overflow: hidden;
+}
+.cusel .jScrollArrowDown { /* стрелка вниз */
+	width: 25px;
+	height: 12px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 3px;
+	cursor: pointer;
+	background-position: -21px -26px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
