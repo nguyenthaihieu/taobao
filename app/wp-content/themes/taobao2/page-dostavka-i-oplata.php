@@ -19,18 +19,15 @@
 
                     <div class="slaide-page">
                         <ul>
-                            <li>
-                                <a href="#">ВНИМАНИЕ! Почта zakaz.taobao.ru.com@gmail.com временно не работает.
-                                    Отправляйте письмо на почту zakaz@taobao.ru.com</a>
-                            </li>
-                            <li>
-                                <a href="#">ВНИМАНИЕ! Почта zakaz.taobao.ru.com@gmail.com временно не работает.
-                                    Отправляйте письмо на почту zakaz@taobao.ru.com</a>
-                            </li>
-                            <li>
-                                <a href="#">ВНИМАНИЕ! Почта zakaz.taobao.ru.com@gmail.com временно не работает.
-                                    Отправляйте письмо на почту zakaz@taobao.ru.com</a>
-                            </li>
+                            <?php query_posts('post_type=messages_slider&messages-slider-category=dostavka-i-oplata')?>
+                            <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : the_post();  ?>
+                                <li>
+                                    <?php the_content(); ?>
+                                </li>
+                                <?php endwhile; ?>
+                            <?php endif;?>
+                            <?php wp_reset_query();?>
                         </ul>
                     </div>
                 </div>

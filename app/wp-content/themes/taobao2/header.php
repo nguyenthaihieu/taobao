@@ -147,7 +147,7 @@
                 <span class="next"></span>
                 <div class="slaide">
                     <ul>
-                        <?php query_posts('post_type=messages_slider')?>
+                        <?php query_posts('post_type=messages_slider&messages-slider-category=all')?>
                         <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post();  ?>
                             <li>

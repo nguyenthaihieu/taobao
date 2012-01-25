@@ -8,7 +8,6 @@ function clientHoursMinusServerHours(date) {
     var client = date;
     var clientHours = client.getHours();
     clientHours = parseInt(clientHours.toString());
-    console.log("serverHours="+serverHours);
     var differenceHours = serverHours - clientHours;
     return differenceHours;
 }
@@ -57,7 +56,7 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
             }
-    if(newClientHours>=endOfWork) {
+    if(newClientHours>= endOfWork) {
         var hoursLeft = 23 - newClientHours + startOfWork;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
@@ -65,11 +64,11 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
 
     }
 
-	
+
     minutesLeft = appZero(minutesLeft);
     hoursLeft = appZero(hoursLeft);
     if(dot==":"){dot=" "}else{dot=":"}
-    var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
+    var hours = "<span class='time'>" + hoursLeft + dot + minutesLeft + "</span>";
     $("#alarm").html(str + hours);
     $("#alarm").attr('class', cssClass);
 }
