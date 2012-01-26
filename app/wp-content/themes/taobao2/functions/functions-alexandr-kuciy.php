@@ -6,10 +6,8 @@ require_once "taxonomy-video-slider.php";
 require_once "type-transport-com.php";
 require_once "meta-transport-com.php";
 require_once "taxonomy-transport-com.php";
-?>
 
-
-<?php add_shortcode( 'howItWorks', 'shortcode_howItWorks' );
+add_shortcode( 'howItWorks', 'shortcode_howItWorks' );
 
 function shortcode_howItWorks(){
     return '<div class="alamo">
@@ -57,10 +55,10 @@ function shortcode_howItWorks(){
 								</ol>
 							</li>
 						</ul>
-					</div>'; ?>
-<?php } ?>
+					</div>';
+}
 
-<?php add_shortcode( 'spiral', 'shortcode_spiral' );
+add_shortcode( 'spiral', 'shortcode_spiral' );
 
 function shortcode_spiral(){
     return '<div class="steps step-next">
@@ -89,5 +87,4 @@ function shortcode_spiral(){
             <div class="color-text">
                 <p>Для того чтобы воспользоваться нашим предложением и получить товары оптом из Китая, составьте заявку, заполнив форму для заказа, и отправьте на почту <a href="mailto:opt@taobao.ru.com">opt@taobao.ru.com</a> либо свяжитесь с нами любым удобным способом!</p>
             </div>'; ?>
-<?php } ?>
-
+<?php }

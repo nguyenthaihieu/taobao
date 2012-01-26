@@ -79,6 +79,13 @@ define('WPLANG', 'ru_RU');
  * в своём рабочем окружении.
  */
 define('WP_DEBUG', false);
+
+ini_set("display_errors", 1);
+
+ini_set("display_startup_errors", 1);
+
+error_reporting(E_ALL & ~E_NOTICE);
+
 /** отключение ревизий. */
 define('WP_POST_REVISIONS', false);
 /* Это всё, дальше не редактируем. Успехов! */

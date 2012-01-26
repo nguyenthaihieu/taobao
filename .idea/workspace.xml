@@ -2,9 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="961f9ffe-5542-4b59-aa2d-3a082eaddef4" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\COPYING" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\css\admin.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\css\lb_black.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\css\lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\closelabel.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\closelabel_black.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\loading_black.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\nextlabel.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\nextlabel_black.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\prevlabel.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\images\prevlabel_black.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\includes\class.base.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\includes\class.fields.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\includes\class.options.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\includes\class.utilities.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\js\dev\lightbox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\js\lib.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\main.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\model.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\screenshot-1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\screenshot-2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\active\taobao\app\wp-content\plugins\simple-lightbox\templates\default\layout.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-config.php" afterPath="$PROJECT_DIR$/app/wp-config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-alexandr-kuciy.php" afterPath="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-alexandr-kuciy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/wp-settings.php" afterPath="$PROJECT_DIR$/app/wp-settings.php" />
     </list>
     <ignored path="taobao.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,6 +45,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+    <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -29,7 +58,7 @@
       <file leaf-file-name="functions-sergey-korkyshko.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="1" selection-start="8224" selection-end="8224" vertical-scroll-proportion="-41.153847">
+            <state line="214" column="1" selection-start="8224" selection-end="8224" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -38,16 +67,83 @@
       <file leaf-file-name="slider-video-blog.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/slider-video-blog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="805" selection-end="805" vertical-scroll-proportion="-11.769231">
+            <state line="18" column="11" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-dostavka-i-oplata.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="page-dostavka-i-oplata.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="40" selection-start="238" selection-end="238" vertical-scroll-proportion="-0.6716141">
+            <state line="30" column="41" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-19.615385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions-vladislav-fedorischev.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-vladislav-fedorischev.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="23" selection-start="572" selection-end="572" vertical-scroll-proportion="-14.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions-alexandr-kuciy.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-alexandr-kuciy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="0" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.2991755">
+              <folding>
+                <marker date="1327572813607" expanded="true" signature="366:2081" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="392:2069" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="404:581" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="593:1119" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="702:1106" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="719:1098" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="723:1081" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="738:862" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="877:963" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="978:1066" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="1131:1241" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="1253:2057" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="1321:2044" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="1335:1609" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="2205:3311" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="2241:2421" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="2457:2606" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="2643:2849" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="2885:3088" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="3124:3292" placeholder="..." />
+                <marker date="1327572813607" expanded="true" signature="3348:3643" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="10" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-settings.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/wp-settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="2" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,7 +152,7 @@
       <file leaf-file-name="page-index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="35" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-11.576923">
+            <state line="119" column="35" selection-start="4032" selection-end="4032" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -65,7 +161,7 @@
       <file leaf-file-name="transport-companies.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/transport-companies.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="6" selection-start="4477" selection-end="4477" vertical-scroll-proportion="-17.0">
+            <state line="83" column="6" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +186,6 @@
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/style.css" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kak-zakazat.php" />
-        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-vladislav-fedorischev.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/dostavka.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/oplata.php" />
@@ -99,6 +194,10 @@
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php" />
         <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php" />
+        <option value="$PROJECT_DIR$/app/wp-config.php" />
+        <option value="$PROJECT_DIR$/app/wp-settings.php" />
+        <option value="$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-alexandr-kuciy.php" />
       </list>
     </option>
   </component>
@@ -264,20 +363,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="web-ide.project.structure" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" scope="Directory">
-      <TestRunner />
       <method>
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -317,23 +438,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="292" width="1717" height="743" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3395321" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33496633" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26394722" sideWeight="0.49407783" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26394722" sideWeight="0.49407783" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -366,12 +489,6 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -391,111 +508,125 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/twentyeleven/sidebar-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="191" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/twentyeleven/tabs-templaite.php">
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/slider-video-home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/twentyeleven/content-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="-1.9410646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="39" selection-start="1730" selection-end="1745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="156" selection-end="156" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/slider-video-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/js/timer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="5" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.54867256">
-          <folding />
-        </state>
+        <state line="64" column="5" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.54867256" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="49" selection-start="11909" selection-end="12350" vertical-scroll-proportion="0.7110266">
-          <folding />
-        </state>
+        <state line="157" column="49" selection-start="11909" selection-end="12350" vertical-scroll-proportion="0.7110266" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/taxonomy-video-slider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/taxonomy-transport-com.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.39115044" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kak-zakazat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="66" selection-start="456" selection-end="462" vertical-scroll-proportion="0.2953668" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="1" selection-start="8224" selection-end="8224" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/slider-video-blog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="805" selection-end="805" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/taxonomy-transport-com.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.39115044">
+        <state line="18" column="11" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="35" selection-start="4032" selection-end="4032" vertical-scroll-proportion="-11.576923">
+        <state line="119" column="35" selection-start="4032" selection-end="4032" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/transport-companies.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="6" selection-start="4477" selection-end="4477" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-kak-zakazat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="66" selection-start="456" selection-end="462" vertical-scroll-proportion="0.2953668">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-sergey-korkyshko.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="1" selection-start="8224" selection-end="8224" vertical-scroll-proportion="-41.153847">
+        <state line="83" column="6" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/page-dostavka-i-oplata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="238" selection-end="238" vertical-scroll-proportion="-0.6716141">
+        <state line="30" column="41" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-19.615385">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-vladislav-fedorischev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="572" selection-end="572" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="10" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="2" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/wp-content/themes/taobao2/functions/functions-alexandr-kuciy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.2991755">
+          <folding>
+            <marker date="1327572813607" expanded="true" signature="366:2081" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="392:2069" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="404:581" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="593:1119" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="702:1106" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="719:1098" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="723:1081" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="738:862" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="877:963" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="978:1066" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="1131:1241" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="1253:2057" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="1321:2044" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="1335:1609" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="2205:3311" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="2241:2421" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="2457:2606" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="2643:2849" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="2885:3088" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="3124:3292" placeholder="..." />
+            <marker date="1327572813607" expanded="true" signature="3348:3643" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
