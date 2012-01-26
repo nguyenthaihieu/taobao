@@ -32,6 +32,11 @@ function my_custom_submenu_page_callback() {
                     	<td><textarea style="width:400px; height:25px;" name="omr_tracking_first"><?php echo get_option('omr_tracking_first');?></textarea>
                     </td>
                 </tr>
+				 <tr valign="top">
+                    <th scope="row">Курс юаня (CNY)</th>
+                    	<td><input style="width:400px; height:25px;" type="text" name="taobao_cny" value="<?php echo get_option('taobao_cny', 'N.A.');?>" />
+                    </td>
+                </tr>
 
             </table>
 

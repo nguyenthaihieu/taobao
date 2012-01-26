@@ -1,4 +1,4 @@
-<?php $kurs_yuanya = 5.4; //актуальный курс юаня
+<?php $kurs_yuanya = get_option('taobao_cny', 'N.A.'); //актуальный курс юаня
 $koefficient = 1.15;  //коэффициент посреднического процента (например, 1.2 = 20%; 1.15 = 15%)
 $transport_kg = 300; //стоимость переправки через речку за кг, в рублях
 $dostavka_do_blg = 14; //количество дней доставки до Благовещенска
@@ -177,14 +177,14 @@ function ems_deliv($from, $weight = 1) {
 	
 	    <div class="calculator">
 	        <span>15<i>%</i></span>
-	        <span>5,3</span>
+	        <span><?php echo get_option('taobao_cny', 'N.A.');?></span>
 	    </div>
 	    <ul class="inform">
 	        <li>- доставка по Китаю выбирается EMS;</li>
 	        <li><span class="num">15%</span> - наша комиссия, которая может изменяться на 5-10 % (для оптовиков и
 	            посредников);
 	        </li>
-	        <li><span class="num">5,3</span> - внутренний курс юаня нашей компании;</li>
+	        <li><span class="num"><?php echo get_option('taobao_cny', 'N.A.');?></span> - внутренний курс юаня нашей компании;</li>
 	        <li>- 300 руб /кг – тарифы компании карго из Хэйхэ (Китай) до Благовещенска (Россия).</li>
 	    </ul>
 	</div>

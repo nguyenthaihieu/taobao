@@ -71,7 +71,7 @@
     <div class="right">
         <div class="boxen">
             <h2>Внутренний курс <span>Taobao.ru.com:</span></h2>
-            <span class="calcul">5,3</span>
+            <span class="calcul"><?php echo get_option('taobao_cny', 'N.A.');?></span>
 
             <div class="calcul">
                 <a href="#">Калькулятор</a>
