@@ -635,16 +635,16 @@ div.pagers{
 }
 
 
-#container div.right div.calcul{
+#container div.right a.calcul{
 	background:url(./img/cal.png) no-repeat;
-	width:150px;
-	padding:7px 0 0 80px;
-	height:77px;
+	width:230px;
+	display:block;
+	height:84px;
 	margin:0 0 15px;
 	margin:0 0 6px 6px;
 }
 
-#container div.right div.calcul:hover{
+#container div.right a.calcul:hover{
 	background-position:0 100%;
 }
 
@@ -1167,19 +1167,19 @@ span.slogan{
     background: url("./img/inpt-left.png") no-repeat scroll 0 center transparent;
     display: inline-block;
     height: 28px;
-    outline: medium none;
     position: absolute;
     top: 5px;
 	width:7px;
     vertical-align: middle;
+	outline: medium none;
 }
 
 .file_right {
     background: url("./img/inpt-right.png") no-repeat 100% 0;
     display: inline-block;
     height: 28px;
-    outline: medium none;
     padding: 0 3px;
+	outline: medium none;
 }
 
 .file_val {
@@ -1188,10 +1188,10 @@ span.slogan{
     font-size: 14px;
     height: 28px;
     line-height: 33px;
-    outline: medium none;
     overflow: hidden;
     padding: 0 6px;
     width: 289px;
+	outline: medium none;
 }
 
 .file_but {
@@ -1201,12 +1201,12 @@ span.slogan{
     font-size: 18px;
     height: 22px;
     line-height: 33px;
-    outline: medium none;
     position: absolute;
     right: 0;
     text-align: center;
     text-indent: -9999px;
     top: 7px;
+	outline: medium none;
     width: 75px;
 }
 
@@ -1229,6 +1229,9 @@ span.slogan{
 	margin:0 234px 0 0;
 	float:right;
 	padding:0 0 4px;
+	font-size:12px;
+	color:#fff;
+	text-transform:uppercase;
 	cursor:pointer;
 }
 
@@ -2682,8 +2685,7 @@ div.lineForm{
 }
 
 .cusel .jScrollPaneContainer{
-	background:url(img/list.png) no-repeat;
-	width:224px;
+	width:210px !important;
 	height:346px;
 }
 
@@ -2700,8 +2702,9 @@ div.cusel-scroll-wrap{
 
 div.cusel-scroll-wrap span{
 	display:block;
-	width:100%;
+	width:82%;
 	overflow:hidden;
+	font-size:13px;
 }
 
 div.wid100{
@@ -2712,21 +2715,15 @@ div.wid100{
 /*
 	styles for select
 */
-.cusel,
-.cuselFrameRight,
-.jScrollPaneDrag,
-.jScrollArrowUp,
-.jScrollArrowDown {
-	background: url(img/selects-2.png) no-repeat;
-}
+
 .cusel { /* общий вид селекта включая стрелку справа */
-	height: 26px;
-	background-position: left top;
+	height: 13px;
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	font-size: 14px;
 	z-index: 1;
+	outline: medium none;
 }
 .cuselFrameRight { /* левая чсть селект. обыно скругление и левая граница */
 	position: absolute;
@@ -2735,7 +2732,7 @@ div.wid100{
 	right: 0;
 	height: 100%;
 	width: 42px;
-	background-position: right top;
+	outline: medium none;
 }
 
 .cuselText { /* контейнер для отображенного текста селект */
@@ -2747,6 +2744,7 @@ div.wid100{
 	z-index: 1;
 	font: 12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; /* шрифты */
 	position: absolute;
+	outline: medium none;
 	top: 0;
 	left: 0;
 }
@@ -2771,18 +2769,6 @@ div.wid100{
 	cursor: default;
 }
 
-/*
-	styles for focus and hover
-*/
-.cusel:hover,
-.cusel:hover .cuselFrameRight,
-.cusel:focus,
-.cusel:focus .cuselFrameRight,
-.cuselFocus,
-.cuselFocus .cuselFrameRight {
-	background-image: url(img/selects-focus.png);
-}
-
 .cuselOpen {
 	z-index: 999;
 }
@@ -2805,20 +2791,22 @@ div.wid100{
 	styles for scrollbar
 */
 .cusel .cusel-scroll-wrap { /* контейнер для блока с прокруткой */
+	background:url(img/list.png) no-repeat;
 	display: block;
+	height:346px;
 	visibility: hidden;
 	position: absolute;
 	left: 0;
+	padding:18px 5px 20px 9px;
 	top: 100%;
-	background: #fff; /* фон выпадающего списка */
 	min-width: 100%;
-	width: auto;
+	outline: medium none;
 }
 .cusel .jScrollPaneContainer {
 	position: relative;
 	overflow: hidden;
 	z-index: 5;
-	border: 1px solid #999; /* границы выпадающего спиcка */
+	outline: medium none;
 }
 
 .cusel .jScrollPaneTrack { /* трек для ползунка прокрутки */
@@ -2827,15 +2815,15 @@ div.wid100{
 	background: #ccc;
 	position: absolute;
 	top: 0;
-	right: 4px;
+	right: 9px;
 }
 .cusel .jScrollPaneDrag { /* ползунок */
 	position: absolute;
-	background-position: -40px -26px;
 	cursor: pointer;
 	width: 15px !important;
 	height: 27px !important;
 	right: -4px;
+	background:url(img/drag.png) no-repeat
 	
 }
 
@@ -2879,11 +2867,10 @@ div.wid100{
 }
 
 #content div.allbox ul.tabs li{
-	margin:0 15px 0 0;
+	margin:0 13px 0 0;
 	float:left;
 	height:33px;
 	cursor:pointer;
-	padding:0 0 0 9px;
 }
 
 #content div.t5,#content div.t6,#content div.t7,#content div.t8{
@@ -2917,6 +2904,7 @@ div.wid100{
 #content div.allbox ul.tabs li.tab-current i{
 	background:url(img/tab-arow.png) no-repeat 50% 0;
 	height:33px;
+	padding:0 0 0 11px;
 	float:left;
 	
 }
@@ -2933,4 +2921,8 @@ div.wid100{
 #content div.contact-list li p img{
 	float:left;
 	margin:0 7px 0 0;
+}
+
+#content div.slaider-video{
+	width:436px !important;
 }

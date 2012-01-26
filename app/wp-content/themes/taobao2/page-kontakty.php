@@ -18,7 +18,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="#">Как добраться</a></p>		           
+						<p><a href="<?=wp_get_attachment_url(get_post_meta(2750,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>		           
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Благовещенске</b></p>
@@ -46,20 +46,20 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="#">Как добраться</a></p>		           
+						<p><a href="<?=wp_get_attachment_url(get_post_meta(2753,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в г. Хабаровск</b></p>
 	                    <ul>
-							<?php for($i = 0;get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+							<?php for($i = 0;get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
 								{?>
 		                        <li>
 		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>
-		                            <span class="name"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
-		                            <p>тел.: <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
-		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
-		                            <p class="skype"><a href="skype:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
-		                            <p><a href="mailto:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
+		                            <span class="name"><?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
+		                            <p>тел.: <?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
+		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
+		                            <p class="skype"><a href="skype:<?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
+		                            <p><a href="mailto:<?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2753,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
 		                        </li>
 							<?php } ?>
 	                    </ul>
@@ -74,7 +74,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="#">Как добраться</a></p>		           
+						<p><a href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Москве</b></p>
@@ -101,13 +101,13 @@
 				    <div class="contact-list">
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
-						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="#">Как добраться</a></p>		           
+						<p><a href="javascript:void(0)" class="button">Напишите нам</a></p>
+						<p><a href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Китай, г. Хэй-Хэ</b></p>
 	                    <ul>
-							<?php for($i = 0;get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+							<?php for($i = 0;get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
 								{?>
 		                        <li>
 		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>

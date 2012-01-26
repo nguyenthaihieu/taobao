@@ -26,6 +26,25 @@ function initScripts()
 	    var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
         var blogUrl = "<?php bloginfo('url'); ?>";
     </script>
+	
+	<script type="text/javascript">
+       
+jQuery(document).ready(function() {
+
+        jQuery("#fancys").fancybox({
+
+    'titlePosition'  : 'inside',
+    
+    'transitionIn'  : 'none',
+   
+    'transitionOut'  : 'none',
+    'type' : 'image'
+    
+   
+   });
+
+       });
+</script>
 	<!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
 <?php
     wp_register_script('timer',
@@ -66,7 +85,15 @@ function initScripts()
     wp_register_script('jquery.mousewheel',
        get_template_directory_uri() . '/js/jquery.mousewheel.js',
        array('jquery'));
-
+	 wp_register_script('jquery.easing-1.3.pack',
+       get_template_directory_uri() . '/fancybox/jquery.easing-1.3.pack.js',
+       array('jquery'));
+	wp_register_script('jquery.fancybox-1.3.4.pack',
+       get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.pack.js',
+       array('jquery'));  
+	wp_register_script('jquery.fancybox-1.3.4',
+       get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.js',
+       array('jquery'));     
     wp_register_script('main',
        get_template_directory_uri() . '/js/main.js',
        array('jquery'));
@@ -83,6 +110,9 @@ function initScripts()
     wp_enqueue_script('cusel');
     wp_enqueue_script('jScrollPane');
     wp_enqueue_script('jquery.mousewheel');
+    wp_enqueue_script('jquery.easing-1.3.pack');
+    wp_enqueue_script('jquery.fancybox-1.3.4.pack');
+    wp_enqueue_script('jquery.fancybox-1.3.4');
     wp_enqueue_script('main');
 }
 add_action('wp_enqueue_scripts','initScripts');

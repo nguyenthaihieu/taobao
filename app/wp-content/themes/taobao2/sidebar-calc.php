@@ -1,11 +1,7 @@
 <h2>Внутренний курс <span>Taobao.ru.com:</span></h2>
 <span class="calcul"><?php echo get_option('taobao_cny', 'N.A.');?></span>
 
-<div class="calcul">
-    <a href="<?php bloginfo('url'); ?>/?page_id=1693">Калькулятор</a>
-
-    <p>Рассчитать стоимость товаров с учетом доставки.</p>
-</div>
+<a class="calcul" href="<?php bloginfo('url'); ?>/?page_id=1693"></a>
 <div class="top-s"></div>
 <div class="body-s">
     <h2>Русский поиск <span>на Taobao.com:</span></h2>

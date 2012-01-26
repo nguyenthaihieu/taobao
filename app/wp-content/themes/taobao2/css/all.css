@@ -581,22 +581,16 @@ div.slaider-box div.slaide p{
 }
 
 
-#container div.right div.calcul{
+#container div.right a.calcul{
 	background:url(../img/cal.png) no-repeat;
 	width:150px;
 	padding:7px 0 0 80px;
-	height:77px;
+	height:84px;
+	display:block;
 	margin:0 0 15px;
 }
 
-#container div.right div.calcul:hover{
-	background-position:0 100%;
-}
 
-#container div.right div.calcul a{
-	font-size:18px;
-	color:#000;
-}
 
 #container div.right div.calcul p{
 	margin:0;

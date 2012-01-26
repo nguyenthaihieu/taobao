@@ -6,9 +6,11 @@
 <!--[if IE 9 ]>    <html lang="ru" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
 <head>
-    <title><?php wp_title() ?></title>
+    <title><?php wp_title() ?></title>    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>/fancybox/jquery.fancybox-1.3.4.css" type="text/css"/>
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
+	
     <?php wp_head(); ?>
 </head>
 <body>
@@ -66,7 +68,7 @@
 				         </div>
 						 <ul class="contact">
 							<li><img src="http://web.icq.com/whitepages/online?icq=<?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_1_fieldID_3_numInSet_0',true); ?>&img=5" alt="Статус <?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_1_fieldID_3_numInSet_0',true); ?>" /><?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_1_fieldID_3_numInSet_0',true); ?></li>
-							<li class="mail"><a href="<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a></li>
+							<li class="mail"><a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a></li>
 							<li class="skype"><a href="skype:<?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_1_fieldID_4_numInSet_0',true);?>"><?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_1_fieldID_4_numInSet_0',true);?></a></li>					
 						</ul>
 				    </div>  
@@ -77,7 +79,7 @@
 				         </div>
 						 <ul class="contact">
 							<li><img src="http://web.icq.com/whitepages/online?icq=<?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_2_fieldID_3_numInSet_0',true); ?>&img=5" alt="Статус <?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_2_fieldID_3_numInSet_0',true); ?>" /><?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_2_fieldID_3_numInSet_0',true); ?></li>
-							<li class="mail"><a href="<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a></li>
+							<li class="mail"><a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a></li>
 							<li class="skype"><a href="skype:<?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_2_fieldID_4_numInSet_0',true);?>"><?php echo get_post_meta(2701,'_simple_fields_fieldGroupID_2_fieldID_4_numInSet_0',true);?></a></li>					
 						</ul>
 				    </div>             

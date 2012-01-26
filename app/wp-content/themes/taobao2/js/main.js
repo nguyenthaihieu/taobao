@@ -1,7 +1,6 @@
 jQuery(function($) {
     initCounter();
     setInterval(initCounter, 1000);
-
     initCarousel();
     initSlider();
     initSelect();
@@ -10,7 +9,7 @@ jQuery(function($) {
 
     $('#do').click(function(){
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
-    })
+    })	
 
     function initCarousel() {
         $("div.slaider-video").jCarouselLite({
@@ -18,6 +17,13 @@ jQuery(function($) {
             btnPrev: "div.videos span.prev",
             speed: 400,
             visible: 3,
+            circular: false
+        });
+		$("#content div.slaider-video").jCarouselLite({
+            btnNext: "#content div.videos span.next",
+            btnPrev: "#content div.videos span.prev",
+            speed: 400,
+            visible: 2,
             circular: false
         });
 
@@ -96,7 +102,7 @@ jQuery(function($) {
     function initSelect() {
         var params = {
             changedEl: "#search_country",
-            visRows: 5,
+            visRows: 16,
             scrollArrows: true
         }
 
@@ -107,4 +113,7 @@ jQuery(function($) {
     function initCounter() {
         $('#counter').load(blogUrl + '/?timer');
     }
+	
+	
 });
+
