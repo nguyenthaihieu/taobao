@@ -61,30 +61,35 @@ function shortcode_howItWorks(){
 add_shortcode( 'spiral', 'shortcode_spiral' );
 
 function shortcode_spiral(){
+    global $post;
+    wp_reset_query();
+    rewind_posts();
+    if (have_posts()) : while (have_posts()) : the_post();
+        echo get_post_meta($post->ID, "num-2", true);
     return '<div class="steps step-next">
                 <div class="num-1">
                     <span class="num">2</span>
-                    <p>Получаем товар на нашем складе в Китае (с момента оплаты проходит от 4 до 10 дней)</p>
+                    <p>'.get_post_meta($post->ID, "num-2", true).'</p>
                 </div>
                 <div class="num-2">
                     <span class="num">1</span>
-                    <p>Закупаем товар в течение <br/> одного рабочего дня.</p>
+                    <p>'.get_post_meta($post->ID, "num-1", true).'</p>
                 </div>
 
                 <div class="num-4">
                     <span class="num">3</span>
-                    <p>Все взвешиваем, и сообщаем, сколько необходимо заплатить за доставку в Россию – это второй денежный перевод.</p>
+                    <p>'.get_post_meta($post->ID, "num-3", true).'</p>
                 </div>
                 <div class="num-5">
                     <span class="num">4</span>
-                    <p>Оплатите доставку из Китая в Россию (при получении ваших вещей на нашем складе в Китае все взвешивается. </p>
+                    <p>'.get_post_meta($post->ID, "num-4", true).'</p>
                 </div>
                 <div class="num-6">
                     <span class="num">5</span>
-                    <p>Далее, любым удобным для вас способом, товар отправляется в ваш город.</p>
+                    <p>'.get_post_meta($post->ID, "num-5", true).'</p>
                 </div>
             </div>
             <div class="color-text">
-                <p>Для того чтобы воспользоваться нашим предложением и получить товары оптом из Китая, составьте заявку, заполнив форму для заказа, и отправьте на почту <a href="mailto:opt@taobao.ru.com">opt@taobao.ru.com</a> либо свяжитесь с нами любым удобным способом!</p>
+                <p>'.get_post_meta($post->ID, "Текст под схемой", true).'</p>
             </div>'; ?>
-<?php }
+<?php endwhile; endif; wp_reset_query(); }
