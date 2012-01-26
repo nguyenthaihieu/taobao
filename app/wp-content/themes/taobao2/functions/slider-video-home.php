@@ -38,7 +38,8 @@
                     </a>
                 </div>
                 <div class="text-video">
-                    <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"><?php the_title(); ?></a></p>
+                    <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
+                          rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
                 </div>
             </li>
             <?php endwhile; ?>
