@@ -64,7 +64,6 @@ function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
 
     }
 
-
     minutesLeft = appZero(minutesLeft);
     hoursLeft = appZero(hoursLeft);
     if(dot==":"){dot=" "}else{dot=":"}

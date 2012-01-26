@@ -2667,7 +2667,7 @@ div.cuselText{
 	float:left;
 	padding:0 12px 0 0;
 	margin:1px 0 0 6px;
-	background:url(./img/arow.png) no-repeat 100% 6px;
+	background:url(img/arow.png) no-repeat 100% 6px;
 }
 
 div.cusel-scroll-pane{
@@ -2717,7 +2717,7 @@ div.wid100{
 .jScrollPaneDrag,
 .jScrollArrowUp,
 .jScrollArrowDown {
-	background: url(../images/selects-2.png) no-repeat;
+	background: url(img/selects-2.png) no-repeat;
 }
 .cusel { /* общий вид селекта включая стрелку справа */
 	height: 26px;
@@ -2780,7 +2780,7 @@ div.wid100{
 .cusel:focus .cuselFrameRight,
 .cuselFocus,
 .cuselFocus .cuselFrameRight {
-	background-image: url(../images/selects-focus.png);
+	background-image: url(img/selects-focus.png);
 }
 
 .cuselOpen {
@@ -2792,7 +2792,7 @@ div.wid100{
 */
 .classDisCusel,
 .classDisCusel .cuselFrameRight {
-	background-image: url(../images/selects-2-dis.png) !important;
+	background-image: url(img/selects-2-dis.png) !important;
 	cursor: default;
 	color: #ccc;
 }

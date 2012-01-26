@@ -58,26 +58,3 @@ function viewsRefresh()
 }
 
 add_action('init', 'viewsRefresh');
-
-/**
- * Prints scripts for ajax requests for the count of viewers
- * @author Vladislav Fedorischev <vlad_graf@mail.ru>
- */
-function ajaxCall()
-{
-    ?>
-<script>
-    $(function() {
-        function myFunction() {
-            $('#counter').load('<?php bloginfo('url'); ?>/?timer');
-        }
-
-        setInterval(myFunction, 1000);
-        myFunction();
-    })
-</script>
-<?php
-    return true;
-}
-
-add_action('wp_enqueue_scripts', 'ajaxCall');
