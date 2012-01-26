@@ -35,6 +35,7 @@
             <span class="slogan"><?php the_content(); ?></span>
             <?php echo do_shortcode('[contact-form 2 "Обратная связь"]') ?>
         </div>
+        </div>
         <div class="bottom"></div>
         <?php endwhile; else: ?>
         <p><?php _e('По вашему запросу ничего нет.'); ?></p>
