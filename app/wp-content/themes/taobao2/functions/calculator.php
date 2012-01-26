@@ -30,8 +30,11 @@ function submenu_calculator_callback () {
                 $pre_code = (isset($_POST['pre_code']))?$_POST['pre_code']:NULL;
                 $post_code = (isset($_POST['post_code']))?$_POST['post_code']:NULL;
                 $result = calculator_set_param($_POST['label'], $pre_code, $post_code);
-            } elseif ($action[0] == 'save' && isset($_POST['formula'])) {
-                update_option('calculator_formula', strtolower(trim($_POST['formula'])));
+            } elseif ($action[0] == 'save') {
+                $formula = (isset($_POST['formula']))?$_POST['formula']:'';
+                $formula_opt = (isset($_POST['formula_opt']))?$_POST['formula_opt']:'';
+                update_option('calculator_formula', strtolower(trim($formula)));
+                update_option('calculator_formula_opt', strtolower(trim($formula_opt)));
             }
         }
     }
@@ -44,7 +47,7 @@ function submenu_calculator_callback () {
             .calculator_admin_form table {width:100%;margin:0;}
             .calculator_admin_form table input[type=text] {width:100%;}
             .calculator_admin_form table button[type=submit] {width:38%;}
-            #formula_field {margin-left:6px;width:300px;}
+            .calculator_admin_formula input {margin-left:6px;width:300px;}
         </style>
         
         <div class="wrap">
@@ -95,9 +98,26 @@ function submenu_calculator_callback () {
                 </table>
             </form>
             
-            <form class="calculator_admin_form" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                <label for="formula_field"><b>Formula</b></label>
-                <input id="formula_field" type="text" name="formula" value="<?php echo get_option('calculator_formula'); ?>" />
+            <form class="calculator_admin_formula" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="formula_field"><b>Формула</b></label>
+                        </td>
+                        <td>
+                            <input id="formula_field" type="text" name="formula" value="<?php echo get_option('calculator_formula'); ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="formula_opt_field"><b>Формула для опта</b></label>
+                        </td>
+                        <td>
+                            <input id="formula_opt_field" type="text" name="formula_opt" value="<?php echo get_option('calculator_formula_opt'); ?>" />
+                        </td>
+                    </tr>
+                </table>
+                
                 <button type="submit" name="action" class="button-primary" value="save">Save</button>
                 <p class="description">Вы можете вставить в формулу переменную Y для <br />
                 использования стоимости одного юаня в рублях.</p>
