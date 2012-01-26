@@ -118,3 +118,4 @@ return '<span class="block"><a href="'. get_permalink($post->ID) . '">' . ' Чи
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+require_once 'functions/calculator.php';
