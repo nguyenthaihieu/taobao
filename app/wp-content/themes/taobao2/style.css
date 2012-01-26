@@ -2873,20 +2873,64 @@ div.wid100{
 	overflow: hidden;
 }
 
+#content div.allbox ul.tabs{
+	width:100%;
+	overflow:hidden;
+}
 
+#content div.allbox ul.tabs li{
+	margin:0 15px 0 0;
+	float:left;
+	height:33px;
+	cursor:pointer;
+	padding:0 0 0 9px;
+}
 
+#content div.t5,#content div.t6,#content div.t7,#content div.t8{
+	width:100%;
+	overflow:hidden;
+	padding:20px 0 0;
+	display:none;
+}
 
+#content div.allbox ul.tabs li b{
+	font-size:12px;
+	font-weight:normal;
+	color:#0579cb;
+	border-bottom:1px dotted #0579cb;
+	float:left;
+	font-style:normal;
+	padding:5px 0 0;
+	
+}
 
+#content div.allbox ul.tabs li span{
+	padding:0 10px 0 0;
+	height:33px;
+	float:left;
+}
 
+#content div.allbox ul.tabs li.tab-current{
+	background:url(img/tab-current.png) no-repeat;
+}
 
+#content div.allbox ul.tabs li.tab-current i{
+	background:url(img/tab-arow.png) no-repeat 50% 0;
+	height:33px;
+	float:left;
+	
+}
 
+#content div.allbox ul.tabs li.tab-current b{
+	color:#000;
+	border:0;
+}
 
+#content div.allbox ul.tabs li.tab-current span{
+	background:url(img/tab-span.png) no-repeat 100% 0;
+}
 
-
-
-
-
-
-
-
-
+#content div.contact-list li p img{
+	float:left;
+	margin:0 7px 0 0;
+}

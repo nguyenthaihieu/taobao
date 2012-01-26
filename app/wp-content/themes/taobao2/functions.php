@@ -97,6 +97,70 @@ function optionstext()
     register_post_type('optionstext',$eventargs);
 }
 
+add_action('init', 'contact');
+
+function contact()
+{
+
+    $eventlabels = array(
+        'name' => 'Контакты',
+        'singular_name' => 'contact',
+        'add_new' => 'Добавить контакт',
+        'add_new_item' => 'Добавить контакт',
+        'edit_item' => 'Добавить новую запись',
+        'new_item' => 'Новая запись',
+        'view_item' => 'Показать',
+        'search_items' => '',
+        'not_found' =>  '',
+        'not_found_in_trash' => '',
+        'parent_item_colon' => '',
+        'menu_name' => 'Контакты',
+        'all_items' => 'Все контакты'
+
+    );
+    $eventargs = array(
+        'labels' => $eventlabels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor'));
+
+    register_post_type('contact',$eventargs);
+}
+
+register_taxonomy('contact-category',
+    array(
+        0 => 'contact',
+    ),
+    array('hierarchical' => true,
+        'label' => 'Categories',
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'Slug'),
+        'singular_label' => 'Category'
+    )
+);
+
+register_taxonomy('contact-tags',
+    array(
+        0 => 'contact',
+    ),
+    array('hierarchical' => false,
+        'label' => 'Tags',
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'Slug'),
+        'singular_label' => 'Tag'
+    )
+);
+
 // Load main options panel file
 require_once (TEMPLATEPATH . '/functions/admin-menu.php');
 

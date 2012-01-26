@@ -6,127 +6,126 @@
         <div class="body">
             <div class="allbox">
 				<ul class="tabs">
-					<li class="t5"><span>г. Благовещенск</span></li>
-					<li class="t6"><span>г. Хабаровск</span></li>
-					<li class="t7"><span>г. Москва</span></li>
-					<li class="t8"><span>Китай, г. Хэй-Хэ</span></li>
+					<li class="t5"><span><i><b>г. Благовещенск</b></i></span></li>
+					<li class="t6"><span><i><b>г. Хабаровск</b></i></span></li>
+					<li class="t7"><span><i><b>г. Москва</b></i></span></li>
+					<li class="t8"><span><i><b>Китай, г. Хэй-Хэ</b></i></span></li>
 				</ul>
-				<div class="t5">1</div>
-				<div class="t6">2</div>
-				<div class="t7">3</div>
-				<div class="t8">4</div>
-                <div class="contact-list">
-                    <h2>Центральный офис в Благовещенске</h2>
-                    <p><span>Амурская область, г.Благовещенск <br/> ул.Чайковского 7, офис 204</span> <a href="#" class="button">Напишите нам</a></p>
-                    <p>тел.: (4162) 00-00-00</p>
-                    <p><a href="#">Как добраться</a></p>
-                </div>
-                <div class="contact-list">
-                    <p><b>Менеджеры в Благовещенске</b></p>
-                    <ul>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-list">
-                    <h2>Офис в Хэй-Хэ</h2>
-                    <p><span>КНР Г. Хэйхэ,ул. Хайлaнд 147. </span> <a href="#" class="button">Напишите нам</a></p>
-                    <p>тел: +86 0456-8278887</p>
-                    <p>сот.:+86 13604568887, 89098191661.</p>
-                    <p><a href="#">Как добраться</a></p>
-                </div>
-                <div class="contact-list">
-                    <p><b>Менеджеры в Хэй-Хэ</b></p>
-                    <ul>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                        <li>
-                            <div class="ava"><img src="<?php bloginfo('template_directory'); ?>/img/ava.jpg" alt="" title="" /></div>
-                            <span class="name">Алина</span>
-                            <p>тел.: (4162) 00-00-00</p>
-                            <p class="qip">611 250 763</p>
-                            <p class="skype"><a href="#">alina.taobao.ru.com</a></p>
-                            <p><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
-                        </li>
-                    </ul>
-                </div>
-                <form action="" method="post">
-                    <div class="text-form">
-                        <h2>Форма обратной связи:</h2>
-                        <p>После того, как вы заполнили форму заказа, отправьте ее нам при помощи этой формы, указав при этом свои контактные данные. Менеджер свяжется с вами в течение суток.</p>
-                    </div>
-                    <div class="item">
-                        <p><em>Поля, отмеченные *, обязательны для заполнения.</em></p>
-                    </div>
-                    <div class="item">
-                        <label>ФИО: <em>*</em></label>
-                        <input type="text" class="text" />
-                    </div>
-                    <div class="item">
-                        <label>Ваш e-mail: <em>*</em></label>
-                        <input type="text" class="text" />
-                    </div>
-                    <div class="item">
-                        <label>Контактный телефон: <em>*</em></label>
-                        <input type="text" class="text" />
-                    </div>
-                    <div class="item">
-                        <label>Ваш город, область, регион:</label>
-                        <input type="text" class="text" />
-                    </div>
-                    <div class="item">
-                        <label>Другие средства связи (ICQ, Skype, Mail.ru-агент и т.п.):</label>
-                        <input type="text" class="text" />
-                    </div>
-                    <div class="item">
-                        <label>Ваш город, область, регион:</label>
-                        <textarea></textarea>
-                    </div>
-                    <div class="item">
-                        <label>Прикрепить заполненную форму заказа (только *.xls *.xlsx)</label>
-                        <input class="file" type="file" />
-                    </div>
-                    <div class="item">
-                        <input type="submit" class="sub" value="" />
-                    </div>
-                </form>
+				<div class="t5">					
+				<?php query_posts('post_type=contact&contact-category=g-blagoveshhensk'); ?>
+				<?php while (have_posts()) : the_post(); ?>				
+				    <div class="contact-list">
+						<h2><?php the_title(); ?></h2>
+				        <?php the_content(); ?>		
+						<p><a href="#" class="button">Напишите нам</a></p>
+						<p><a href="#">Как добраться</a></p>		           
+				    </div>
+					<div class="contact-list">
+	                    <p><b>Менеджеры в Благовещенске</b></p>
+	                    <ul>
+							<?php for($i = 0;get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+								{?>
+		                        <li>
+		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>
+		                            <span class="name"><?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
+		                            <p>тел.: <?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
+		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
+		                            <p class="skype"><a href="skype:<?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
+		                            <p><a href="mailto:<?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2750,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
+		                        </li>
+							<?php } ?>
+	                    </ul>
+	                </div>
+				<?php endwhile; ?>
+			    <?php wp_reset_query(); ?>  	                
+				</div>
+				<div class="t6">
+				<?php query_posts('post_type=contact&contact-category=g-xabarovsk'); ?>
+				<?php while (have_posts()) : the_post(); ?>				
+				    <div class="contact-list">
+						<h2><?php the_title(); ?></h2>
+				        <?php the_content(); ?>		
+						<p><a href="#" class="button">Напишите нам</a></p>
+						<p><a href="#">Как добраться</a></p>		           
+				    </div>
+					<div class="contact-list">
+	                    <p><b>Менеджеры в г. Хабаровск</b></p>
+	                    <ul>
+							<?php for($i = 0;get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+								{?>
+		                        <li>
+		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>
+		                            <span class="name"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
+		                            <p>тел.: <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
+		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
+		                            <p class="skype"><a href="skype:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
+		                            <p><a href="mailto:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
+		                        </li>
+							<?php } ?>
+	                    </ul>
+	                </div>
+				<?php endwhile; ?>
+			    <?php wp_reset_query(); ?>
+				</div>
+				<div class="t7">
+				<?php query_posts('post_type=contact&contact-category=g-moskva'); ?>
+				<?php while (have_posts()) : the_post(); ?>				
+				    <div class="contact-list">
+						<h2><?php the_title(); ?></h2>
+				        <?php the_content(); ?>		
+						<p><a href="#" class="button">Напишите нам</a></p>
+						<p><a href="#">Как добраться</a></p>		           
+				    </div>
+					<div class="contact-list">
+	                    <p><b>Менеджеры в Москве</b></p>
+	                    <ul>
+							<?php for($i = 0;get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+								{?>
+		                        <li>
+		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>
+		                            <span class="name"><?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
+		                            <p>тел.: <?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
+		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
+		                            <p class="skype"><a href="skype:<?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
+		                            <p><a href="mailto:<?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
+		                        </li>
+							<?php } ?>
+	                    </ul>
+	                </div>
+				<?php endwhile; ?>
+			    <?php wp_reset_query(); ?>
+				</div>
+				<div class="t8">
+				<?php query_posts('post_type=contact&contact-category=kitaj-g-xej-xe'); ?>
+				<?php while (have_posts()) : the_post(); ?>				
+				    <div class="contact-list">
+						<h2><?php the_title(); ?></h2>
+				        <?php the_content(); ?>		
+						<p><a href="#" class="button">Напишите нам</a></p>
+						<p><a href="#">Как добраться</a></p>		           
+				    </div>
+					<div class="contact-list">
+	                    <p><b>Менеджеры в Китай, г. Хэй-Хэ</b></p>
+	                    <ul>
+							<?php for($i = 0;get_post_meta(2751,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)!=0;$i++) 
+								{?>
+		                        <li>
+		                            <div class="ava"><img src="<?=wp_get_attachment_url(get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_1_numInSet_'.$i,true)) ?>" alt="" title="" /></div>
+		                            <span class="name"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_2_numInSet_'.$i,true); ?></span>
+		                            <p>тел.: <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_8_numInSet_'.$i,true);?></p>
+		                            <p><img src="http://web.icq.com/whitepages/online?icq=<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?>&img=5" alt="Статус <?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_',true); ?>" /><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_3_numInSet_'.$i,true); ?></p>
+		                            <p class="skype"><a href="skype:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?>"><?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_4_numInSet_'.$i,true);?></a></p>
+		                            <p><a href="mailto:<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_5_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo1.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_6_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/v.jpg" alt="" title="" /></a> <a href="<?=get_post_meta(2752,'_simple_fields_fieldGroupID_7_fieldID_7_numInSet_'.$i,true);?>"><img src="<?php bloginfo('template_directory'); ?>/img/f.jpg" alt="" title="" /></a></p>
+		                        </li>
+							<?php } ?>
+	                    </ul>
+	                </div>
+				<?php endwhile; ?>
+			    <?php wp_reset_query(); ?>
+				</div>                
             </div>
+            <?php echo do_shortcode('[contact-form 2 "Обратная связь"]') ?>
+        </div>
         </div>
         <div class="bottom"></div>
     </section>
@@ -139,4 +138,5 @@
         </div>
     </div>
 </section>
+</div>
 <?php get_footer();?>
