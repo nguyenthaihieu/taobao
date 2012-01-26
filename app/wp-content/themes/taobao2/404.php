@@ -2,11 +2,11 @@
 <div class="width">
     <section id="container">
         <section id="content">
-            <h2 class="title">Error 404 - Not Found</h2>
+            <h2 class="title">Ошибка 404 страница не найдена</h2>
             <div class="top"></div>
             <div class="body">
                 <div class="page">
-                    <h3>Error 404 - Not Found Please <a href="<?php bloginfo('home'); ?>" Click here</a> to return to our home page.</h3>
+                    <h3>Ошибка 404 страница не найдена <a href="<?php bloginfo('home'); ?>" Переход на главную </a></h3>
                 </div>
                 </div>
                 <div class="bottom"></div>
