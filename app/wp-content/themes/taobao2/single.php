@@ -13,12 +13,12 @@ function catch_that_image() {
   return $matches[1][1];
 }
 ?>
-<body>	
+
 	<div class="width">
 		<section id="container">
 			<section id="content">
 				<h2 class="title">Блог Taobao.ru.com</h2>
-				<span class="post">Всего записей: 137</span>
+				<span class="post"></span>
 				<?php rewind_posts(); $i=1; ?>  
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<div class="top"></div>
