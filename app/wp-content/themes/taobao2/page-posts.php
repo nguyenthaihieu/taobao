@@ -11,7 +11,7 @@ $morenumber="%";
 		<section id="container">
 			<section id="content">
 				<h2 class="title">Блог Taobao.ru.com</h2>
-				<span class="post">Всего записей: 137</span>
+				<span class="post">Всего записей: <?php echo get_category('4')->category_count;?></span>
 				<div class="top"></div>
 				<div class="body">
 					<?php query_posts( array( 'cat' => 4, 'paged' => get_query_var('paged') ) );?>
