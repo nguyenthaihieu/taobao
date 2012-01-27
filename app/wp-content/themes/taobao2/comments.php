@@ -38,21 +38,25 @@
 			</div>
 			<div class="item">				
 				<label for="author"><?php _e('Name'); ?> <em>*</em></label>
-				<input type="text" name="author" id="author" class="text" value="<?php echo $comment_author; ?>" size="28" tabindex="1" />
+				<input type="text" name="author" id="author" class="text requre" value="<?php echo $comment_author; ?>" size="28" tabindex="1" />
+				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
 			</div>
 		 
 			<div class="item">
 				<label for="email"><?php _e('E-mail'); ?> <em>*</em></label>
-				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2" class="text" />				
+				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2" class="text requre" />		
+				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>		
 			</div>		 
 			<div class="item">				
-				<label for="url"><?php _e('Город'); ?></label>
-				<input type="text" name="url" id="url" value="" size="28" tabindex="3" class="text" />
+				<label for="url"><?php _e('Город'); ?></label> 
+				<input type="text" name="url" id="url" value="" size="28" tabindex="3" class="text requre" />
+				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
 			</div>		 
 			<?php endif; ?>		 
 				<div class="item">
 					<label for="comment"><?php _e('Коментарий'); ?></label>
-					<textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea"></textarea>
+					<textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea requre"></textarea>
+					<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
 				</div>		 
 				<div class="item">
 					<input name="submit" id="submit" type="submit" tabindex="5" value="<?php _e('Отправить'); ?>" class="cbutton" />

@@ -93,7 +93,10 @@ jQuery(document).ready(function() {
        array('jquery'));  
 	wp_register_script('jquery.fancybox-1.3.4',
        get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.js',
-       array('jquery'));     
+       array('jquery')); 
+	wp_register_script('valid',
+       get_template_directory_uri() . '/js/valid.js',
+       array('jquery'));       
     wp_register_script('main',
        get_template_directory_uri() . '/js/main.js',
        array('jquery'));
@@ -113,6 +116,7 @@ jQuery(document).ready(function() {
     wp_enqueue_script('jquery.easing-1.3.pack');
     wp_enqueue_script('jquery.fancybox-1.3.4.pack');
     wp_enqueue_script('jquery.fancybox-1.3.4');
+    wp_enqueue_script('valid');
     wp_enqueue_script('main');
 }
 add_action('wp_enqueue_scripts','initScripts');

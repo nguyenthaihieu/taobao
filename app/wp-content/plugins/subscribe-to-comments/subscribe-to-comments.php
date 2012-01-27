@@ -84,8 +84,10 @@ if ( !$sg_subscribe->current_viewer_subscription_status() ) :
 	<p class="solo-subscribe-to-comments">
 	<?php _e('Подписаться по e-mail:', 'Подписаться'); ?>
 	<br />
-	<label for="solo-subscribe-email"><?php _e('E-Mail:', 'subscribe-to-comments'); ?>
-	<input type="text" name="email" id="solo-subscribe-email" size="22" value="<?php echo $user_email; ?>" /></label>
+	<div class="item">
+	<label for="solo-subscribe-email"><?php _e('E-Mail:', 'subscribe-to-comments'); ?></label>
+	<input type="text" name="email" class="text" id="solo-subscribe-email" size="22" value="<?php echo $user_email; ?>" />
+	</div>
 	<input class="cbutton" type="submit" name="submit" value="<?php _e('Подписаться', 'subscribe-to-comments'); ?>" />
 	</p>
 	</form>
