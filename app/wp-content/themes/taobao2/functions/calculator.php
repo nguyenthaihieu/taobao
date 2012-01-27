@@ -3,6 +3,8 @@
  * Калькулятор стоимости покупки и доставки товара
  */
 
+// Интерфейс настройки калькулятора
+
 add_action('admin_menu', 'register_submenu_calculator');
 
 function register_submenu_calculator () {
@@ -11,7 +13,7 @@ function register_submenu_calculator () {
 
 function submenu_calculator_callback () {
     global $title;
-    
+
     // Сохраняем, изменяем или удаляем данныне если нам что-то передали
     if (isset($_POST) && isset($_POST['action'])) {
         $result = true;
@@ -35,10 +37,22 @@ function submenu_calculator_callback () {
                 $formula_opt = (isset($_POST['formula_opt']))?$_POST['formula_opt']:'';
                 update_option('calculator_formula', strtolower(trim($formula)));
                 update_option('calculator_formula_opt', strtolower(trim($formula_opt)));
+
+                if (isset($_POST['calculator_conf_countries'])) {
+                    update_option('calculator_conf_countries', 1);
+                } else {
+                    update_option('calculator_conf_countries', '');
+                }
+
+                if (isset($_POST['calculator_conf_opt'])) {
+                    update_option('calculator_conf_opt', 1);
+                } else {
+                    update_option('calculator_conf_opt', '');
+                }
             }
         }
     }
-    
+
     // Собираем существующие параметры
     $params = calculator_get_params();
     ?>
@@ -48,10 +62,11 @@ function submenu_calculator_callback () {
             .calculator_admin_form table input[type=text] {width:100%;}
             .calculator_admin_form table button[type=submit] {width:38%;}
             .calculator_admin_formula input {margin-left:6px;width:300px;}
+            .calculator_admin_formula label {font-weight:bold;}
         </style>
-        
+
         <div class="wrap">
-            
+
             <div id="icon-options-general" class="icon32"><br></div>
             <h2><?php echo $title; ?></h2>
 
@@ -97,12 +112,12 @@ function submenu_calculator_callback () {
                     </tr>
                 </table>
             </form>
-            
+
             <form class="calculator_admin_formula" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
                 <table>
                     <tr>
                         <td>
-                            <label for="formula_field"><b>Формула</b></label>
+                            <label for="formula_field">Формула</label>
                         </td>
                         <td>
                             <input id="formula_field" type="text" name="formula" value="<?php echo get_option('calculator_formula'); ?>" />
@@ -110,14 +125,30 @@ function submenu_calculator_callback () {
                     </tr>
                     <tr>
                         <td>
-                            <label for="formula_opt_field"><b>Формула для опта</b></label>
+                            <label for="formula_opt_field">Формула для опта</label>
                         </td>
                         <td>
                             <input id="formula_opt_field" type="text" name="formula_opt" value="<?php echo get_option('calculator_formula_opt'); ?>" />
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <label for="calculator_conf_countries">Отображать список городов</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="calculator_conf_countries" value="1" id="calculator_conf_countries" <?php if (get_option('calculator_conf_countries')): ?>checked <?php endif; ?>/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="calculator_conf_opt">Отображать выбор опта</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="calculator_conf_opt" value="1" id="calculator_conf_opt" <?php if (get_option('calculator_conf_opt')): ?>checked <?php endif; ?>/>
+                        </td>
+                    </tr>
                 </table>
-                
+
                 <button type="submit" name="action" class="button-primary" value="save">Save</button>
                 <p class="description">Вы можете вставить в формулу переменную Y для <br />
                 использования стоимости одного юаня в рублях.</p>
@@ -135,7 +166,7 @@ function calculator_get_params () {
     $query = "SELECT `option_name`, `option_value` FROM wp_options WHERE "
         . "`option_name` LIKE 'calculator_p%' ORDER BY `option_id`;";
     $params = $wpdb->get_results($query);
-    
+
     // Преобразуем массив в удобную форму
     $new_params = array();
     foreach ($params as $param) {
@@ -145,7 +176,7 @@ function calculator_get_params () {
             "pre_code" => $options[0],
             "post_code" => $options[1]);
     }
-    
+
     return $new_params;
 }
 
@@ -158,17 +189,17 @@ function calculator_get_params () {
  * @return boolean Возвращает false если при сохранении возникли ошибки и true в ином случае
  */
 function calculator_set_param ($label, $pre_code = NULL, $post_code = NULL, $slug = NULL) {
-    
+
     // Без лейбела - не пустим!
     if (empty($label)) {
         return false;
     }
-    
+
     // Преобразуем данные в необходимый нам формат
     $pre_code = htmlspecialchars($pre_code);
     $post_code = htmlspecialchars($post_code);
     $label = htmlspecialchars($label);
-    
+
     // Если slug нет - то мы создадим новый параметр, а если есть возьмем его номер
     if (is_null($slug)) {
         $number = get_option('calculator_count_params', 0);
@@ -179,11 +210,11 @@ function calculator_set_param ($label, $pre_code = NULL, $post_code = NULL, $slu
             return false;
         }
     }
-    
+
     // Формируем строку для записи и сохраняем в БД новое значение
     $new_value = $pre_code . "<" . $post_code . "<" . $label;
     update_option('calculator_' . $slug, $new_value);
-    
+
     return true;
 }
 
@@ -195,3 +226,43 @@ function calculator_delete_param ($slug) {
     global $wpdb;
     $wpdb->query("DELETE FROM $wpdb->options WHERE `option_name` = 'calculator_" . $slug . "'");
 }
+
+// Алгоритм калькулятора
+
+/**
+ * Функция расчитывает стоимость заказа
+ * @param array $params Параметры заказа
+ * @param boolean $opt Передать true если заказ оптовый
+ * @return mixed Return number or false
+ */
+function calculate ($params, $opt = false) {
+    // Выбираем формулу
+    $formula = 'calculator_formula';
+    if ($opt) {
+        $formula .= '_opt';
+    }
+    $formula = get_option($formula);
+
+    // Вставляем в формулу параметры
+    $cny = get_option('cny');
+    foreach ($params as $slug => $value) {
+        if (preg_match("/^p[0-9]+$/", $slug)) {
+            $value = trim($value);
+            if (empty($value)) {
+                $value = 0;
+            }
+            $formula = str_replace($slug, $value, $formula);
+        }
+    }
+
+    $formula = str_replace("y", $cny, $formula);
+
+    $result = false;
+    $formula = '$result = ' . $formula . ';';
+    eval($formula);
+
+    return $result;
+}
+
+// Интерфейс пользователя
+
