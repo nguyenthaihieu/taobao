@@ -71,7 +71,7 @@ function catch_that_image() {
 
 							<ul class="rss">
 								<li><a href="<?php bloginfo('rss2_url'); ?>" class="rss">RSS</a></li>
-								<li><a href="#" class="mail">Подписаться по e-mail</a></li>
+								<li><a href="#" class="mail"></a></li>
 							</ul>
 						</div>			
 					</div>					

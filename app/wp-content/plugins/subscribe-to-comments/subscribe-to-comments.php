@@ -82,11 +82,11 @@ if ( !$sg_subscribe->current_viewer_subscription_status() ) :
 	<input type="hidden" name="ref" value="<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . attribute_escape($_SERVER['REQUEST_URI'])); ?>" />
 
 	<p class="solo-subscribe-to-comments">
-	<?php _e('Subscribe without commenting', 'subscribe-to-comments'); ?>
+	<?php _e('Подписаться по e-mail:', 'Подписаться'); ?>
 	<br />
 	<label for="solo-subscribe-email"><?php _e('E-Mail:', 'subscribe-to-comments'); ?>
 	<input type="text" name="email" id="solo-subscribe-email" size="22" value="<?php echo $user_email; ?>" /></label>
-	<input type="submit" name="submit" value="<?php _e('Subscribe', 'subscribe-to-comments'); ?>" />
+	<input class="cbutton" type="submit" name="submit" value="<?php _e('Подписаться', 'subscribe-to-comments'); ?>" />
 	</p>
 	</form>
 
@@ -995,7 +995,7 @@ function sg_subscribe_admin($standalone = false) {
 	<?php $sg_subscribe->hidden_form_fields(); ?>
 
 			<p class="submit">
-			<input type="submit" name="submit" value="<?php _e('Remove Block &raquo;', 'subscribe-to-comments'); ?>" />
+			<input class="cbutton" type="submit" name="submit" value="<?php _e('Remove Block &raquo;', 'subscribe-to-comments'); ?>" />
 			</p>
 			</form>
 		</fieldset>
@@ -1050,7 +1050,7 @@ function sg_subscribe_admin($standalone = false) {
 
 			<p>
 			<input name="email" type="text" id="email" size="40" />
-			<input type="submit" value="<?php _e('Search &raquo;', 'subscribe-to-comments'); ?>" />
+			<input class="cbutton" type="submit" value="<?php _e('Search &raquo;', 'subscribe-to-comments'); ?>" />
 			</p>
 			</form>
 		</fieldset>
@@ -1169,7 +1169,7 @@ function checkAll(form) {
 				</p>
 
 				<p class="submit">
-				<input type="submit" name="submit" value="<?php _e('Remove Selected Subscription(s) &raquo;', 'subscribe-to-comments'); ?>" />
+				<input class="cbutton" type="submit" name="submit" value="<?php _e('Remove Selected Subscription(s) &raquo;', 'subscribe-to-comments'); ?>" />
 				</p>
 				</form>
 		</fieldset>
@@ -1190,7 +1190,7 @@ function checkAll(form) {
 				</p>
 
 				<p class="submit">
-				<input type="submit" name="submit" value="<?php _e('Block Notifications &raquo;', 'subscribe-to-comments'); ?>" />
+				<input class="cbutton" type="submit" name="submit" value="<?php _e('Block Notifications &raquo;', 'subscribe-to-comments'); ?>" />
 				</p>
 				</form>
 		</fieldset>
@@ -1212,7 +1212,7 @@ function checkAll(form) {
 				</p>
 
 				<p class="submit">
-				<input type="submit" name="submit" value="<?php _e('Change E-mail Address &raquo;', 'subscribe-to-comments'); ?>" />
+				<input class="cbutton" type="submit" name="submit" value="<?php _e('Change E-mail Address &raquo;', 'subscribe-to-comments'); ?>" />
 				</p>
 				</form>
 		</fieldset>

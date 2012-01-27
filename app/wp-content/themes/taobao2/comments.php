@@ -60,7 +60,7 @@
 				</div>
 			<?php do_action('comment_form', $post->ID); ?>
 		</form>
-        <?php show_manual_subscription_form(); ?>
+        <?php  show_manual_subscription_form(); ?>
 		<?php endif; ?>
 	</div>
 	<!-- You can start editing here. -->
