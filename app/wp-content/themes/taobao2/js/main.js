@@ -6,7 +6,6 @@ jQuery(function($) {
     initSelect();
     initTabs();
     initTabs2();
-
     $('#do').click(function(){
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
     })	
@@ -113,7 +112,8 @@ jQuery(function($) {
     function initCounter() {
         $('#counter').load(blogUrl + '/?timer');
     }
-	
-	
-});
 
+});
+$(function(){
+    $('a[title=Каталог]').attr('target','_blank');
+})
