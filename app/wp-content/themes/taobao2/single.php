@@ -68,7 +68,7 @@ function catch_that_image() {
 									</div>
 								</div>
 							</form>-->
-							
+
 							<ul class="rss">
 								<li><a href="<?php bloginfo('rss2_url'); ?>" class="rss">RSS</a></li>
 								<li><a href="#" class="mail">Подписаться по e-mail</a></li>

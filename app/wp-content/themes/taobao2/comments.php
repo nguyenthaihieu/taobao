@@ -28,9 +28,9 @@
 		 
 			<?php if ( $user_ID ) : ?>
 		 
-		<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. 
+		<p>Вы вошли как <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.
 		 
-		<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
+		<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Выйти с аккаунта">Выход &raquo;</a></p>
 		 
 			<?php else : ?>
 		 	<div class="item">
@@ -60,6 +60,7 @@
 				</div>
 			<?php do_action('comment_form', $post->ID); ?>
 		</form>
+        <?php show_manual_subscription_form(); ?>
 		<?php endif; ?>
 	</div>
 	<!-- You can start editing here. -->
