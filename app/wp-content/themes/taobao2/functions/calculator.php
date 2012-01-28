@@ -268,7 +268,7 @@ function calculate ($params, $city_coast = 1, $opt = false) {
 // Интерфейс пользователя
 
 function shortcode_taobao_calc ($atts) {
-    $calc = '<div class="calc" style="display:block;"><div class="minus">';
+    $calc = '<div class="calc" style="display:block;width:100%;"><div class="minus">';
     $calc .= '<form action="" method="post" class="color">';
     $calc .= '<div class="text-form"><h2>Калькулятор стоимости доставки</h2><p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p></div>';
 
@@ -304,40 +304,7 @@ function shortcode_taobao_calc ($atts) {
     if (get_option('calculator_conf_opt')) {
         $calc .= '<div class="item"><label>Оптовый заказ <input clsss="chek" name="opt_check" type="checkbox"></label></div>';
     }
-
-/*
-    ?>
-
-        <div class="item">
-            <label>Стоимость товара на таобао (юани)</label>
-            <input type="text" name="cost_china" value="" class="text">
-            <a href="#" class="info"></a>
-        </div>
-        <div class="item">
-            <label>Стоимость доставки по Китаю (юани)</label>
-            <input name="dostavka_china" type="text" class="text" value="">
-            <a href="#" class="info"></a>
-        </div>
-        <div class="item">
-            <label>Вес посылки (кг.)</label>
-            <input name="weight" type="text" value="" class="text">
-        </div>
-        <div class="item">
-            <label>Ваше местоположение</label>
-            <span class="sel_left undefined" style="z-index: 50; "><span class="sel_right"><span class="sel_val">Абакан</span><ul style="display: none; "><li>Абакан</li><li>Анадырь</li><li>Анапа</li><li>Архангельск</li><li>Астрахань</li><li>Барнаул</li><li>Белгород</li><li>Биробиджан</li><li>Благовещенск</li><li>Брянск</li><li>Великий Новгород</li><li>Владивосток</li><li>Владикавказ</li><li>Владимир</li><li>Волгоград</li><li>Вологда</li><li>Воркута</li><li>Воронеж</li><li>Горно-Алтайск</li><li>Грозный</li><li>Дудинка</li><li>Екатеринбург</li><li>Елизово</li><li>Иваново</li><li>Ижевск</li><li>Иркутск</li><li>Йошкар-Ола</li><li>Казань</li><li>Калининград</li><li>Калуга</li><li>Кемерово</li><li>Киров</li><li>Костомукша</li><li>Кострома</li><li>Краснодар</li><li>Красноярск</li><li>Курган</li><li>Курск</li><li>Кызыл</li><li>Липецк</li><li>Магадан</li><li>Магнитогорск</li><li>Майкоп</li><li>Махачкала</li><li>Минеральные Воды</li><li>Мирный</li><li>Москва</li><li>Мурманск</li><li>Мытищи</li><li>Набережные Челны</li><li>Надым</li><li>Назрань</li><li>Нальчик</li><li>Нарьян-Мар</li><li>Нерюнгри</li><li>Нефтеюганск</li><li>Нижневартовск</li><li>Нижний Новгород</li><li>Новокузнецк</li><li>Новороссийск</li><li>Новосибирск</li><li>Новый Уренгой</li><li>Норильск</li><li>Ноябрьск</li><li>Омск</li><li>Орел</li><li>Оренбург</li><li>Пенза</li><li>Пермь</li><li>Петрозаводск</li><li>Петропавловск-Камчатский</li><li>Псков</li><li>Ростов-на-Дону</li><li>Рязань</li><li>Салехард</li><li>Самара</li><li>Санкт-Петербург</li><li>Саранск</li><li>Саратов</li><li>Смоленск</li><li>Сочи</li><li>Ставрополь</li><li>Стрежевой</li><li>Сургут</li><li>Сыктывкар</li><li>Тамбов</li><li>Тверь</li><li>Тольятти</li><li>Томск</li><li>Тула</li><li>Тында</li><li>Тюмень</li><li>Улан-Удэ</li><li>Ульяновск</li><li>Усинск</li><li>Уфа</li><li>Ухта</li><li>Хабаровск</li><li>Ханты-Мансийск</li><li>Холмск</li><li>Чебоксары</li><li>Челябинск</li><li>Череповец</li><li>Черкесск</li><li>Чита</li><li>Элиста</li><li>Южно-Сахалинск</li><li>Якутск</li><li>Ярославль</li><li>Алтайский край</li><li>Амурская область</li><li>Архангельская область</li><li>Астраханская область</li><li>Белгородская область</li><li>Брянская область</li><li>Владимирская область</li><li>Волгоградская область</li><li>Вологодская область</li><li>Воронежская область</li><li>Еврейская АО</li><li>Забайкальский край</li><li>Ивановская область</li><li>Иркутская область</li><li>Кабардино-Балкарская Республика</li><li>Калининградская область</li><li>Калужская область</li><li>Камчатский край</li><li>Карачаево-Черкесская Республика</li><li>Кемеровская область</li><li>Кировская область</li><li>Костромская область</li><li>Краснодарский край</li><li>Красноярский край</li><li>Курганская область</li><li>Курская область</li><li>Ленинградская область</li><li>Липецкая область</li><li>Магаданская область</li><li>Московская область</li><li>Мурманская область</li><li>Ненецкий АО</li><li>Нижегородская область</li><li>Новгородская область</li><li>Новосибирская область</li><li>Омская область</li><li>Оренбургская область</li><li>Орловская область</li><li>Пензенская область</li><li>Пермский край</li><li>Приморский край</li><li>Псковская область</li><li>Республика Адыгея</li><li>Республика Алтай</li><li>Республика Башкортостан</li><li>Республика Бурятия</li><li>Республика Дагестан</li><li>Республика Ингушетия</li><li>Республика Калмыкия</li><li>Республика Карелия</li><li>Республика Коми</li><li>Республика Марий Эл</li><li>Республика Мордовия</li><li>Республика Саха (Якутия)</li><li>Республика Сев.Осетия-Алания</li><li>Республика Татарстан</li><li>Республика Тыва</li><li>Республика Хакасия</li><li>Ростовская область</li><li>Рязанская область</li><li>Самарская область</li><li>Саратовская область</li><li>Сахалинская область</li><li>Свердловская область</li><li>Смоленская область</li><li>Ставропольский край</li><li>Таймырский АО</li><li>Тамбовская область</li><li>Тверская область</li><li>Томская область</li><li>Тульская область</li><li>Тюменская область</li><li>Удмуртская Республика</li><li>Ульяновская область</li><li>Хабаровский край</li><li>Ханты-Мансийский АО</li><li>Челябинская область</li><li>Чеченская республика</li><li>Чувашская Республика</li><li>Чукотский АО</li><li>Ямало-Ненецкий АО</li><li>Ярославская область</li></ul><select name="location" class="sel">
-
-<option value="city--abakan">Абакан</option>
-
-
-            </select></span></span>
-        </div>
-        <div class="item">
-            <label>Оптовый заказ <input clsss="chek" name="opt_check" type="checkbox"></label>
-        </div>
-        
-
-<?php
-*/
+    
     $calc .= '<div class="item"><button type="submit" class="sub"><i>Рассчитать</i></button></div></form>';
 
     // Результаты
@@ -346,7 +313,7 @@ function shortcode_taobao_calc ($atts) {
 
         $calc_params = array();
 
-        $cal_res = "<table><tbody>";
+        $cal_res = '<div class="more"><table><tbody>';
 
         foreach ($_POST as $index => $value) {
             if (preg_match("/^p[0-9]+$/", $index)) {
@@ -377,7 +344,7 @@ function shortcode_taobao_calc ($atts) {
             $cal_res .= "<tr><th>Общая стоимость:</th><td>{$formula_res}</td></tr>";
         }
 
-        $calc .= $cal_res . "</tbody></table>";
+        $calc .= $cal_res . "</tbody></table></div>";
     }
 
 
