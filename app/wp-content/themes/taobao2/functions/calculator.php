@@ -268,7 +268,7 @@ function calculate ($params, $city_coast = 1, $opt = false) {
 // Интерфейс пользователя
 
 function shortcode_taobao_calc ($atts) {
-    $calc = '<div class="calc" style="display:block;position:absolute;z-index:500;"><div class="minus">';
+    $calc = '<div class="calc" style="display:block;"><div class="minus">';
     $calc .= '<form action="" method="post" class="color">';
     $calc .= '<div class="text-form"><h2>Калькулятор стоимости доставки</h2><p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p></div>';
 
