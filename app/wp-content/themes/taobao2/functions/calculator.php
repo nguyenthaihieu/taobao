@@ -268,7 +268,38 @@ function calculate ($params, $city_coast = 1, $opt = false) {
 // Интерфейс пользователя
 
 function shortcode_taobao_calc ($atts) {
-    $calc = '<div class="calc" style="display:block;width:100%;"><div class="minus">';
+
+    $calc = "<script type=\"text/javascript\">function taobaoChangeCity (city) {
+    city = city.split(' - ');
+    jQuery('input[name=calc_coast]').val(city[1]);
+    jQuery('input[name=calc_city]').val(city[0]);
+}
+function taobaoShowCities (country) {
+    country = country.split(' ')[0];
+    var \$cities = \$('ul.city li');
+    \$cities.hide();
+    var \$selected_list = jQuery('ul.city li.'+country);
+    \$selected_list.show();
+    var \$current_city = \$selected_list.first().text();
+
+    taobaoChangeCity(\$current_city);
+
+    jQuery('div.cities .sel_val').text(\$current_city);
+}
+jQuery(function(){
+    \$countries = jQuery('ul.country li');
+    var \$cities = \$('ul.city li');
+    var first_country = \$countries.first().attr('class');
+    taobaoShowCities(first_country);
+    \$countries.click(function(){
+        taobaoShowCities(jQuery(this).attr('class'));
+    });
+    \$cities.click(function(){
+        taobaoChangeCity(jQuery(this).text());
+    });
+});</script>";
+
+    $calc .= '<div class="calc" style="display:block;width:100%;"><div class="minus">';
     $calc .= '<form action="" method="post" class="color">';
     $calc .= '<div class="text-form"><h2>Калькулятор стоимости доставки</h2><p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p></div>';
 
@@ -292,11 +323,11 @@ function shortcode_taobao_calc ($atts) {
         }
         $calc .= '</ul></span></span></div>';
         // Города
-        $calc .= '<div class="item"><input type="hidden" name="calc_coast" value="' . $cities[0]->coast . '" /><input type="hidden" name="calc_city" value="' . $cities[0]->name . '" />'
+        $calc .= '<div class="item cities"><input type="hidden" name="calc_coast" value="' . $cities[0]->coast . '" /><input type="hidden" name="calc_city" value="' . $cities[0]->name . '" />'
             . '<label>Ближайшее местоположение</label>'
-            . '<span class="sel_left undefined" style="z-index: 50; "><span class="sel_right"><span class="sel_val">' . $cities[0]->name . ' - ' . $cities[0]->coast . '</span><ul style="display: none; ">';
+            . '<span class="sel_left undefined" style="z-index: 50; "><span class="sel_right"><span class="sel_val">' . $cities[0]->name . ' - ' . $cities[0]->coast . '</span><ul class="city" style="display: none; ">';
         foreach ($cities as $city) {
-            $calc .= '<li class="country_' . $city->country_id . ' city city_' . $city->id . '">' . $city->name . ' - ' . $city->coast . '</li>';
+            $calc .= '<li class="country_' . $city->country_id . '">' . $city->name . ' - ' . $city->coast . '</li>';
         }
         $calc .= '</ul></span></span></div>';
     }
@@ -347,6 +378,7 @@ function shortcode_taobao_calc ($atts) {
         //$calc .= var_export($formula_res,1);
 
         if ($formula_res) {
+            $formula_res = round($formula_res, 2);
             $class = ($row_ch % 2 == 0)?' class="item1"':'';
             $cal_res .= "<tr{$class}><th class=\"item\">Общая стоимость:</th><td class=\"item1\">{$formula_res}</td></tr>";
             $row_ch++;
