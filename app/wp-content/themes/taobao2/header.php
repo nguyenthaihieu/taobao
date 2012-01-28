@@ -26,6 +26,94 @@
 		<li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_8_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i7.gif" alt="" title="" /></a></li>
 	</ul>
 </div>
+	<div class="form-reg">
+				<div class="shadow"></div>
+				<div class="ctnr">
+					<form action="" method="post">
+						<div class="form-1">
+							<div class="item">
+								<h3>Авторизация</h3>
+							</div>
+							<div class="item">
+								<p>Если вы у нас первый раз, <a href="#">зарегистрируйтесь</a></p>
+							</div>
+							<div class="item">
+								<label>Логин:</label>
+								<input type="password" class="text" />
+							</div>
+							<div class="item">
+								<label>Пароль:</label>
+								<input type="password" class="text" />
+								<label><a href="#" class="show">показать пароль</a></label>
+							</div>
+							<ul>
+								<li><input type="checkbox" class="chek" /> <span>Запомнить меня</span></li>
+								<li><input type="submit" class="sube" value="Войти" /></li>
+								<li><a href="#">Я забыл пароль!</a></li>
+							</ul>
+							<p><a class="hid-form" href="javascript:void(0);" onclick="$('.form-reg').slideToggle('slow');"></a></p>
+						</div>
+					</form>	
+				</div>				
+			</div>
+			<div class="form-reg-2">
+				<div class="shadow"></div>
+				<div class="ctnr">
+					<form action="" method="post">
+						<div class="register-form">
+							<div class="item">
+								<h3>Регистрация <a href="#">Видеоинструкция</a></h3>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="item">
+										<label>Логин: <i>*</i></label>
+										<input type="text" class="text" />
+									</div>
+									<div class="item">
+										<label>Пароль: <i>*</i></label>
+										<input type="password" class="text" />
+										<label><a href="#" class="show">показать пароль</a></label>
+									</div>
+									<div class="item">
+										<label>Ваш e-mail: <i>*</i></label>
+										<input type="text" class="text" />
+									</div>
+									<div class="item">
+										<label>Контактный телефон: <i>*</i></label>
+										<input type="text" class="text" />
+										<span>Домашний, в формате (код города) xx-xx-xx <br/> Сотовый, в формате  +7 (xxx) xxx-xx-xx</span>
+									</div>
+								</div>
+								<div class="left right">
+									<div class="item">
+										<label>Дополнительные контакты (icq. skype и т.п.):</label>
+										<input type="text" class="text" />
+									</div>
+									<div class="item">
+										<label>Фамилия: <i>*</i></label>
+										<input type="text" class="text" />
+									</div>
+									<div class="item">
+										<label>Имя: <i>*</i></label>
+										<input type="text" class="text" />
+									</div>
+									<div class="item">
+										<label>Отчество: <i>*</i></label>
+										<input type="text" class="text" />
+										<label><em>Поля, отмеченные *, обязательны для заполнения</em></label>
+									</div>
+								</div>
+							</div>
+							<p><a class="hid-form" href="javascript:void(0);" onclick="$('.form-reg-2').slideToggle('slow');"></a></p>
+						</div>
+						<ul>
+							<li><input type="checkbox" class="chek" /> <span>Я согласен <a href="#">с условиями работы сервиса</a></span></li>
+							<li><input type="submit" class="sube" value="Зарегистрироваться" /></li>
+						</ul>
+					</form>
+				</div>				
+			</div>
 <div class="width">
     <section id="header">
         <header class="top">
@@ -37,11 +125,11 @@
 								<select class="wid100" id="search_country" name="search_country"><option value="0" selected="selected">Все страны</option><option value="13">Австралия</option><option value="15">Австрия</option><option value="6">Азербайджан</option><option value="8">Армения</option><option value="30">Беларусь</option><option value="22">Бельгия</option><option value="36">Болгария</option><option value="241">Великобритания</option><option value="109">Венгрия</option><option value="250">Вьетнам</option><option value="89">Гана</option><option value="94">Германия</option><option value="104">Гонконг</option><option value="98">Греция</option><option value="88">Грузия</option><option value="61">Дания</option><option value="67">Египет</option><option value="117">Израиль</option><option value="113">Индия</option><option value="111">Индонезия</option><option value="116">Иран</option><option value="68">Ирландия</option><option value="216">Испания</option><option value="118">Италия</option><option value="261">Йемен</option><option value="136">Казахстан</option><option value="40">Канада</option><option value="60">Кипр</option><option value="46">Китай</option><option value="57">Куба</option><option value="129">Кыргызстан</option><option value="139">Латвия</option><option value="140">Литва</option><option value="146">Люксембург</option><option value="167">Малайзия</option><option value="151">Молдова</option><option value="174">Нигерия</option><option value="175">Нидерланды (Голландия)</option><option value="183">Новая Зеландия</option><option value="177">Норвегия</option><option value="3">О.А.Э.</option><option value="189">Пакистан</option><option value="186">Перу</option><option value="190">Польша</option><option value="192">Португалия</option><option value="202">Россия</option><option value="199">Румыния</option><option value="214">Сингапур</option><option value="142">Словакия</option><option value="211">Словения</option><option value="243">США</option><option value="227">Таджикистан</option><option value="226">Таиланд</option><option value="237">Тайвань</option><option value="233">Тунис</option><option value="235">Турция</option><option value="246">Узбекистан</option><option value="242">Украина</option><option value="200">Филиппины</option><option value="77">Финляндия</option><option value="84">Франция</option><option value="108">Хорватия</option><option value="75" id="test">Чехия</option><option value="223">Швейцария</option><option value="220">Швеция</option><option value="70">Эстония</option><option value="133">Южная Корея</option><option value="121">Япония</option></select>
 						</span>
                 </div>
-                <div class="righ-box">
-                    <a href="#" class="item1">Войти</a>
-                    &Iota;
-                    <a href="#" class="item2">Зарегистрироваться</a>
-                </div>
+               <div class="righ-box">
+					<a href="javascript:void(0);" onclick="$('.form-reg').slideToggle('slow');" class="item1">Войти</a>
+					&Iota;
+					<a href="javascript:void(0);" onclick="$('.form-reg-2').slideToggle('slow');">Зарегистрироваться</a>
+				</div>
             </div>
 		    <div class="box">
                 <div id="counter" class="number">
