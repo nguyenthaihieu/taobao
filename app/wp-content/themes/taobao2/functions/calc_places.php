@@ -45,7 +45,7 @@ function submenu_calc_places_callback () {
             .calc_places_form, .calc_places_form table {width:100%;}
             .calc_places_form thead td.first_coll input {width:322px;}
             .calc_places_form tbody td.first_coll input {width:300px;}
-            .calc_places_form thead {background:#eef;}
+            .calc_places_form thead {background:#eef;cursor:pointer;}
             .calc_places_form thead:hover {background:#ddf;}
             .calc_places_form thead.add_country:hover {background:#eef;}
             .calc_places_form td {padding:3px;text-align:center;}
@@ -55,6 +55,16 @@ function submenu_calc_places_callback () {
             .calc_places_form tbody td.first_coll {padding-left:25px;}
             .calc_places_form tbody td.first_coll input.city_coast {width:100px;}
         </style>
+
+        <script type="text/javascript">
+            jQuery(function(){
+                var $tbody = jQuery('.calc_places_form tbody');
+                jQuery('.calc_places_form thead').click(function(){
+                    $tbody.hide();
+                    jQuery(this).next().fadeIn('slow');
+                });
+            });
+        </script>
         
         <div class="wrap">
             <div id="icon-options-general" class="icon32"><br /></div>
@@ -78,7 +88,7 @@ function submenu_calc_places_callback () {
                                     </td>
                                 </tr>
                             </thead>
-                            <tbody<?php /**/ $num = false; /**/ if ($num) : ?> style="display:none;"<?php endif; ?>>
+                            <tbody<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
                                 <?php foreach ($cities as $city) : ?>
                                     <tr>
                                         <td class="first_coll">
