@@ -244,7 +244,7 @@ function calculate ($params, $city_coast = 1, $opt = false) {
     $formula = get_option($formula);
 
     // Вставляем в формулу параметры
-    $cny = get_option('cny');
+    $cny = get_option('taobao_cny');
     foreach ($params as $slug => $value) {
         if (preg_match("/^p[0-9]+$/", $slug)) {
             $value = trim($value);
@@ -311,20 +311,26 @@ function shortcode_taobao_calc ($atts) {
 
     if (isset($_POST) && count($_POST)) {
 
+        $row_ch = 0;
+
         $calc_params = array();
 
-        $cal_res = '<div class="more"><table><tbody>';
+        $cal_res = '<div class="more"><h2>Подробный расчет стоимости доставки товара:</h2><table cellpadding="0" class="" cellspacing="0">';
 
         foreach ($_POST as $index => $value) {
             if (preg_match("/^p[0-9]+$/", $index)) {
                 $label = (isset($_POST[$index . '_label']))?$_POST[$index . '_label']:'Параметр';
-                $cal_res .= "<tr><th>{$label}:</th><td>{$value}</td></tr>";
+                $class = ($row_ch % 2 == 0)?' class="item1"':'';
+                $cal_res .= "<tr{$class}><th class=\"item\">{$label}:</th><td class=\"item1\">{$value}</td></tr>";
+                $row_ch++;
             }
         }
 
         if (isset($_POST['calc_coast'])) {
             if (isset($_POST['calc_city'])) {
-                $cal_res .= "<tr><th>Стоимость доставки из Китая в {$_POST['calc_city']}:</th><td>{$_POST['calc_coast']}</td></tr>";
+                $class = ($row_ch % 2 == 0)?' class="item1"':'';
+                $cal_res .= "<tr{$class}><th class=\"item\">Стоимость доставки из Китая в {$_POST['calc_city']}:</th><td class=\"item1\">{$_POST['calc_coast']}</td></tr>";
+                $row_ch++;
             }
             $city_coast = $_POST['calc_coast'];
         } else {
@@ -341,10 +347,12 @@ function shortcode_taobao_calc ($atts) {
         //$calc .= var_export($formula_res,1);
 
         if ($formula_res) {
-            $cal_res .= "<tr><th>Общая стоимость:</th><td>{$formula_res}</td></tr>";
+            $class = ($row_ch % 2 == 0)?' class="item1"':'';
+            $cal_res .= "<tr{$class}><th class=\"item\">Общая стоимость:</th><td class=\"item1\">{$formula_res}</td></tr>";
+            $row_ch++;
         }
 
-        $calc .= $cal_res . "</tbody></table></div>";
+        $calc .= $cal_res . "</table></div>";
     }
 
 
