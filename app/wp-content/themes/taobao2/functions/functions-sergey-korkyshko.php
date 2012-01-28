@@ -20,31 +20,7 @@ function initScripts()
     wp_register_script( 'jquery',
         get_template_directory_uri() . '/js/jquery-1.6.1.js');
     ?>
-    <script>
-        var serverHours = parseInt("<?php echo getHours(); ?>");
-        var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
-	    var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
-        var blogUrl = "<?php bloginfo('url'); ?>";
-    </script>
-	
-	<script type="text/javascript">
-       
-jQuery(document).ready(function() {
 
-        jQuery("#fancys").fancybox({
-
-    'titlePosition'  : 'inside',
-    
-    'transitionIn'  : 'none',
-   
-    'transitionOut'  : 'none',
-    'type' : 'image'
-    
-   
-   });
-
-       });
-</script>
 	<!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
 <?php
     wp_register_script('timer',
@@ -99,7 +75,10 @@ jQuery(document).ready(function() {
        array('jquery'));
 	   wp_register_script('valid',
        get_template_directory_uri() . '/js/valid.js',
-       array('jquery'));   
+       array('jquery'));
+	   wp_register_script('base',
+       get_template_directory_uri() . '/js/base.js',
+       array('jquery'));  
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('timer');
@@ -118,6 +97,7 @@ jQuery(document).ready(function() {
     wp_enqueue_script('jquery.fancybox-1.3.4');    
     wp_enqueue_script('main');
 	wp_enqueue_script('valid');
+	wp_enqueue_script('base');
 }
 add_action('wp_enqueue_scripts','initScripts');
 

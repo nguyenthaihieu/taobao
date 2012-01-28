@@ -24,7 +24,7 @@
 		 
 		<?php else : ?>
 		 
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="valid">
+		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" name="valid" id="valid">
 		 
 			<?php if ( $user_ID ) : ?>
 		 
@@ -43,9 +43,10 @@
 			</div>
 		 
 			<div class="item">
-				<label for="email"><?php _e('E-mail'); ?> <em>*</em></label>
-				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2" class="text requre" />		
-				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>		
+				<label for="3"><?php _e('E-mail'); ?> <em>*</em></label>
+                                <input id="3" class="text requre" type="text" value="" name="mail" />
+                                <div id="validate_item3" class="validate_mess" style="display:none;">Заполните поле</div>
+                                <div id="validate_mail" class="validate_mess" style="display:none;">Не верный e-mail</div>
 			</div>		 
 			<div class="item">				
 				<label for="url"><?php _e('Город'); ?></label> 
