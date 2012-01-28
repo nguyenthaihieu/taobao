@@ -158,6 +158,12 @@ function get_calc_places () {
 
 // Countries
 
+function calc_places_get_countries () {
+    global $wpdb;
+    $res = $wpdb->get_results("SELECT `" . $wpdb->prefix . "countries`.`name`, `" . $wpdb->prefix . "countries`.`id` FROM `" . $wpdb->prefix . "countries` ORDER BY `" . $wpdb->prefix . "countries`.`name`;");
+    return $res;
+}
+
 function calc_places_delete_country ($country_id) {
     global $wpdb;
     $res = $wpdb->query("DELETE FROM " . $wpdb->prefix . "countries WHERE `id` = " . $country_id . ";");
@@ -177,6 +183,12 @@ function calc_places_update_country ($country_id, $country) {
 }
 
 // Cities
+
+function calc_places_get_cities () {
+    global $wpdb;
+    $res = $wpdb->get_results("SELECT * FROM `" . $wpdb->prefix . "cities` ORDER BY `name`");
+    return $res;
+}
 
 function calc_places_delete_city ($city_id) {
     global $wpdb;
