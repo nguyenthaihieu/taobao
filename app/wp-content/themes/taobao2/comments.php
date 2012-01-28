@@ -24,7 +24,7 @@
 		 
 		<?php else : ?>
 		 
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="valid">
 		 
 			<?php if ( $user_ID ) : ?>
 		 

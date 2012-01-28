@@ -62,7 +62,7 @@
 				      <?php if ($comment->comment_approved == '0') : ?>
 				         <p><?php _e('Your comment is awaiting moderation.') ?></p>
 				      <?php endif; ?>
-				      <p><a href="<?php the_permalink() ?>"><?php comment_text(); ?></a></p> <?php 
+				      <p><?php comment_text(); ?></p> <?php 
 					  endforeach;
 					  echo "<li>";
 				  ?>
