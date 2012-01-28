@@ -338,7 +338,7 @@ function shortcode_taobao_calc ($atts) {
 
 <?php
 */
-    $calc .= '<div class="item"><button type="submit" class="sub"><i>Рассчитать</i></button></div></form></div></div>';
+    $calc .= '<div class="item"><button type="submit" class="sub"><i>Рассчитать</i></button></div></form>';
 
     // Результаты
 
@@ -381,7 +381,7 @@ function shortcode_taobao_calc ($atts) {
     }
 
 
-    return $calc;
+    return $calc . '</div></div>';
 }
 
 add_shortcode('taobaocalc', 'shortcode_taobao_calc');
