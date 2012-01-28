@@ -2091,13 +2091,15 @@ div.slaide-page li{
 	height:115px;
 }
 
-#content div.calculator span{
-	color: #000;
+#content div.calculator span {
+    color: #000;
+    float: left;
     font-size: 24px;
     line-height: 35px;
-    margin: 0 79px 0 115px;
+    margin: 0 79px 0 105px;
+    text-align: center;
+    width: 60px;
 }
-
 #content div.calculator i{
 	font-size:14px;
 	font-style:normal;
@@ -2934,4 +2936,192 @@ p.subscribe-to-comments{
 p.subscribe-to-comments input{
 	float:left;
 	margin:3px 8px 0 0;
+}
+
+.form-reg{
+	width:100%;
+	position:absolute;
+	top:42px;
+	left:0;
+	height:100%;
+	z-index:100;
+	display:none;
+}
+
+
+.form-reg-2{
+	width:100%;
+	position:absolute;
+	top:42px;
+	left:0;
+	height:100%;
+	z-index:100;
+	display:none;
+}
+
+
+.shadow{
+	background:url(img/b.png) repeat;
+	height: 100%;
+    left: 0;
+    position: fixed;
+    top: 42px;
+    width: 100%;
+}
+
+div.ctnr{
+    display:inline-block;
+    width: 100%;
+	position:relative;
+    z-index: 100;
+	padding:0 0 25px;
+	background:#f8f5f0;
+}
+
+div.form-1{
+	width:306px;
+	margin:40px auto 0;
+}
+
+div.form-1 a{
+	color:#006dca;
+}
+
+div.ctnr div.item{
+	width:100%;
+	display:inline-block;
+	margin:0 0 15px;
+}
+
+div.ctnr div.item h3{
+	margin:0;
+}
+
+div.ctnr div.item label{
+	display:block;
+	color:#000;
+	font-size:12px;
+	margin:0 0 3px;
+}
+
+div.ctnr div.item input.text{
+	background:url(img/bg-txt.png) no-repeat;
+	width:283px;
+	height:18px;
+	border:0;
+	margin:4px 0;
+	padding:5px 4px;
+	font-size:12px;
+}
+
+div.ctnr div.item a.show{
+	float:right;
+	font-size:11px;
+}
+
+div.ctnr ul{
+	width:100%;
+	overflow:hidden;
+	text-align:center;
+}
+
+div.ctnr ul li{
+	width:100%;
+	margin:0 0 10px;
+	overflow:hidden;
+}
+
+div.ctnr ul input.chek{
+	margin:2px 0 0;
+}
+
+div.ctnr ul li span{
+	line-height:15px;
+	font-size:12px;
+	color:#000;
+}
+
+
+div.ctnr ul input.sube{
+	background: url("img/sub.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 35px;
+    padding:5px 4px 11px;
+    width: 190px;
+}
+
+a.hid-form{
+	background:url(img/close-form.png) no-repeat;
+	width:58px;
+	height:50px;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	bottom:-17px;
+	left:50%;
+	margin:0 0 0 -31px;
+}
+
+div.ctnr h3 a{
+	color:#006dca;
+	font-size:12px;
+	font-weight:normal;
+}
+
+
+div.register-form{
+	width:650px;
+	margin:40px auto 0;
+}
+
+div.register-form div.left{
+	float:left;
+	width:300px;
+}
+
+div.register-form div.left div.item{
+	width:100%;
+	overflow:hidden;
+	margin:0;
+	min-height:66px;
+}
+
+div.register-form div.left a{
+	color:#006DCA;
+	font-size:12px;
+}
+
+div.register-form i{
+	color:#ff0000;
+	font-size:12px;
+	font-style:normal;
+}
+
+div.register-form span{
+	font-size:11px;
+	color:#838383;
+}
+
+div.register-form div.right{
+	float:right;
+}
+
+div.register-form em{
+	color:#ff0000;
+	font-size:11px;
+	font-style:normal;
+}
+
+div.register-form div.left a.show {
+    float: right;
+    font-size: 11px;
+    margin: 0 11px 0 0;
+}
+
+div.ctnr ul li a{
+	color:#006DCA;
+	font-size:12px;
 }

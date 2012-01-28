@@ -65,7 +65,6 @@ function shortcode_spiral(){
     wp_reset_query();
     rewind_posts();
     if (have_posts()) : while (have_posts()) : the_post();
-        echo get_post_meta($post->ID, "num-2", true);
     return '<div class="steps step-next">
                 <div class="num-1">
                     <span class="num">2</span>

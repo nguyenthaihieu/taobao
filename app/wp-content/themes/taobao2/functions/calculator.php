@@ -299,7 +299,7 @@ jQuery(function(){
     });
 });</script>";
 
-    $calc .= '<div class="calc" style="display:block;width:100%;"><div class="minus">';
+    $calc .= '<div class="t4"><div class="minus">';
     $calc .= '<form action="" method="post" class="color">';
     $calc .= '<div class="text-form"><h2>Калькулятор стоимости доставки</h2><p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p></div>';
 

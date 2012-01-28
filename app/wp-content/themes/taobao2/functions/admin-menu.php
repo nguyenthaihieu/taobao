@@ -37,7 +37,11 @@ function my_custom_submenu_page_callback() {
                     	<td><input style="width:400px; height:25px;" type="text" name="taobao_cny" value="<?php echo get_option('taobao_cny', 'N.A.');?>" />
                     </td>
                 </tr>
-
+				 <tr valign="top">
+                    <th scope="row">Наша комисия %</th>
+                    	<td><input style="width:400px; height:25px;" type="text" name="procent" value="<?php echo get_option('procent', '15');?>" />
+                    </td>
+                </tr>
             </table>
 
             <p class="submit">

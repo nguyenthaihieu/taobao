@@ -20,8 +20,13 @@ function initScripts()
     wp_register_script( 'jquery',
         get_template_directory_uri() . '/js/jquery-1.6.1.js');
     ?>
-
-	<!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
+<script>
+var serverHours = parseInt("<?php echo getHours(); ?>");
+var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
+var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
+var blogUrl = "<?php bloginfo('url'); ?>";
+</script>
+<!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
 <?php
     wp_register_script('timer',
        get_template_directory_uri() . '/js/timer.js',
@@ -61,24 +66,21 @@ function initScripts()
     wp_register_script('jquery.mousewheel',
        get_template_directory_uri() . '/js/jquery.mousewheel.js',
        array('jquery'));
-	 wp_register_script('jquery.easing-1.3.pack',
+wp_register_script('jquery.easing-1.3.pack',
        get_template_directory_uri() . '/fancybox/jquery.easing-1.3.pack.js',
        array('jquery'));
-	wp_register_script('jquery.fancybox-1.3.4.pack',
+wp_register_script('jquery.fancybox-1.3.4.pack',
        get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.pack.js',
-       array('jquery'));  
-	wp_register_script('jquery.fancybox-1.3.4',
+       array('jquery'));
+wp_register_script('jquery.fancybox-1.3.4',
        get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.js',
-       array('jquery')); 	    
+       array('jquery'));
     wp_register_script('main',
        get_template_directory_uri() . '/js/main.js',
        array('jquery'));
-	   wp_register_script('valid',
+wp_register_script('valid',
        get_template_directory_uri() . '/js/valid.js',
        array('jquery'));
-	   wp_register_script('base',
-       get_template_directory_uri() . '/js/base.js',
-       array('jquery'));  
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('timer');
@@ -94,13 +96,11 @@ function initScripts()
     wp_enqueue_script('jquery.mousewheel');
     wp_enqueue_script('jquery.easing-1.3.pack');
     wp_enqueue_script('jquery.fancybox-1.3.4.pack');
-    wp_enqueue_script('jquery.fancybox-1.3.4');    
+    wp_enqueue_script('jquery.fancybox-1.3.4');
     wp_enqueue_script('main');
-	wp_enqueue_script('valid');
-	wp_enqueue_script('base');
+wp_enqueue_script('valid');
 }
 add_action('wp_enqueue_scripts','initScripts');
-
 
 function onlineConsultation()
 { ?>
@@ -137,17 +137,18 @@ register_taxonomy('messages-slider-category',
 
 
 function shortcode_calculation() {?>
-
-<div class="alamo">
-    <h2>Расчет</h2>
-    <div class="calculator"><span>15<em>%</em></span>
-        <span>5,3</span></div>
-    <ul class="inform">
-        <li>- доставка по Китаю выбирается EMS;</li>
-        <li><span class="num">15%</span> - наша комиссия, которая может изменяться на 5-10 % (для оптовиков и посредников);</li>
-        <li><span class="num">5,3</span> - внутренний курс юаня нашей компании;</li>
-        <li>- 300 руб /кг – тарифы компании карго из Хэйхэ (Китай) до Благовещенска (Россия).</li>
-    </ul>
+<div class="t3">
+	<div class="alamo">
+	    <h2>Расчет</h2>
+	    <div class="calculator"><span><?php echo get_option('procent', '15');?><em>%</em></span>
+	        <span><?php echo get_option('taobao_cny', 'N.A.');?></span></div>
+	    <ul class="inform">
+	        <li>- доставка по Китаю выбирается EMS;</li>
+	        <li><span class="num"><?php echo get_option('procent', '15');?>%</span> - наша комиссия, которая может изменяться на 5-10 % (для оптовиков и посредников);</li>
+	        <li><span class="num"><?php echo get_option('taobao_cny', 'N.A.');?></span> - внутренний курс юаня нашей компании;</li>
+	        <li>- 300 руб /кг – тарифы компании карго из Хэйхэ (Китай) до Благовещенска (Россия).</li>
+	    </ul>
+	</div>
 </div>
 <?php
 //return true;
@@ -155,45 +156,46 @@ function shortcode_calculation() {?>
 add_shortcode('calculation', 'shortcode_calculation');
 
 function PriceCalculatorFun () {?>
-
-<div class="minus">
-    <form action="" method="post" class="color">
-        <div class="text-form">
-            <h2>Калькулятор стоимости доставки</h2>
-
-            <p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p>
-        </div>
-        <div class="item">
-            <label>Стоимость товара на таобао (юани)</label>
-            <input type="text" class="text"/>
-            <a href="#" class="info"></a>
-        </div>
-        <div class="item">
-            <label>Стоимость доставки по Китаю (юани)</label>
-            <input type="text" class="text"/>
-            <a href="#" class="info"></a>
-        </div>
-        <div class="item">
-            <label>Вес посылки (кг.)</label>
-            <input type="text" class="text"/>
-            <a href="#" class="info"></a>
-        </div>
-        <div class="item">
-            <label>Ваше местоположение</label>
-            <select class="sel">
-                <option>не выбрано</option>
-                <option>1</option>
-                <option>1</option>
-                <option>1</option>
-            </select>
-        </div>
-        <div class="item">
-            <label>Оптовый заказ <input clsss="chek" type="checkbox"/></label>
-        </div>
-        <div class="item">
-            <button type="submit" class="sub"><i>Рассчитать</i></button>
-        </div>
-    </form>
+<div class="t4">
+	<div class="minus">
+	    <form action="" method="post" class="color">
+	        <div class="text-form">
+	            <h2>Калькулятор стоимости доставки</h2>
+	
+	            <p>Для удобства расчета стоимости товара с учетом доставки, воспользуйтесь приведенной ниже формой. </p>
+	        </div>
+	        <div class="item">
+	            <label>Стоимость товара на таобао (юани)</label>
+	            <input type="text" class="text"/>
+	            <a href="#" class="info"></a>
+	        </div>
+	        <div class="item">
+	            <label>Стоимость доставки по Китаю (юани)</label>
+	            <input type="text" class="text"/>
+	            <a href="#" class="info"></a>
+	        </div>
+	        <div class="item">
+	            <label>Вес посылки (кг.)</label>
+	            <input type="text" class="text"/>
+	            <a href="#" class="info"></a>
+	        </div>
+	        <div class="item">
+	            <label>Ваше местоположение</label>
+	            <select class="sel">
+	                <option>не выбрано</option>
+	                <option>1</option>
+	                <option>1</option>
+	                <option>1</option>
+	            </select>
+	        </div>
+	        <div class="item">
+	            <label>Оптовый заказ <input clsss="chek" type="checkbox"/></label>
+	        </div>
+	        <div class="item">
+	            <button type="submit" class="sub"><i>Рассчитать</i></button>
+	        </div>
+	    </form>
+	</div>
 </div>
 <?php
     //return true;
@@ -290,3 +292,4 @@ function transportationFun(){
 
 }
 add_shortcode('transportation', 'transportationFun');
+
