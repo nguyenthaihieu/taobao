@@ -713,6 +713,10 @@ div.pagers{
 	font-size:14px;
 }
 
+#container div.body-s .sub:hover{
+	background:url(./img/sub.gif) no-repeat 0 100%;	
+}
+
 #container div.body-s a{
 	float:right;
 }
@@ -770,12 +774,16 @@ h2 a{
 	margin:10px 0 0;
 }
 
-#wraper div.report tr div{}
-
 #wraper div.report tr td{
 	width:245px;
 	color:#000;
 	font-size:11px;
+	padding:0 0 8px;
+	vertical-align:bottom;
+}
+
+#wraper div.report tr.height td{
+	height:10px;
 }
 
 #wraper div.report tr td p{
@@ -2482,7 +2490,7 @@ h2 a{
 
 #content div.all div.right-box{
 	width:293px;
-	float:left;
+	float:right;
 	overflow:hidden;
 }
 

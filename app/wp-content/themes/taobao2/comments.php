@@ -24,7 +24,7 @@
 		 
 		<?php else : ?>
 		 
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" name="valid" id="valid">
+		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 		 
 			<?php if ( $user_ID ) : ?>
 		 
@@ -38,26 +38,22 @@
 			</div>
 			<div class="item">				
 				<label for="author"><?php _e('Name'); ?> <em>*</em></label>
-				<input type="text" name="author" id="author" class="text requre" value="<?php echo $comment_author; ?>" size="28" tabindex="1" />
-				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
+				<input type="text" name="author" id="author" class="textarea" value="<?php echo $comment_author; ?>" size="28" />
+
 			</div>
 		 
 			<div class="item">
 				<label for="3"><?php _e('E-mail'); ?> <em>*</em></label>
-                                <input id="3" class="text requre" type="text" value="" name="mail" />
-                                <div id="validate_item3" class="validate_mess" style="display:none;">Заполните поле</div>
-                                <div id="validate_mail" class="validate_mess" style="display:none;">Не верный e-mail</div>
+                <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2"  />
 			</div>		 
 			<div class="item">				
 				<label for="url"><?php _e('Город'); ?></label> 
 				<input type="text" name="url" id="url" value="" size="28" tabindex="3" class="text requre" />
-				<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
 			</div>		 
 			<?php endif; ?>		 
 				<div class="item">
 					<label for="comment"><?php _e('Коментарий'); ?></label>
 					<textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea requre"></textarea>
-					<div style="display: none;" class="validate_mess" id="validate_item4">Заполните поле</div>
 				</div>		 
 				<div class="item">
 					<input name="submit" id="submit" type="submit" tabindex="5" value="<?php _e('Отправить'); ?>" class="cbutton" />
