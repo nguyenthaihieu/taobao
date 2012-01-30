@@ -22,16 +22,19 @@ function submenu_calculator_callback () {
             if ($action[0] == 'delete') {
                 calculator_delete_param($action[1]);
             } elseif ($action[0] == 'update' && isset($_POST[$action[1] . '_label'])) {
-                $pre_code = (isset($_POST[$action[1] . '_pre_code']))?$_POST[$action[1] . '_pre_code']:NULL;
+                //$pre_code = (isset($_POST[$action[1] . '_pre_code']))?$_POST[$action[1] . '_pre_code']:NULL;
                 $post_code = (isset($_POST[$action[1] . '_post_code']))?$_POST[$action[1] . '_post_code']:NULL;
                 $result = calculator_set_param($_POST[$action[1] . '_label'],
-                        $pre_code, $post_code, $action[1]);
+                        //$pre_code,
+                        $post_code, $action[1]);
             }
         } else {
             if ($action[0] == 'add' && isset($_POST['label'])) {
-                $pre_code = (isset($_POST['pre_code']))?$_POST['pre_code']:NULL;
+                //$pre_code = (isset($_POST['pre_code']))?$_POST['pre_code']:NULL;
                 $post_code = (isset($_POST['post_code']))?$_POST['post_code']:NULL;
-                $result = calculator_set_param($_POST['label'], $pre_code, $post_code);
+                $result = calculator_set_param($_POST['label'], 
+                        //$pre_code,
+                        $post_code);
             } elseif ($action[0] == 'save') {
                 $formula = (isset($_POST['formula']))?$_POST['formula']:'';
                 $formula_opt = (isset($_POST['formula_opt']))?$_POST['formula_opt']:'';
@@ -74,8 +77,8 @@ function submenu_calculator_callback () {
                 <table cellspacing="10">
                     <tr>
                         <th>Label</th>
-                        <th>Prefix code</th>
-                        <th>Postfix code</th>
+                        <!-- <th>Prefix code</th> -->
+                        <th>Image Link</th>
                         <th>Options</th>
                     </tr>
                     <?php foreach ($params as $slug => $param) : ?>
@@ -83,9 +86,9 @@ function submenu_calculator_callback () {
                             <td>
                                 <input type="text" name="<?php echo $slug; ?>_label" value="<?php echo $param['label'] ?>" />
                             </td>
-                            <td>
-                                <input type="text" name="<?php echo $slug; ?>_pre_code" value="<?php echo $param['pre_code'] ?>" />
-                            </td>
+                            <!-- <td>
+                                <input type="text" name="<?php echo $slug; ?>_pre_code" value="<?php //echo $param['pre_code'] ?>" />
+                            </td> -->
                             <td>
                                 <input type="text" name="<?php echo $slug; ?>_post_code" value="<?php echo $param['post_code'] ?>" />
                             </td>
@@ -100,9 +103,9 @@ function submenu_calculator_callback () {
                         <td>
                             <input type="text" name="label" value="" />
                         </td>
-                        <td>
+                        <!-- <td>
                             <input type="text" name="pre_code" value="" />
-                        </td>
+                        </td> -->
                         <td>
                             <input type="text" name="post_code" value="" />
                         </td>
@@ -172,9 +175,9 @@ function calculator_get_params () {
     foreach ($params as $param) {
         $options = explode("<", $param->option_value);
         $new_params[substr($param->option_name, 11)] = array(
-            "label" => $options[2],
-            "pre_code" => $options[0],
-            "post_code" => $options[1]);
+            "label" => $options[1],
+            //"pre_code" => $options[0],
+            "post_code" => $options[0]);
     }
 
     return $new_params;
@@ -188,7 +191,9 @@ function calculator_get_params () {
  * @param string $slug Название переменной для формулы
  * @return boolean Возвращает false если при сохранении возникли ошибки и true в ином случае
  */
-function calculator_set_param ($label, $pre_code = NULL, $post_code = NULL, $slug = NULL) {
+function calculator_set_param ($label, 
+        //$pre_code = NULL,
+        $post_code = NULL, $slug = NULL) {
 
     // Без лейбела - не пустим!
     if (empty($label)) {
@@ -196,7 +201,7 @@ function calculator_set_param ($label, $pre_code = NULL, $post_code = NULL, $slu
     }
 
     // Преобразуем данные в необходимый нам формат
-    $pre_code = htmlspecialchars($pre_code);
+    //$pre_code = htmlspecialchars($pre_code);
     $post_code = htmlspecialchars($post_code);
     $label = htmlspecialchars($label);
 
@@ -212,7 +217,7 @@ function calculator_set_param ($label, $pre_code = NULL, $post_code = NULL, $slu
     }
 
     // Формируем строку для записи и сохраняем в БД новое значение
-    $new_value = $pre_code . "<" . $post_code . "<" . $label;
+    $new_value = /*$pre_code . "<" .*/ $post_code . "<" . $label;
     update_option('calculator_' . $slug, $new_value);
 
     return true;
@@ -306,11 +311,14 @@ jQuery(function(){
     $params = calculator_get_params();
 
     foreach ($params as $name => $param) {
-        $calc .= '<div class="item">' . htmlspecialchars_decode($param['pre_code'])
+        $calc .= '<div class="item">'// . htmlspecialchars_decode($param['pre_code'])
             . '<label>' . $param['label'] . '</label>'
             . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
-            . '<input type="text" name="' . $name . '" value="" class="text" />'
-            . htmlspecialchars_decode($param['post_code']) . '</div>';
+            . '<input type="text" name="' . $name . '" value="" class="text" />';
+        if (!empty($param['post_code'])) {
+            $calc .= '<div class="calc_info_img"><div><a href="' . htmlspecialchars_decode($param['post_code']) . '" class="info"></a></div></div>';
+        }
+        $calc .= '</div>';
     }
 
     if (get_option('calculator_conf_countries')) {
