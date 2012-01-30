@@ -764,31 +764,31 @@ h2 a{
 	line-height:22px;
 }
 
-#wraper div.report ul{
+#wraper div.report tr{
 	width:126%;
 	overflow:hidden;
 	margin:10px 0 0;
 }
 
-#wraper div.report ul li{
-	float:left;
+#wraper div.report tr div{}
+
+#wraper div.report tr td{
 	width:245px;
 	color:#000;
-	margin:0 43px 6px 7px;
 	font-size:11px;
 }
 
-#wraper div.report ul li p{
+#wraper div.report tr td p{
 	margin:0;
 }
 
-#wraper div.report ul li a{
+#wraper div.report tr td a{
 	color:#000;
 	font-size:11px;
 	font-style:italic;
 }
 
-#wraper div.report ul li span{
+#wraper div.report tr td span{
 	color:#bcbbb9;
 }
 
