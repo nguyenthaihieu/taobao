@@ -81,6 +81,8 @@ body{
 	margin:0;
 	padding:0;
 	font-family:Verdana;
+	border:0;
+	outline:none;
 	font-size:12px;
 	background:url(./img/body.gif) repeat #f8f5f0;
 }
@@ -455,16 +457,11 @@ nav.menu ul li a{
 }
 
 div.slaider-box{
-	background:#fff;
+	background:url(img/slaider-box.png) no-repeat;
 	width:910px;
 	padding:15px 20px;
-	height:63px;
-	behavior: url(css/PIE.htc);
-	-webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
+	height:133px;
 	margin:25px 0 0;
-	min-width:450PX;
 }
 
 div.slaider-box span.prev{
@@ -486,7 +483,8 @@ div.slaider-box span.next{
 div.slaider-box div.slaide{
 	width:841px;
 	overflow:hidden;
-	margin:0 auto;
+	margin:-10px auto 0;
+	height:133px;
 }
 
 div.slaider-box div.slaide a{
@@ -512,13 +510,11 @@ div.slaider-box div.slaide h3{
 
 #container{
 	width:970px;
-	overflow:hidden;
 	margin:0 auto;
 }
 
 #container div.left{
 	width:700px;
-	overflow:hidden;
 	float:left;
 	margin:15px 0 0;
 }
@@ -541,7 +537,7 @@ div.slaider-box div.slaide h3{
 }
 
 div.pagers{
-	margin:28px 0 0;
+	margin:49px 0 0;
 }
 
 #container div.pager a.activeSlide,div.pagers a.activeSlide{
@@ -559,10 +555,10 @@ div.pagers{
 }
 
 #container div.slaider-video{
-	width:616px !important;
+	width:652px !important;
 	overflow:hidden;
 	height:231px;
-	margin:17px auto 0;
+	margin:17px 0 0;
 }
 
 #container div.slaider-video ul li{
@@ -603,7 +599,7 @@ div.pagers{
 	width:21px;
 	height:32px;
 	float:left;
-	margin:74px 0 0 5px;
+	margin:74px 0 0 -31px;
 	cursor:pointer;
 }
 
@@ -692,7 +688,7 @@ div.pagers{
 
 #container div.videos{
 	width:100%;
-	overflow:hidden;
+	display:inline-block;
 	margin:21px 0 0;
 }
 
@@ -2647,7 +2643,7 @@ div.soce{
 	height:294px;
 	overflow:hidden;
 	position:fixed;
-	top:352px;
+	top:62px;
 	left:0;
 }
 
