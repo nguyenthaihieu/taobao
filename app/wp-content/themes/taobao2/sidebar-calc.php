@@ -16,7 +16,7 @@
         <div class="item">
             <label>Затем нажмите "Поиск на <br/> Taobao" и у вас откроется <br/> страница с результатами
                 поиска.</label>
-		<form action="http://search8.taobao.com/search" method="get">
+		<form action="http://search8.taobao.com/search" method="get"  target='_blank'>
             <input type="text" class="text" id="target" name=q />
             <input type="submit" class="sub" value="Поиск на Taobao.com"/>
         </div>
