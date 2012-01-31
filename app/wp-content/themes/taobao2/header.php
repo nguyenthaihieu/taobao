@@ -196,8 +196,8 @@
                         <?php query_posts('post_type=messages_slider&messages-slider-category=all')?>
                         <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post();  ?>
-                            <li>
-                                <?php the_content(); ?>
+                            <li>                                
+								<?php the_content(); ?>
                             </li>
                             <?php endwhile; ?>
                         <?php endif;?>

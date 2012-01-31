@@ -38,13 +38,13 @@
 			</div>
 			<div class="item">				
 				<label for="author"><?php _e('Name'); ?> <em>*</em></label>
-				<input type="text" name="author" id="author" class="textarea" value="<?php echo $comment_author; ?>" size="28" />
+				<input type="text" name="author" id="author" class="text" value="<?php echo $comment_author; ?>" size="28" />
 
 			</div>
 		 
 			<div class="item">
 				<label for="3"><?php _e('E-mail'); ?> <em>*</em></label>
-                <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2"  />
+                <input type="text" name="email" id="email" class="text" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2"  />
 			</div>		 
 			<div class="item">				
 				<label for="url"><?php _e('Город'); ?></label> 

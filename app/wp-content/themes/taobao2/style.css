@@ -3130,3 +3130,13 @@ div.ctnr ul li a{
 	font-size:12px;
 }
 
+div.slaider-box div.slaide h3{
+	 color: #00BDEF;
+    font-size: 18px;
+    text-decoration: none;
+	font-weight:normal;
+}
+
+div.slaider-box div.slaide span.block{
+	display:none;
+}
