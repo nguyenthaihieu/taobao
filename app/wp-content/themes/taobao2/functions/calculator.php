@@ -316,7 +316,7 @@ jQuery(function(){
             . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
             . '<input type="text" name="' . $name . '" value="" class="text" />';
         if (!empty($param['post_code'])) {
-            $calc .= '<div class="calc_info_img"><div><a href="' . htmlspecialchars_decode($param['post_code']) . '" class="info"></a></div></div>';
+            $calc .= '<span><a href="javascript:void(0);" onclick="$(\'#info_' . $name . '\').slideToggle(\'slow\');" class="info"></span><div id="info_' . $name . '" class="calc_info_img" style="display:none;"><div><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></a></div></div>';
         }
         $calc .= '</div>';
     }
