@@ -21,8 +21,8 @@ function initScripts()
         get_template_directory_uri() . '/js/jquery-1.6.1.js');
     ?>
 <script>
-var serverHours = parseInt("<?php echo getHours(); ?>");
-var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
+var serverHours = "08" //parseInt("<?php// echo getHours(); ?>");
+var serverMinutes ="59" //parseInt("<?php // echo getMinutes(); ?>");
 var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
 var blogUrl = "<?php bloginfo('url'); ?>";
 </script>
