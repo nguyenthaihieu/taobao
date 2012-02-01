@@ -571,13 +571,33 @@ div.pagers{
 }
 
 #container div.slaider-video div.foto{
-	width:153px;
+	width:183px;
 	overflow:hidden;
+	height:160px;
 	margin:0;
 }
 
+#content div.slaider-video div.foto{
+    height: 130px;
+    margin: 0;
+    overflow: hidden;
+    width: 152px;
+}
+
+#content div.slaider-video div.foto img{
+	height: 130px;
+    margin: 0;
+    overflow: hidden;
+    width: 152px;
+}
+
+#content div.slaider-video ul li{
+	overflow: hidden;
+    width: 152px;
+}
+
 #container div.slaider-video div.text-video{
-	width:143px;
+	width:173px;
 	overflow:hidden;
 	padding:15px 0 0 10px;
 }
@@ -588,9 +608,9 @@ div.pagers{
 }
 
 #container div.slaider-video div.foto img{
-	width:153px;
+	width:183px;
 	overflow:hidden;
-	height:130px;
+	height:160px;
 }
 
 #container div.videos span.prev{
@@ -600,6 +620,10 @@ div.pagers{
 	float:left;
 	margin:74px 0 0 -31px;
 	cursor:pointer;
+}
+
+#content div.videos span.prev{
+	margin:74px 16px 0 0;
 }
 
 #container div.videos span.next{
@@ -635,7 +659,8 @@ div.pagers{
 	width:230px;
 	display:block;
 	height:84px;
-	margin:0 0 6px 4px;
+	margin:0 0 15px;
+	margin:0 0 6px 6px;
 }
 
 #container div.right a.calcul:hover{
@@ -2575,7 +2600,7 @@ h2 a{
 
 #content div.all ul.video li{
 	float:left;
-	margin:0 12px 0 0;
+	margin:0 27px 0 0;
 }
 
 #content div.all ul.video li div.text-video {
@@ -2656,6 +2681,9 @@ div.soce{
 div.soce ul li{
 	margin:9px 0 0 7px;
 	overflow:hidden;
+	float:left;
+	width:100%;
+	height:25px;
 }
 
 #container div.slider ul li{
@@ -2927,10 +2955,8 @@ div.wid100{
 }
 
 #content div.slaider-video{
-	width:536px !important;
-    margin:0 0 0 30px;
+	width:534px !important;
 }
-
 
 p.subscribe-to-comments{
 	width:100%;
@@ -3139,14 +3165,4 @@ div.slaider-box div.slaide h3{
 
 div.slaider-box div.slaide span.block{
 	display:none;
-}
-
-
-div.slaider-box div.slaide li{
-    height: 70px;
-}
-
-#content div.all span.prev{
-    margin:72px 0 0;
-    margin:72px 0 0;
 }
