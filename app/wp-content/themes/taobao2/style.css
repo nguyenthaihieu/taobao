@@ -636,8 +636,7 @@ div.pagers{
 	width:230px;
 	display:block;
 	height:84px;
-	margin:0 0 15px;
-	margin:0 0 6px 6px;
+	margin:0 0 6px 4px;
 }
 
 #container div.right a.calcul:hover{
