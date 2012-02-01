@@ -14,6 +14,23 @@ function getMinutes()
     return $times[1];
 }
 
+function getRealIpAddr()
+{
+  if (!empty($_SERVER['HTTP_CLIENT_IP']))
+  {
+    $ip=$_SERVER['HTTP_CLIENT_IP'];
+  }
+  elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+  {
+    $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+  }
+  else
+  {
+    $ip=$_SERVER['REMOTE_ADDR'];
+  }
+  return $ip;
+}
+
 function initScripts()
 {
     wp_deregister_script( 'jquery' );
@@ -23,7 +40,7 @@ function initScripts()
 <script>
 var serverHours = parseInt("<?php echo getHours(); ?>");
 var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
-var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
+var clientIP = "<?php echo getRealIpAddr(); ?>";
 var blogUrl = "<?php bloginfo('url'); ?>";
 </script>
 <!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
@@ -66,19 +83,19 @@ var blogUrl = "<?php bloginfo('url'); ?>";
     wp_register_script('jquery.mousewheel',
        get_template_directory_uri() . '/js/jquery.mousewheel.js',
        array('jquery'));
-wp_register_script('jquery.easing-1.3.pack',
+    wp_register_script('jquery.easing-1.3.pack',
        get_template_directory_uri() . '/fancybox/jquery.easing-1.3.pack.js',
        array('jquery'));
-wp_register_script('jquery.fancybox-1.3.4.pack',
+    wp_register_script('jquery.fancybox-1.3.4.pack',
        get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.pack.js',
        array('jquery'));
-wp_register_script('jquery.fancybox-1.3.4',
-       get_template_directory_uri() . '/fancybox/jquery.fancybox-1.3.4.js',
+    wp_register_script('jquery.cookie',
+       get_template_directory_uri() . '/js/jquery.cookie.js',
        array('jquery'));
     wp_register_script('main',
        get_template_directory_uri() . '/js/main.js',
        array('jquery'));
-wp_register_script('valid',
+    wp_register_script('valid',
        get_template_directory_uri() . '/js/valid.js',
        array('jquery'));
 
@@ -96,7 +113,7 @@ wp_register_script('valid',
     wp_enqueue_script('jquery.mousewheel');
     wp_enqueue_script('jquery.easing-1.3.pack');
     wp_enqueue_script('jquery.fancybox-1.3.4.pack');
-    wp_enqueue_script('jquery.fancybox-1.3.4');
+    wp_enqueue_script('jquery.cookie');
     wp_enqueue_script('main');
 wp_enqueue_script('valid');
 }

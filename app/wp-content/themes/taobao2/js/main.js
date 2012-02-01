@@ -106,6 +106,14 @@ jQuery(function($) {
     }
 
     function initSelect() {
+        var currentCountry = $.cookie('country');
+        $("#search_country").val(currentCountry);
+
+        $("#search_country").live('change', function(){
+            var currentCountry = $(this).val();
+            $.cookie('country', currentCountry);
+        })
+
         var params = {
             changedEl: "#search_country",
             visRows: 16,

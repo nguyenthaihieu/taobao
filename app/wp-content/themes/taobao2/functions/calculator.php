@@ -281,25 +281,25 @@ function shortcode_taobao_calc ($atts) {
 }
 function taobaoShowCities (country) {
     country = country.split(' ')[0];
-    var \$cities = \$('ul.city li');
-    \$cities.hide();
-    var \$selected_list = jQuery('ul.city li.'+country);
-    \$selected_list.show();
-    var \$current_city = \$selected_list.first().text();
+    var $cities = $('ul.city li');
+    $cities.hide();
+    var $selected_list = jQuery('ul.city li.'+country);
+    $selected_list.show();
+    var $current_city = $selected_list.first().text();
 
-    taobaoChangeCity(\$current_city);
+    taobaoChangeCity($current_city);
 
-    jQuery('div.cities .sel_val').text(\$current_city);
+    jQuery('div.cities .sel_val').text($current_city);
 }
 jQuery(function(){
-    \$countries = jQuery('ul.country li');
-    var \$cities = \$('ul.city li');
-    var first_country = \$countries.first().attr('class');
+    $countries = jQuery('ul.country li');
+    var $cities = $('ul.city li');
+    var first_country = $countries.first().attr('class');
     taobaoShowCities(first_country);
-    \$countries.click(function(){
+    $countries.click(function(){
         taobaoShowCities(jQuery(this).attr('class'));
     });
-    \$cities.click(function(){
+    $cities.click(function(){
         taobaoChangeCity(jQuery(this).text());
     });
 });</script>";
