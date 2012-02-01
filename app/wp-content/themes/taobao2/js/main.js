@@ -8,7 +8,14 @@ jQuery(function($) {
     initTabs2();
     $('#do').click(function(){
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
-    })	
+    })
+
+    $('.comments-wrap form').submit(function(){
+        if(!$('#comment').val()) {
+            alert('Введите комментарий!');
+            return false;
+        }
+    })
 
     function initCarousel() {
         $("div.slaider-video").jCarouselLite({
