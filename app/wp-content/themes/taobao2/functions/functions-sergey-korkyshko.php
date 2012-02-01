@@ -40,6 +40,8 @@ function initScripts()
 <script>
 var serverHours = parseInt("<?php echo getHours(); ?>");
 var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
+var startOfWork = parseInt(10);
+var endOfWork = parseInt(19);
 var clientIP = "<?php echo getRealIpAddr(); ?>";
 var blogUrl = "<?php bloginfo('url'); ?>";
 </script>

@@ -8,7 +8,7 @@
 <head>
     <title><?php wp_title() ?></title>    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>/fancybox/jquery.fancybox-1.3.4.css" type="text/css"/>
+	  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fancybox/jquery.fancybox-1.3.4.css" type="text/css"/>
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
 	
     <?php wp_head(); ?>

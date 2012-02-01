@@ -6,11 +6,6 @@
            });
        });
        
-        var serverHours = parseInt("<?php echo getHours(); ?>");
-        var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
-	    var clientIP = "<?php echo getenv('REMOTE_ADDR'); ?>";
-        var blogUrl = "<?php bloginfo('url'); ?>";
-
 jQuery(document).ready(function() {
 
         jQuery("#fancys").fancybox({
