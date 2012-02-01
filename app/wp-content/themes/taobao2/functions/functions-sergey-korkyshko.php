@@ -40,6 +40,12 @@ function initScripts()
 <script>
 var serverHours = parseInt("<?php echo getHours(); ?>");
 var serverMinutes = parseInt("<?php echo getMinutes(); ?>");
+<?php list($startOfWork, $endOfWork) = explode('-', get_option('working_hours', '10-19')); ?>
+var startOfWork = parseInt("<?php echo $startOfWork ?>");
+var endOfWork = parseInt("<?php echo $endOfWork ?>");
+var workingDays = "<?php echo get_option('working_days', '1,2,3,4,5') ?>";
+var holidays = "<?php echo get_option('holidays', ''); ?>";
+
 var clientIP = "<?php echo getRealIpAddr(); ?>";
 var blogUrl = "<?php bloginfo('url'); ?>";
 </script>

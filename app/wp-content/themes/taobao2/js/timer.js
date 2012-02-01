@@ -1,41 +1,7 @@
-var date = new Date();
-var hours = clientHoursMinusServerHours(date);
-var minutes = clientMinutesMinusServerMinutes(date);
-var dot;
-var interval = setInterval("getCurrentTime(date,hours,minutes)", 1000);
-
-function clientHoursMinusServerHours(date) {
-    var client = date;
-    var clientHours = client.getHours();
-    clientHours = parseInt(clientHours.toString());
-    var differenceHours = serverHours - clientHours;
-    return differenceHours;
-}
-
-function clientMinutesMinusServerMinutes(date) {
-    var client = date;
-    var clientMinutes = client.getMinutes();
-    clientMinutes = parseInt(clientMinutes.toString());
-    var differenceMinutes = serverMinutes - clientMinutes;
-    return differenceMinutes;
-}
-
-function getCurrentTime(date,differenceHours, differenceMinutes) {
-    var client = new Date();
-    var clientHours = client.getHours();
-    var clientMinutes = client.getMinutes();
-    var clientHours = parseInt(clientHours.toString());
-    var clientMinutes = parseInt(clientMinutes.toString());
-    var newClientHours = clientHours + differenceHours;
-    var newClientMinutes = clientMinutes + differenceMinutes;
-    timer2(newClientHours, newClientMinutes, 10, 19);
-}
-
-function appZero(i) {
-    i=Math.abs(i);
+function addLeadingZero(i) {
+    i = Math.abs(i);
     if ((i < 10) ) {
-
-        if (i == 0) {
+        if (i < 1) {
             i = '00';
         } else {
             i = "0" + i;
@@ -44,32 +10,62 @@ function appZero(i) {
     return i;
 }
 
-function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
+var dot = ':';
+
+function updateTimer() {
+    var clientDate = new Date();
+    var clientHours = parseInt(clientDate.getHours());
+    var clientMinutes = parseInt(clientDate.getMinutes());
+
+    var clientDayOfWeek = clientDate.getDay();
+    var clientMonth = addLeadingZero(clientDate.getMonth()+1);
+    var clientDay = addLeadingZero(clientDate.getDate());
+    
+    var clientCurrentDate = clientDay+'.'+clientMonth;
+
+    var deltaHours = serverHours - clientHours;
+    var deltaMinutes = serverMinutes - clientMinutes;
+
+    var newClientHours = clientHours + deltaHours;
+    var newClientMinutes = clientMinutes + deltaMinutes;
+
+
     if ((newClientHours >= startOfWork) && (newClientHours < endOfWork)) {
-        console.log("newClientHours="+(endOfWork - newClientHours) - 1);
         var hoursLeft = (endOfWork - newClientHours) - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
         var cssClass = 'work';
-    }
-    if((newClientHours<=startOfWork)) {
-        var hoursLeft = (startOfWork - newClientHours) - 1;
+    } else {
+        if(newClientHours<=startOfWork) {
+          var hoursLeft = (startOfWork - newClientHours) - 1;
+        } else if(newClientHours>= endOfWork) {
+          var hoursLeft = 23 - newClientHours + startOfWork;
+        }
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
-            }
-    if(newClientHours>= endOfWork) {
-        var hoursLeft = 23 - newClientHours + startOfWork;
-        var minutesLeft = 59 - newClientMinutes;
-        var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
-        var cssClass = 'suspend';
-
     }
-
-    minutesLeft = appZero(minutesLeft);
-    hoursLeft = appZero(hoursLeft);
+    
+    var isWorkDay = (workingDays.search(clientDayOfWeek) > -1);
+    var isHoliday = (holidays.search(clientCurrentDate) > -1);
+     
+    minutesLeft = addLeadingZero(minutesLeft);
+    hoursLeft = addLeadingZero(hoursLeft);
+    
     if(dot==":"){dot=" "}else{dot=":"}
-    var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
+    
+    if(isWorkDay && !isHoliday) {
+      var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
+    } else {
+      var hours = "";
+      var str = '<strong><i>Отдыхаем.</i> Сегодня у нас выходной, заходите в рабочий день</strong>';
+      var cssClass = 'suspend';
+    }
+    
     $("#alarm").html(str + hours);
     $("#alarm").attr('class', cssClass);
 }
+
+$(function(){
+    setInterval(updateTimer, 1000);
+})
