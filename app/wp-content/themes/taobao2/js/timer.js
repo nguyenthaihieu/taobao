@@ -32,10 +32,11 @@ function getCurrentTime(date,differenceHours, differenceMinutes) {
 }
 
 function appZero(i) {
+    i=Math.abs(i);
     if ((i < 10) ) {
 
         if (i == 0) {
-            i = '0'+1;
+            i = '00';
         } else {
             i = "0" + i;
         }
@@ -44,14 +45,15 @@ function appZero(i) {
 }
 
 function timer2(newClientHours, newClientMinutes, startOfWork, endOfWork) {
-    if ((newClientHours > startOfWork) && (newClientHours < endOfWork)) {
-        var hoursLeft = endOfWork - newClientHours - 1;
+    if ((newClientHours >= startOfWork) && (newClientHours < endOfWork)) {
+        console.log("newClientHours="+(endOfWork - newClientHours) - 1);
+        var hoursLeft = (endOfWork - newClientHours) - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
         var cssClass = 'work';
     }
-    if((newClientHours<startOfWork)) {
-        var hoursLeft = startOfWork - newClientHours - 1;
+    if((newClientHours<=startOfWork)) {
+        var hoursLeft = (startOfWork - newClientHours) - 1;
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
