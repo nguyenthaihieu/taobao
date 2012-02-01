@@ -24,13 +24,13 @@ function submenu_calc_places_callback () {
             }
         } elseif ($action[0] == 'update') {
             if ($action[1] == 'country') {
-                calc_places_update_country($action[2], $_POST['country_' . $action[2]]);
+                calc_places_update_country($action[2], $_POST['country_' . $action[2]], $_POST['code_' . $action[2]]);
             } elseif ($action[1] == 'city') {
                 calc_places_update_city($action[2], $_POST['city_' . $action[2]], $_POST['city_' . $action[2] . '_coast']);
             }
         } elseif ($action[0] == 'add') {
             if ($action[1] == 'country') {
-                calc_places_add_country($_POST['country']);
+                calc_places_add_country($_POST['country'], $_POST['code']);
             } elseif ($action[1] == 'city') {
                 calc_places_add_city($action[2], $_POST['city_country_' . $action[2]], $_POST['city_country_' . $action[2] . '_coast']);
             }
@@ -53,7 +53,7 @@ function submenu_calc_places_callback () {
             .calc_places_form td {width:70px;text-align:center;}
             .calc_places_form td.first_coll {width:auto;text-align:left;}
             .calc_places_form tbody td.first_coll {padding-left:25px;}
-            .calc_places_form tbody td.first_coll input.city_coast {width:100px;}
+            .calc_places_form td.first_coll input.second_field {width:100px;}
         </style>
 
         <script type="text/javascript">
@@ -74,51 +74,52 @@ function submenu_calc_places_callback () {
             <form class="calc_places_form" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
                 <table cellspacing="0">
                     <?php foreach ($places as $country_id => $place) : ?>
-                        <?php foreach ($place as $country => $cities) : ?>
-                            <thead>
+                        <thead>
+                            <tr>
+                                <td class="first_coll">
+                                    <input type="text" name="country_<?php echo $country_id; ?>" value="<?php echo $place['country']; ?>" />
+                                    <input class="second_field" type="text" name="code_<?php echo $country_id; ?>" value="<?php echo $place['code']; ?>" />
+                                </td>
+                                <td>
+                                    <button type="submit" name="action" value="update_country_<?php echo $country_id; ?>" class="button-primary">Update</button>
+                                </td>
+                                <td>
+                                    <button type="submit" name="action" value="delete_country_<?php echo $country_id; ?>" class="button-primary">Delete</button>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
+                            <?php foreach ($place['cities'] as $city) : ?>
                                 <tr>
                                     <td class="first_coll">
-                                        <input type="text" name="country_<?php echo $country_id; ?>" value="<?php echo $country; ?>" />
+                                        <input type="text" name="city_<?php echo $city['city_id']; ?>" value="<?php echo $city['city']; ?>" />
+                                        <input class="second_field" type="text" name="city_<?php echo $city['city_id']; ?>_coast" value="<?php echo $city['coast']; ?>" />
                                     </td>
                                     <td>
-                                        <button type="submit" name="action" value="update_country_<?php echo $country_id; ?>" class="button-primary">Update</button>
+                                        <button type="submit" name="action" value="update_city_<?php echo $city['city_id']; ?>"  class="button-primary">Update</button>
                                     </td>
                                     <td>
-                                        <button type="submit" name="action" value="delete_country_<?php echo $country_id; ?>" class="button-primary">Delete</button>
+                                        <button type="submit" name="action" value="delete_city_<?php echo $city['city_id']; ?>"  class="button-primary">Delete</button>
                                     </td>
                                 </tr>
-                            </thead>
-                            <tbody<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
-                                <?php foreach ($cities as $city) : ?>
-                                    <tr>
-                                        <td class="first_coll">
-                                            <input type="text" name="city_<?php echo $city['city_id']; ?>" value="<?php echo $city['city']; ?>" />
-                                            <input class="city_coast" type="text" name="city_<?php echo $city['city_id']; ?>_coast" value="<?php echo $city['coast']; ?>" />
-                                        </td>
-                                        <td>
-                                            <button type="submit" name="action" value="update_city_<?php echo $city['city_id']; ?>"  class="button-primary">Update</button>
-                                        </td>
-                                        <td>
-                                            <button type="submit" name="action" value="delete_city_<?php echo $city['city_id']; ?>"  class="button-primary">Delete</button>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                                <tr>
-                                    <td class="first_coll">
-                                        <input type="text" name="city_country_<?php echo $country_id; ?>" value="" />
-                                        <input class="city_coast" type="text" name="city_country_<?php echo $country_id; ?>_coast" value="" />
-                                    </td>
-                                    <td colspan="2">
-                                        <button type="submit" name="action" value="add_city_<?php echo $country_id; ?>" class="button-primary">Add</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        <?php endforeach; $num++; ?>
+                            <?php endforeach; ?>
+                            <tr>
+                                <td class="first_coll">
+                                    <input type="text" name="city_country_<?php echo $country_id; ?>" value="" />
+                                    <input class="second_field" type="text" name="city_country_<?php echo $country_id; ?>_coast" value="" />
+                                </td>
+                                <td colspan="2">
+                                    <button type="submit" name="action" value="add_city_<?php echo $country_id; ?>" class="button-primary">Add</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php $num++; ?>
                     <?php endforeach; ?>
                     <thead class="add_country">
                         <tr>
                             <td class="first_coll">
                                 <input type="text" name="country" value="" />
+                                <input class="second_field" type="text" name="code" value="" />
                             </td>
                             <td colspan="2">
                                 <button type="submit" name="action" value="add_country" class="button-primary">Add</button>
@@ -138,8 +139,8 @@ function submenu_calc_places_callback () {
 function get_calc_places () {
     global $wpdb;
     $query = "SELECT `wp_cities`.`id`, `wp_cities`.`name`, `wp_cities`.`coast`, "
-            . "`wp_countries`.`id` as `country_id`, `wp_countries`.`name` as `country_name` "
-            . "FROM `wp_cities` "
+            . "`wp_countries`.`id` as `country_id`, `wp_countries`.`name` as `country_name`, "
+            . "`wp_countries`.`code` FROM `wp_cities` "
             . "RIGHT JOIN `wp_countries` ON `wp_countries`.`id`=`wp_cities`.`country_id` "
             . "ORDER BY `wp_countries`.`name`, `wp_cities`.`name`;";
     $places = $wpdb->get_results($query);
@@ -148,8 +149,12 @@ function get_calc_places () {
     $nice_data = array();
     $count_places = count($places);
     for ($c = 0; $c < $count_places;) {
-        $nice_data[$places[$c]->country_id][$places[$c]->country_name] = array();
-        $new_data = &$nice_data[$places[$c]->country_id][$places[$c]->country_name];
+        $nice_data[$places[$c]->country_id] = array(
+            "country" => $places[$c]->country_name,
+            "code" => $places[$c]->code,
+            "cities" => array()
+        );
+        $new_data = &$nice_data[$places[$c]->country_id]["cities"];
         for ($c2 = $c; $c2 < $count_places;) {
             if (!empty($places[$c2]->name)) {
                 array_push($new_data, array(
@@ -170,7 +175,7 @@ function get_calc_places () {
 
 function calc_places_get_countries () {
     global $wpdb;
-    $res = $wpdb->get_results("SELECT `" . $wpdb->prefix . "countries`.`name`, `" . $wpdb->prefix . "countries`.`id` FROM `" . $wpdb->prefix . "countries` ORDER BY `" . $wpdb->prefix . "countries`.`name`;");
+    $res = $wpdb->get_results("SELECT `" . $wpdb->prefix . "countries`.`name`, `" . $wpdb->prefix . "countries`.`id`, `" . $wpdb->prefix . "countries`.`code` FROM `" . $wpdb->prefix . "countries` ORDER BY `" . $wpdb->prefix . "countries`.`name`;");
     return $res;
 }
 
@@ -180,15 +185,15 @@ function calc_places_delete_country ($country_id) {
     return $res;
 }
 
-function calc_places_add_country ($country) {
+function calc_places_add_country ($country, $code) {
     global $wpdb;
-    $res = $wpdb->query("INSERT INTO " . $wpdb->prefix . "countries (`name`) VALUES ('" . $country . "');");
+    $res = $wpdb->query("INSERT INTO " . $wpdb->prefix . "countries (`name`, `code`) VALUES ('" . $country . "', '" . $code . "');");
     return $res;
 }
 
-function calc_places_update_country ($country_id, $country) {
+function calc_places_update_country ($country_id, $country, $code) {
     global $wpdb;
-    $res = $wpdb->query("UPDATE " . $wpdb->prefix . "countries SET `name`='" . $country . "' WHERE `id` = " . $country_id . ";");
+    $res = $wpdb->query("UPDATE " . $wpdb->prefix . "countries SET `name`='" . $country . "', `code`='" . $code . "' WHERE `id` = " . $country_id . ";");
     return $res;
 }
 
