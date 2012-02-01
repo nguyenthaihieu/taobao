@@ -571,14 +571,13 @@ div.pagers{
 }
 
 #container div.slaider-video div.foto{
-	width:183px;
+	width:153px;
 	overflow:hidden;
-	height:160px;
 	margin:0;
 }
 
 #container div.slaider-video div.text-video{
-	width:173px;
+	width:143px;
 	overflow:hidden;
 	padding:15px 0 0 10px;
 }
@@ -589,9 +588,9 @@ div.pagers{
 }
 
 #container div.slaider-video div.foto img{
-	width:183px;
+	width:153px;
 	overflow:hidden;
-	height:160px;
+	height:130px;
 }
 
 #container div.videos span.prev{
@@ -2576,7 +2575,7 @@ h2 a{
 
 #content div.all ul.video li{
 	float:left;
-	margin:0 27px 20px 0;
+	margin:0 12px 0 0;
 }
 
 #content div.all ul.video li div.text-video {
@@ -2928,8 +2927,10 @@ div.wid100{
 }
 
 #content div.slaider-video{
-	width:436px !important;
+	width:536px !important;
+    margin:0 0 0 30px;
 }
+
 
 p.subscribe-to-comments{
 	width:100%;
@@ -3138,4 +3139,14 @@ div.slaider-box div.slaide h3{
 
 div.slaider-box div.slaide span.block{
 	display:none;
+}
+
+
+div.slaider-box div.slaide li{
+    height: 70px;
+}
+
+#content div.all span.prev{
+    margin:72px 0 0;
+    margin:72px 0 0;
 }

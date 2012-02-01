@@ -29,7 +29,7 @@ jQuery(function($) {
             btnNext: "#content div.videos span.next",
             btnPrev: "#content div.videos span.prev",
             speed: 400,
-            visible: 2,
+            visible: 3,
             circular: false
         });
 
