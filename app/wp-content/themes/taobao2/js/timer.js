@@ -36,7 +36,11 @@ function updateTimer() {
         var str = '<strong><i>Работаем.</i> До конца <br/> рабочего дня осталось:</strong>';
         var cssClass = 'work';
     } else {
-        var hoursLeft = (startOfWork - newClientHours) - 1;
+        if(newClientHours<=startOfWork) {
+          var hoursLeft = (startOfWork - newClientHours) - 1;
+        } else if(newClientHours>= endOfWork) {
+          var hoursLeft = 23 - newClientHours + startOfWork;
+        }
         var minutesLeft = 59 - newClientMinutes;
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
