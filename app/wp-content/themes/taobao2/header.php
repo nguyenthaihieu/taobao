@@ -126,7 +126,7 @@
                                     $countries = calc_places_get_countries();
                                     foreach ($countries as $country) {
                                         if($country->name)
-                                        echo '<option value="' . $country->id . '">' . $country->name . '</option>';
+                                        echo '<option value="' . $country->code . '">' . $country->name . '</option>';
                                     }
                                     ?>
                                 </select>
