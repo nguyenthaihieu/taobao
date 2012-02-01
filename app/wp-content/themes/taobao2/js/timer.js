@@ -17,6 +17,12 @@ function updateTimer() {
     var clientHours = parseInt(clientDate.getHours());
     var clientMinutes = parseInt(clientDate.getMinutes());
 
+    var clientDayOfWeek = clientDate.getDay();
+    var clientMonth = addLeadingZero(clientDate.getMonth()+1);
+    var clientDay = addLeadingZero(clientDate.getDate());
+    
+    var clientCurrentDate = clientDay+'.'+clientMonth;
+
     var deltaHours = serverHours - clientHours;
     var deltaMinutes = serverMinutes - clientMinutes;
 
@@ -35,13 +41,22 @@ function updateTimer() {
         var str = '<strong><i>Отдыхаем.</i> До начала <br/> рабочего дня осталось:</strong>';
         var cssClass = 'suspend';
     }
+    
+    var isWorkDay = (workingDays.search(clientDayOfWeek) > -1);
+    var isHoliday = (holidays.search(clientCurrentDate) > -1);
      
     minutesLeft = addLeadingZero(minutesLeft);
     hoursLeft = addLeadingZero(hoursLeft);
     
     if(dot==":"){dot=" "}else{dot=":"}
     
-    var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
+    if(isWorkDay && !isHoliday) {
+      var hours = "<span class='time'>" + '<span>' + hoursLeft + '</span>'  + '<span class="dot">' + dot + '</span>' + '<span>' + minutesLeft + '</span>' + "</span>";
+    } else {
+      var hours = "";
+      var str = '<strong><i>Отдыхаем.</i> Сегодня у нас выходной, заходите в рабочий день</strong>';
+      var cssClass = 'suspend';
+    }
     
     $("#alarm").html(str + hours);
     $("#alarm").attr('class', cssClass);
