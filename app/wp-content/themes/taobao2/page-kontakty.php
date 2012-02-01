@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 <section id="container">
+    <script type="text/javascript">
+        jQuery(function(){
+            jQuery('span.fancyimg').fancybox();
+        });
+    </script>
+    <style type="text/css">
+        span.fancyimg {color:blue;text-decoration:underline;cursor:pointer;}
+    </style>
     <section id="content">
         <h2 class="title">Контакты</h2>
         <div class="top"></div>
@@ -18,7 +26,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="<?=wp_get_attachment_url(get_post_meta(2750,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>		           
+						<p><span href="<?=wp_get_attachment_url(get_post_meta(2750,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Благовещенске</b></p>
@@ -46,7 +54,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="<?=wp_get_attachment_url(get_post_meta(2753,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
+						<p><span href="<?=wp_get_attachment_url(get_post_meta(2753,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в г. Хабаровск</b></p>
@@ -74,7 +82,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="#" class="button">Напишите нам</a></p>
-						<p><a href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
+						<p><span href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Москве</b></p>
@@ -102,7 +110,7 @@
 						<h2><?php the_title(); ?></h2>
 				        <?php the_content(); ?>		
 						<p><a href="javascript:void(0)" class="button">Напишите нам</a></p>
-						<p><a href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" id="fancys">Как добраться</a></p>	           
+						<p><span href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
 				    </div>
 					<div class="contact-list">
 	                    <p><b>Менеджеры в Китай, г. Хэй-Хэ</b></p>
