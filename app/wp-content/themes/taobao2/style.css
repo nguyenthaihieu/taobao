@@ -2675,6 +2675,7 @@ div.soce{
 	overflow:hidden;
 	position:fixed;
 	top:62px;
+	z-index:5;
 	left:0;
 }
 
