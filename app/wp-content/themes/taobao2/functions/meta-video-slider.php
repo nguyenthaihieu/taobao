@@ -2,19 +2,19 @@
 $prefix = "video_slider_";
 
 $info_box = array(
-    'id' => 'video_slider-meta-box',
-    'title' => 'Ссылка на видео:',
-    'page' => 'video_slider',
-    'context' => 'normal',
-    'priority' => 'high',
-    'fields' => array(
-        array(
-            'name' => 'Youtube ',
-            'desc' => '',
-            'id' => 'Youtube',
-            'type' => 'text',
-            'std' => ''
-        )
+        'id' => 'video_slider-meta-box',
+        'title' => 'Ссылка на видео:',
+        'page' => 'video_slider',
+        'context' => 'normal',
+        'priority' => 'high',
+        'fields' => array(
+                array(
+                        'name' => 'Youtube ',
+                        'desc' => '',
+                        'id' => 'Youtube',
+                        'type' => 'text',
+                        'std' => ''
+                )
 
 //        array(
 //            'name' => 'Vimeo ',
@@ -23,7 +23,7 @@ $info_box = array(
 //            'type' => 'text',
 //            'std' => ''
 //        )
-    )
+        )
 );
 
 

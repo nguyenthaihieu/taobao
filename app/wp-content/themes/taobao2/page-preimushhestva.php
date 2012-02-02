@@ -9,11 +9,11 @@
         <div class="top"></div>
         <div class="body">
             <div class="allbox padding">
-                <?php the_content(); ?>
+                        <?php the_content(); ?>
             </div>
         </div>
         <div class="bottom"></div>
-        <?php endwhile; else: ?>
+            <?php endwhile; else: ?>
         <p><?php _e('По вашему запросу ничего нет.'); ?></p>
         <?php endif; ?>
     </section>
@@ -23,7 +23,7 @@
             <?php get_sidebar('calc') ?>
 
             <div class="blog-gree">
-            <?php get_sidebar('blog') ?>
+                <?php get_sidebar('blog') ?>
             </div>
         </div>
     </div>

@@ -16,20 +16,20 @@
 
 
 
- 
-<?php the_content();?>
+
+        <?php the_content();?>
 
 
 <small>
-<?php the_tags('<img src="http://taobao.ru.com/wp-content/themes/taobao/images/tag_green.png" width="16" height="16"> ' , ', ' , ' | '); ?> <?php the_time('d F ') ?><?php the_time('Y') ?>
+            <?php the_tags('<img src="http://taobao.ru.com/wp-content/themes/taobao/images/tag_green.png" width="16" height="16"> ' , ', ' , ' | '); ?> <?php the_time('d F ') ?><?php the_time('Y') ?>
 </small>
 
 
 <div class="clearfloat" style="height: 20px;"></div>
 
 
-<?php endwhile; else: ?>
-<p><?php _e('По вашему запросу ничего нет.'); ?></p>
+    <?php endwhile; else: ?>
+<p><?php _e('пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.'); ?></p>
 <?php endif; ?>
 
 
@@ -60,21 +60,21 @@ VK.Widgets.Comments("vk_comments", {limit: 15, width: "780", attach: "*"});
 
 
 
-    
-	
-	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
