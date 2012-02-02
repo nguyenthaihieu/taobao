@@ -145,6 +145,15 @@
                             <div id="alarm"></div>
                         </div>
                     </div>
+                    <?php if ('off' == get_option('taobao_turn_online_consult', 'off')) : ?>
+                        <script type="text/javascript">
+                            jQuery(function(){
+                                jQuery('#liveTexButton_4988').click(function(){
+                                    alert('Онлайн консультант временно не работает');
+                                });
+                            });
+                        </script>
+                    <?php endif; ?>
                     <nav class="block-menu">
                         <ul>
                             <li class="item1"><a href="<?php echo get_option('omr_tracking_first');?>">Первый раз на сайте?</a></li>

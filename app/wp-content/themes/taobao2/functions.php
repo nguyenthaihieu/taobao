@@ -242,7 +242,9 @@ function onlineConsultation() { ?>
     <?php
 }
 
-add_action('wp_enqueue_scripts','onlineConsultation');
+if ('on' == get_option('taobao_turn_online_consult', 'off')) {
+    add_action('wp_enqueue_scripts','onlineConsultation');
+}
 
 register_taxonomy('messages-slider-category',
         array(

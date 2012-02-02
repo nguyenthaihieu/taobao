@@ -11,6 +11,9 @@ function my_custom_submenu_page_callback() {
     if(isset($_POST['settings'])) {
         unset($_POST['settings']);
         $_POST['working_days'] = join(',', $_POST['working_days']);
+        if (!isset($_POST['taobao_turn_online_consult'])) {
+            $_POST['taobao_turn_online_consult'] = 'off';
+        }
         foreach($_POST as $option=>$value) {
             update_option($option, $value);
         }
@@ -65,6 +68,11 @@ function my_custom_submenu_page_callback() {
             <tr valign="top">
                 <th scope="row">Даты праздничных дней (например: 01.01,08.03,09.05)</th>
                 <td><input style="width:400px; height:25px;" type="text" name="holidays" value="<?php echo get_option('holidays', '01.01,08.03,09.05');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Онлайн консультант</th>
+                <td><input type="checkbox" name="taobao_turn_online_consult" value="on"<?php if ('on' == get_option('taobao_turn_online_consult')) : ?> checked="checked"<?php endif; ?> />
                 </td>
             </tr>
         </table>
