@@ -143,7 +143,8 @@ function onlineConsultation()
 </script>
 <?php
 }
-//add_action('wp_enqueue_scripts','onlineConsultation');
+
+add_action('wp_enqueue_scripts','onlineConsultation');
 
 register_taxonomy('messages-slider-category',
     array(

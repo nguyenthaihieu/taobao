@@ -3,20 +3,20 @@
 $prefix = 'transport_com_';
 
 $meta_box = array(
-    'id' => 'my-meta-box',
-    'title' => 'Инфо',
-    'page' => 'transport_com',
-    'context' => 'normal',
-    'priority' => 'high',
-    'fields' => array(
-        array(
-            'name' => 'Сайт компании:',
-            'desc' => 'Пример: http://taobao.ru.com',
-            'id' => $prefix . 'url',
-            'type' => 'text',
-            'std' => ''
+        'id' => 'my-meta-box',
+        'title' => 'Инфо',
+        'page' => 'transport_com',
+        'context' => 'normal',
+        'priority' => 'high',
+        'fields' => array(
+                array(
+                        'name' => 'Сайт компании:',
+                        'desc' => 'Пример: http://taobao.ru.com',
+                        'id' => $prefix . 'url',
+                        'type' => 'text',
+                        'std' => ''
+                )
         )
-    )
 );
 
 add_action('admin_menu', 'mytheme_add_box');

@@ -1,7 +1,7 @@
 <?php
 /*
  * Калькулятор стоимости покупки и доставки товара
- */
+*/
 
 // Интерфейс настройки калькулятора
 
@@ -32,7 +32,7 @@ function submenu_calculator_callback () {
             if ($action[0] == 'add' && isset($_POST['label'])) {
                 //$pre_code = (isset($_POST['pre_code']))?$_POST['pre_code']:NULL;
                 $post_code = (isset($_POST['post_code']))?$_POST['post_code']:NULL;
-                $result = calculator_set_param($_POST['label'], 
+                $result = calculator_set_param($_POST['label'],
                         //$pre_code,
                         $post_code);
             } elseif ($action[0] == 'save') {
@@ -59,104 +59,109 @@ function submenu_calculator_callback () {
     // Собираем существующие параметры
     $params = calculator_get_params();
     ?>
-        <style type="text/css">
-            .calculator_admin_form {margin-top:15px;}
-            .calculator_admin_form table {width:100%;margin:0;}
-            .calculator_admin_form table input[type=text] {width:100%;}
-            .calculator_admin_form table button[type=submit] {width:38%;}
-            .calculator_admin_formula input {margin-left:6px;width:300px;}
-            .calculator_admin_formula label {font-weight:bold;}
-        </style>
+<style type="text/css">
+    .calculator_admin_form {margin-top:15px;}
+    .calculator_admin_form table {width:100%;margin:0;}
+    .calculator_admin_form table input[type=text] {width:100%;}
+    .calculator_admin_form table button[type=submit] {width:38%;}
+    .calculator_admin_formula input {margin-left:6px;width:300px;}
+    .calculator_admin_formula label {font-weight:bold;}
+    .calculator_admin_form .slug {width:20px;}
+</style>
 
-        <div class="wrap">
+<div class="wrap">
 
-            <div id="icon-options-general" class="icon32"><br></div>
-            <h2><?php echo $title; ?></h2>
+    <div id="icon-options-general" class="icon32"><br></div>
+    <h2><?php echo $title; ?></h2>
 
-            <form class="calculator_admin_form" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                <table cellspacing="10">
-                    <tr>
-                        <th>Label</th>
-                        <!-- <th>Prefix code</th> -->
-                        <th>Image Link</th>
-                        <th>Options</th>
-                    </tr>
-                    <?php foreach ($params as $slug => $param) : ?>
-                        <tr>
-                            <td>
-                                <input type="text" name="<?php echo $slug; ?>_label" value="<?php echo $param['label'] ?>" />
-                            </td>
-                            <!-- <td>
-                                <input type="text" name="<?php echo $slug; ?>_pre_code" value="<?php //echo $param['pre_code'] ?>" />
-                            </td> -->
-                            <td>
-                                <input type="text" name="<?php echo $slug; ?>_post_code" value="<?php echo $param['post_code'] ?>" />
-                            </td>
-                            <td>
-                                <button class="button-primary" type="submit" name="action" value="update_<?php echo $slug; ?>">Update</button>
-                                <button class="button-primary" type="submit" name="action" value="delete_<?php echo $slug; ?>">Delete</button>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+    <form class="calculator_admin_form" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+        <table cellspacing="10">
+            <tr>
+                <th>Label</th>
+                <!-- <th>Prefix code</th> -->
+                <th>Image Link</th>
+                <th>Options</th>
+            </tr>
+                <?php foreach ($params as $slug => $param) : ?>
+            <tr>
+                <td class="slug">
+                    <?php echo $slug; ?>:
+                </td>
+                <td>
+                    <input type="text" name="<?php echo $slug; ?>_label" value="<?php echo $param['label'] ?>" />
+                </td>
+                <td>
+                    <input type="text" name="<?php echo $slug; ?>_post_code" value="<?php echo $param['post_code'] ?>" />
+                </td>
+                <td>
+                    <button class="button-primary" type="submit" name="action" value="update_<?php echo $slug; ?>">Update</button>
+                    <button class="button-primary" type="submit" name="action" value="delete_<?php echo $slug; ?>">Delete</button>
+                </td>
+            </tr>
+                <?php endforeach; ?>
 
-                    <tr>
-                        <td>
-                            <input type="text" name="label" value="" />
-                        </td>
-                        <!-- <td>
-                            <input type="text" name="pre_code" value="" />
-                        </td> -->
-                        <td>
-                            <input type="text" name="post_code" value="" />
-                        </td>
-                        <td>
-                            <center><button class="button-primary" type="submit" name="action" value="add">Add New</button></center>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" name="label" value="" />
+                </td>
+                <!-- <td>
+                    <input type="text" name="pre_code" value="" />
+                </td> -->
+                <td>
+                    <input type="text" name="post_code" value="" />
+                </td>
+                <td>
+                    <center><button class="button-primary" type="submit" name="action" value="add">Add New</button></center>
+                </td>
+            </tr>
+        </table>
+    </form>
 
-            <form class="calculator_admin_formula" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-                <table>
-                    <tr>
-                        <td>
-                            <label for="formula_field">Формула</label>
-                        </td>
-                        <td>
-                            <input id="formula_field" type="text" name="formula" value="<?php echo get_option('calculator_formula'); ?>" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="formula_opt_field">Формула для опта</label>
-                        </td>
-                        <td>
-                            <input id="formula_opt_field" type="text" name="formula_opt" value="<?php echo get_option('calculator_formula_opt'); ?>" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="calculator_conf_countries">Отображать список городов</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="calculator_conf_countries" value="1" id="calculator_conf_countries" <?php if (get_option('calculator_conf_countries')): ?>checked <?php endif; ?>/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="calculator_conf_opt">Отображать выбор опта</label>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="calculator_conf_opt" value="1" id="calculator_conf_opt" <?php if (get_option('calculator_conf_opt')): ?>checked <?php endif; ?>/>
-                        </td>
-                    </tr>
-                </table>
+    <form class="calculator_admin_formula" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+        <table>
+            <tr>
+                <td>
+                    <label for="formula_field">Формула</label>
+                </td>
+                <td>
+                    <input id="formula_field" type="text" name="formula" value="<?php echo get_option('calculator_formula'); ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="formula_opt_field">Формула для опта</label>
+                </td>
+                <td>
+                    <input id="formula_opt_field" type="text" name="formula_opt" value="<?php echo get_option('calculator_formula_opt'); ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="calculator_conf_countries">Отображать список городов</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="calculator_conf_countries" value="1" id="calculator_conf_countries" <?php if (get_option('calculator_conf_countries')): ?>checked <?php endif; ?>/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="calculator_conf_opt">Отображать выбор опта</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="calculator_conf_opt" value="1" id="calculator_conf_opt" <?php if (get_option('calculator_conf_opt')): ?>checked <?php endif; ?>/>
+                </td>
+            </tr>
+        </table>
 
-                <button type="submit" name="action" class="button-primary" value="save">Save</button>
-                <p class="description">Вы можете вставить в формулу переменную Y для <br />
-                использования стоимости одного юаня в рублях.</p>
-            </form>
-        </div>
+        <button type="submit" name="action" class="button-primary" value="save">Save</button>
+        <p class="description">Вы можете вставить в формулу переменную Y для <br />
+            использования стоимости одного юаня в рублях<br />
+            и переменную C для использования стоимости<br />
+            доставки в выбранный город.
+        </p>
+    </form>
+</div>
     <?php
 }
 
@@ -167,7 +172,7 @@ function submenu_calculator_callback () {
 function calculator_get_params () {
     global $wpdb;
     $query = "SELECT `option_name`, `option_value` FROM wp_options WHERE "
-        . "`option_name` LIKE 'calculator_p%' ORDER BY `option_id`;";
+            . "`option_name` LIKE 'calculator_p%' ORDER BY `option_name`;";
     $params = $wpdb->get_results($query);
 
     // Преобразуем массив в удобную форму
@@ -175,9 +180,9 @@ function calculator_get_params () {
     foreach ($params as $param) {
         $options = explode("<", $param->option_value);
         $new_params[substr($param->option_name, 11)] = array(
-            "label" => $options[1],
-            //"pre_code" => $options[0],
-            "post_code" => $options[0]);
+                "label" => $options[1],
+                //"pre_code" => $options[0],
+                "post_code" => $options[0]);
     }
 
     return $new_params;
@@ -282,9 +287,9 @@ function shortcode_taobao_calc ($atts) {
 function taobaoShowCities (country) {
     country = country.split(' ')[0];
     var $cities = $('ul.city li');
-    $cities.hide();
+            $cities.hide();
     var $selected_list = jQuery('ul.city li.'+country);
-    $selected_list.show();
+            $selected_list.show();
     var $current_city = $selected_list.first().text();
 
     taobaoChangeCity($current_city);
@@ -292,14 +297,14 @@ function taobaoShowCities (country) {
     jQuery('div.cities .sel_val').text($current_city);
 }
 jQuery(function(){
-    $countries = jQuery('ul.country li');
+            $countries = jQuery('ul.country li');
     var $cities = $('ul.city li');
     var first_country = $countries.first().attr('class');
     taobaoShowCities(first_country);
-    $countries.click(function(){
+            $countries.click(function(){
         taobaoShowCities(jQuery(this).attr('class'));
     });
-    $cities.click(function(){
+            $cities.click(function(){
         taobaoChangeCity(jQuery(this).text());
     });
 });</script>";
@@ -312,9 +317,9 @@ jQuery(function(){
 
     foreach ($params as $name => $param) {
         $calc .= '<div class="item">'// . htmlspecialchars_decode($param['pre_code'])
-            . '<label>' . $param['label'] . '</label>'
-            . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
-            . '<input type="text" name="' . $name . '" value="" class="text" />';
+                . '<label>' . $param['label'] . '</label>'
+                . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
+                . '<input type="text" name="' . $name . '" value="" class="text" />';
         if (!empty($param['post_code'])) {
             $calc .= '<span><a href="javascript:void(0);" onclick="$(\'#info_' . $name . '\').slideToggle(\'slow\');" class="info"></span><div id="info_' . $name . '" class="calc_info_img" style="display:none;"><div><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></a></div></div>';
         }
@@ -332,8 +337,8 @@ jQuery(function(){
         $calc .= '</ul></span></span></div>';
         // Города
         $calc .= '<div class="item cities"><input type="hidden" name="calc_coast" value="' . $cities[0]->coast . '" /><input type="hidden" name="calc_city" value="' . $cities[0]->name . '" />'
-            . '<label>Ближайшее местоположение</label>'
-            . '<span class="sel_left undefined" style="z-index: 50; "><span class="sel_right"><span class="sel_val">' . $cities[0]->name . ' - ' . $cities[0]->coast . '</span><ul class="city" style="display: none; ">';
+                . '<label>Ближайшее местоположение</label>'
+                . '<span class="sel_left undefined" style="z-index: 50; "><span class="sel_right"><span class="sel_val">' . $cities[0]->name . ' - ' . $cities[0]->coast . '</span><ul class="city" style="display: none; ">';
         foreach ($cities as $city) {
             $calc .= '<li class="country_' . $city->country_id . '">' . $city->name . ' - ' . $city->coast . '</li>';
         }
@@ -343,7 +348,7 @@ jQuery(function(){
     if (get_option('calculator_conf_opt')) {
         $calc .= '<div class="item"><label>Оптовый заказ <input clsss="chek" name="opt_check" type="checkbox"></label></div>';
     }
-    
+
     $calc .= '<div class="item"><button type="submit" class="sub"><i>Рассчитать</i></button></div></form>';
 
     // Результаты
