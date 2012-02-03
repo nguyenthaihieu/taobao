@@ -66,6 +66,7 @@ function submenu_calculator_callback () {
     .calculator_admin_form table button[type=submit] {width:38%;}
     .calculator_admin_formula input {margin-left:6px;width:300px;}
     .calculator_admin_formula label {font-weight:bold;}
+    .calculator_admin_form .slug {width:20px;}
 </style>
 
 <div class="wrap">
@@ -83,12 +84,12 @@ function submenu_calculator_callback () {
             </tr>
                 <?php foreach ($params as $slug => $param) : ?>
             <tr>
+                <td class="slug">
+                    <?php echo $slug; ?>:
+                </td>
                 <td>
                     <input type="text" name="<?php echo $slug; ?>_label" value="<?php echo $param['label'] ?>" />
                 </td>
-                <!-- <td>
-                    <input type="text" name="<?php echo $slug; ?>_pre_code" value="<?php //echo $param['pre_code'] ?>" />
-                </td> -->
                 <td>
                     <input type="text" name="<?php echo $slug; ?>_post_code" value="<?php echo $param['post_code'] ?>" />
                 </td>
@@ -100,6 +101,7 @@ function submenu_calculator_callback () {
                 <?php endforeach; ?>
 
             <tr>
+                <td></td>
                 <td>
                     <input type="text" name="label" value="" />
                 </td>
@@ -154,7 +156,10 @@ function submenu_calculator_callback () {
 
         <button type="submit" name="action" class="button-primary" value="save">Save</button>
         <p class="description">Вы можете вставить в формулу переменную Y для <br />
-            использования стоимости одного юаня в рублях.</p>
+            использования стоимости одного юаня в рублях<br />
+            и переменную C для использования стоимости<br />
+            доставки в выбранный город.
+        </p>
     </form>
 </div>
     <?php
@@ -167,7 +172,7 @@ function submenu_calculator_callback () {
 function calculator_get_params () {
     global $wpdb;
     $query = "SELECT `option_name`, `option_value` FROM wp_options WHERE "
-            . "`option_name` LIKE 'calculator_p%' ORDER BY `option_id`;";
+            . "`option_name` LIKE 'calculator_p%' ORDER BY `option_name`;";
     $params = $wpdb->get_results($query);
 
     // Преобразуем массив в удобную форму
