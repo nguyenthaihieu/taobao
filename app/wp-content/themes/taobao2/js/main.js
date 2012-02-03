@@ -33,7 +33,7 @@ jQuery(function($) {
             circular: false
         });
 
-        $("div.slaide-page").jCarouselLite({
+        $("#content div.slaide-page").jCarouselLite({
             btnNext: "div.slaider-box-page span.next",
             btnPrev: "div.slaider-box-page span.prev",
             speed: 400,
