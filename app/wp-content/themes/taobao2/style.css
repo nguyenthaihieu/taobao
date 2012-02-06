@@ -120,7 +120,7 @@ div.width{
 }
 
 #header header.top{
-	width:950px;
+	width:970px;
 	margin:0 auto;	
 	display:block;
 }
@@ -460,7 +460,7 @@ div.slaider-box{
 	background:url(img/slaider-box.png) no-repeat;
 	width:910px;
 	padding:15px 20px;
-	height:133px;
+	height:100px;
 	margin:25px 0 0;
 }
 
@@ -538,6 +538,8 @@ div.slaider-box div.slaide h3{
 
 div.pagers{
 	margin:49px 0 0;
+	float:right;
+	width:auto;
 }
 
 #container div.pager a.activeSlide,div.pagers a.activeSlide{
@@ -619,9 +621,18 @@ div.pagers{
 	width:21px;
 	height:32px;
 	float:left;
-	margin:74px 0 0 -31px;
+	margin:74px 7px 0 0;
 	cursor:pointer;
 }
+
+#container div.videos span.prev:hover{
+	background-position:0 100%;
+}
+
+#container div.videos span.next:hover{
+	background-position:0 100%;
+}
+
 
 #content div.videos span.prev{
 	margin:74px 16px 0 0;
@@ -631,7 +642,7 @@ div.pagers{
 	background:url(./img/1next.png) no-repeat;
 	cursor: pointer;
     float: right;
-    height: 53px;
+    height: 32px;
     margin: 72px 20px 0 0;
     width: 21px;
 }
@@ -783,7 +794,7 @@ div.pagers{
 
 #wraper div.report{
 	float:right;
-	width:541px;
+	width:494px;
 }
 
 h2 a{
@@ -792,35 +803,34 @@ h2 a{
 	line-height:22px;
 }
 
-#wraper div.report tr{
+#wraper div.report ul{
 	width:126%;
 	overflow:hidden;
 	margin:10px 0 0;
 }
 
-#wraper div.report tr td{
-	width:245px;
-	color:#000;
-	font-size:11px;
-	padding:0 0 8px;
-	vertical-align:bottom;
+#wraper div.report li {
+    color: #000;
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 62px 15px 0;
+    max-height: 88px;
+    overflow: hidden;
+    padding: 0 0 8px;
+    vertical-align: top;
+    width: 224px;
 }
-
-#wraper div.report tr.height td{
-	height:10px;
-}
-
-#wraper div.report tr td p{
+#wraper div.report li p{
 	margin:0;
 }
 
-#wraper div.report tr td a{
+#wraper div.report li a{
 	color:#000;
 	font-size:11px;
 	font-style:italic;
 }
 
-#wraper div.report tr td span{
+#wraper div.report  span{
 	color:#bcbbb9;
 }
 
@@ -963,15 +973,18 @@ div.last div.text-left strong{
 
 div.last div.text-right{
 	float: right;
-    width: 541px;
+    width: 508px;
 }
 
 div.last div.col-1{
-	float:left;width:230px;
+	float:left;width:253px;
 	overflow:hidden;
 }
 
-
+div.last div.right{
+	width:230px;
+	float:right;
+}
 
 
 #footer{
@@ -1601,12 +1614,13 @@ h3{
 	margin:10px 0 0;
 }
 
-#content div.comentars textarea{
-	background:url(./img/aria.gif) no-repeat;
-	width:552px;
-	height:73px;
-	border:0;
-	padding:10px;
+#content div.comentars textarea {
+    background: url(./img/aria.gif) no-repeat;
+    border: 0 none;
+    height: 63px;
+    overflow: hidden;
+    padding: 10px;
+    width: 552px;
 }
 
 #content div.comentars div.boxer{
@@ -2675,7 +2689,7 @@ div.soce{
 	height:294px;
 	overflow:hidden;
 	position:fixed;
-	top:62px;
+	top:122px;
 	z-index:5;
 	left:0;
 }
@@ -3167,4 +3181,8 @@ div.slaider-box div.slaide h3{
 
 div.slaider-box div.slaide span.block{
 	display:none;
+}
+
+#wraper div.report li p.name{
+	margin:0 0 7px;
 }
