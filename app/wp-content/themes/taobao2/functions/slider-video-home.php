@@ -5,7 +5,7 @@
 
     <div class="slaider-video">
         <ul>
-            <?php query_posts('post_type=video_slider&video_slider-category=home-video-slider&order=ASC'); ?>
+            <?php query_posts('post_type=video_slider&video_slider-category=home-video-slider&order=ASC&numberposts=6'); ?>
             <?php while (have_posts()) : the_post(); ?>
             <li>
                 <div class="foto">

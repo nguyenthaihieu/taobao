@@ -47,76 +47,25 @@
         </div>
         <div class="report">
             <h2><span>Новые отзывы</span> <a href="<?php bloginfo('url') ?>/?page_id=982">все отзывы</a></h2>
-            <table>
-                <tr>
-<?php
-                    $comments = get_comments('post_id=982&number=2&offset=0');
-                    foreach($comments as $comment) :
-                        echo "<td>"; ?>
-                <strong><?php printf(__('%s'), get_comment_author_link()) ?></strong> <span class="date"><?php printf(__('%1$s'), get_comment_date()) ?>
-    <?php
-                        $author = get_comment_author_url();
-                        echo substr_replace($author, "", 0, 7);
-                        ?>
-                </span> <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a>
-    <?php if ($comment->comment_approved == '0') : ?>
-                <p><?php _e('Your comment is awaiting moderation.') ?></p>
-    <?php endif; ?>
-                <?php
-                endforeach;
-                echo "</td>";
-                ?>
-                </tr>
-                <tr>
-<?php
-                    $comments = get_comments('post_id=982&number=2&offset=0');
-                    foreach($comments as $comment) :
-                        echo "<td>"; ?>
-                <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a>
-    <?php comment_text(); ?> <?php
-                endforeach;
-                echo "</td>";
-                ?>
-                </tr>
-                <tr class="height">
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-<?php
-                    $comments = get_comments('post_id=982&number=2&offset=2');
-                    foreach($comments as $comment) :
-                        echo "<td>"; ?>
-                <strong><?php printf(__('%s'), get_comment_author_link()) ?></strong> <span class="date"><?php printf(__('%1$s'), get_comment_date()) ?>
-    <?php
-                        $author = get_comment_author_url();
-                        echo substr_replace($author, "", 0, 7);
-                        ?>
-                </span> <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a>
-    <?php if ($comment->comment_approved == '0') : ?>
-                <p><?php _e('Your comment is awaiting moderation.') ?></p>
-    <?php endif; ?>
-                <?php
-                endforeach;
-                echo "</td>";
-                ?>
-                </tr>
-                <tr>
-<?php
-                    $comments = get_comments('post_id=982&number=2&offset=2');
-                    foreach($comments as $comment) :
-                        echo "<td>"; ?>
-                <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a>
-    <?php if ($comment->comment_approved == '0') : ?>
-                <p><?php _e('Your comment is awaiting moderation.') ?></p>
-    <?php endif; ?>
-                    <?php comment_text(); ?> <?php
-                endforeach;
-                echo "</td>";
-                ?>
-                </tr>
-            </table>
-
+            <ul>
+                <?php 
+            $comments = get_comments('post_id=982&number=4');
+            foreach($comments as $comment) :
+              echo "<li>"; ?>
+             <p class="name"> <strong><?php printf(__('%s'), get_comment_author_link()) ?></strong> <span class="date"><?php printf(__('%1$s'), get_comment_date()) ?> 
+             <?php
+              $author = get_comment_author_url();	
+              echo substr_replace($author, "", 0, 7);
+            ?>
+           </span> <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"></a></p> 
+			 <?php if ($comment->comment_approved == '0') : ?>	
+                 <p><?php _e('Your comment is awaiting moderation.') ?></p>	  	
+             <?php endif; ?>
+              <p><?php comment_text(); ?></p> <?php 
+           endforeach;
+            echo "<li>";
+          ?>
+            </ul>
         </div>
     </div>
 </div>
