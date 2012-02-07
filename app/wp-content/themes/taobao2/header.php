@@ -213,8 +213,8 @@
                                 <?php if (have_posts()) : ?>
                                     <?php while (have_posts()) : the_post();  ?>
                                 <li>
-                                    <p><?php $a=get_the_content();
-        kama_excerpt(array("maxchar" => 380, "text" => $a));?></p>
+                                    <?php $a=get_the_content();
+        kama_excerpt(array("maxchar" => 380, "text" => $a));?>
                                 </li>
                                     <?php endwhile; ?>
                                 <?php endif;?>
