@@ -5,8 +5,13 @@
 
     <div class="slaider-video">
         <ul>
-            <?php query_posts('post_type=video_slider&video_slider-category=home-video-slider&order=ASC&numberposts=6'); ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php $posts = get_posts(array(
+                'post_type' => 'video_slider',
+                'video_slider-category' => 'home-video-slider',
+                'order' => 'ASC',
+                'numberposts' => 20,
+            )); ?>
+            <?php foreach ($posts as $post): ?>
             <li>
                 <div class="foto">
                     <a href="#">
@@ -42,7 +47,7 @@
                           rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
                 </div>
             </li>
-            <?php endwhile; ?>
+            <?php endforeach; ?>
             <?php wp_reset_query(); ?>
         </ul>
     </div>
