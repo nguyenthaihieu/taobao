@@ -43,7 +43,7 @@
             </div>
 
             <div class="item">
-                <label for="3"><?php _e('E-mail'); ?> <em>*</em></label>
+                <label for="email"><?php _e('E-mail'); ?> <em>*</em></label>
                 <input type="text" name="email" id="email" class="text" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2"  />
             </div>
             <div class="item">
@@ -69,7 +69,7 @@
         <?php if ( have_comments() ) : ?>
     <div class="commentlist">
         <ul>
-                    <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+                    <?php wp_list_comments('type=comment&callback=mytheme_comment&reverse_top_level=true'); ?>
         </ul>
     </div>
     <div class="pagenawi">
