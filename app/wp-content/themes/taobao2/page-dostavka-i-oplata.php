@@ -2,7 +2,10 @@
 
 <section id="container">
     <section id="content">
-        <h2 class="title">Оптовые закупки с Taobao.ru.com</h2>
+        <?php  while (have_posts()) : the_post(); ?>
+        <h2 class="title"><?php the_title(); ?></h2>
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
         <div class="top"></div>
         <div class="body">
             <div class="allbox padding">
