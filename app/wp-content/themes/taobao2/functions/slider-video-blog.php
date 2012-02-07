@@ -5,8 +5,13 @@
 
     <div class="slaider-video">
         <ul class="video">
-            <?php query_posts('post_type=video_slider&video_slider-category=blog-video-slider&order=ASC'); ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php $posts = get_posts(array(
+                'post_type' => 'video_slider',
+                'video_slider-category' => 'blog-video-slider',
+                'order' => 'ASC',
+                'numberposts' => 20,
+            )); ?>
+            <?php foreach ($posts as $post): ?>
             <li>
                 <div class="foto">
 
