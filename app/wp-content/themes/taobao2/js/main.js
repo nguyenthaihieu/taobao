@@ -131,4 +131,9 @@ jQuery(function($) {
 });
 $(function(){
     $('a[title=Каталог]').attr('target','_blank');
-})
+
+    $('ul.reviews li').click(function() {
+        $(this).css('max-height','none');
+    });
+});
+
