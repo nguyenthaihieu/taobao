@@ -47,7 +47,7 @@
         </div>
         <div class="report">
             <h2><span>Новые отзывы</span> <a href="<?php bloginfo('url') ?>/?page_id=982">все отзывы</a></h2>
-            <ul>
+            <ul class='reviews'>
                 <?php 
             $comments = get_comments('post_id=982&number=4');
             foreach($comments as $comment) :
@@ -63,7 +63,7 @@
              <?php endif; ?>
               <p><?php comment_text(); ?></p> <?php 
            endforeach;
-            echo "<li>";
+            echo "</li>";
           ?>
             </ul>
         </div>
