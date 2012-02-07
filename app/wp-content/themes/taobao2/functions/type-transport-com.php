@@ -5,7 +5,7 @@ add_action('init', 'transport_com');
 function transport_com() {
 
     $eventlabels = array(
-            'name' => 'transport_com',
+            'name' => 'Транспортные компаний',
             'singular_name' => 'transport_com',
             'add_new' => 'Добавить транспортную компанию',
             'add_new_item' => 'Новая транспортная компания',

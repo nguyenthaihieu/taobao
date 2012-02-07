@@ -5,7 +5,7 @@ add_action('init', 'video_slider');
 function video_slider() {
 
     $eventlabels = array(
-            'name' => 'video_slider',
+            'name' => 'Видео',
             'singular_name' => 'video_slider',
             'add_new' => 'Добавить видео',
             'add_new_item' => 'Новое видео',
