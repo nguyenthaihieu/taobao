@@ -25,7 +25,7 @@
                     <div class="contact-list">
                         <h2><?php the_title(); ?></h2>
                             <?php the_content(); ?>
-                        <p><a href="#" class="button">Напишите нам</a></p>
+                        <p><a href="#wpcf7-f2-p2682-o1" class="button">Напишите нам</a></p>
                         <p><span href="<?=wp_get_attachment_url(get_post_meta(2750,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
                     </div>
                     <div class="contact-list">
@@ -52,7 +52,7 @@
                     <div class="contact-list">
                         <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
-                        <p><a href="#" class="button">Напишите нам</a></p>
+                        <p><a href="#wpcf7-f2-p2682-o1" class="button">Напишите нам</a></p>
                         <p><span href="<?=wp_get_attachment_url(get_post_meta(2753,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
                     </div>
                     <div class="contact-list">
@@ -79,7 +79,7 @@
                     <div class="contact-list">
                         <h2><?php the_title(); ?></h2>
     <?php the_content(); ?>
-                        <p><a href="#" class="button">Напишите нам</a></p>
+                        <p><a href="#wpcf7-f2-p2682-o1" class="button">Напишите нам</a></p>
                         <p><span href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
                     </div>
                     <div class="contact-list">
@@ -106,7 +106,7 @@
                     <div class="contact-list">
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
-                        <p><a href="javascript:void(0)" class="button">Напишите нам</a></p>
+                        <p><a href="#wpcf7-f2-p2682-o1" class="button">Напишите нам</a></p>
                         <p><span href="<?=wp_get_attachment_url(get_post_meta(2751,'_simple_fields_fieldGroupID_8_fieldID_1_numInSet_0',true)) ?>" class="fancyimg">Как добраться</span></p>
                     </div>
                     <div class="contact-list">
