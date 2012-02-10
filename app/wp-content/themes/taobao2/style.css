@@ -3186,3 +3186,16 @@ div.slaider-box div.slaide span.block{
 #wraper div.report li p.name{
 	margin:0 0 7px;
 }
+
+span.wpcf7-not-valid-tip {
+    position: absolute !important;
+    top: 20% !important;
+    left: 20% !important;
+    z-index: 100 !important;
+    background: white !important;
+    border: 1px solid red !important;
+    font-size: 10pt !important;
+    width: 171px !important;
+    padding: 2px !important;
+    margin: -5px 0px 0px 0px;
+}
