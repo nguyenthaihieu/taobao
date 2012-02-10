@@ -3186,3 +3186,11 @@ div.slaider-box div.slaide span.block{
 #wraper div.report li p.name{
 	margin:0 0 7px;
 }
+
+div.calc_info_img img {
+    max-width: 300px;
+    max-height: 300px;
+    z-index:950;
+    postion: absolute;
+    border:1px solid red;
+}

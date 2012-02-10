@@ -286,25 +286,33 @@ function shortcode_taobao_calc ($atts) {
 }
 function taobaoShowCities (country) {
     country = country.split(' ')[0];
-    var $cities = $('ul.city li');
-            $cities.hide();
-    var $selected_list = jQuery('ul.city li.'+country);
-            $selected_list.show();
-    var $current_city = $selected_list.first().text();
+    var cities = jQuery('ul.city li');
+            cities.hide();
+    var selected_list = jQuery('ul.city li.'+country);
+            selected_list.show();
+    var current_city = selected_list.first().text();
 
-    taobaoChangeCity($current_city);
+    taobaoChangeCity(current_city);
 
-    jQuery('div.cities .sel_val').text($current_city);
+    jQuery('div.cities .sel_val').text(current_city);
 }
 jQuery(function(){
-            $countries = jQuery('ul.country li');
-    var $cities = $('ul.city li');
-    var first_country = $countries.first().attr('class');
+    $(\"a.calc.info\").hover(function() {
+        $(this).next(\"div\").stop(true,true)
+            .animate({opacity: \"show\",  top: \"-75\"}, \"slow\");
+    }, function() {
+        $(this).next(\"div\").stop(true,true)
+            .animate({opacity: \"hide\", top: \"-85\"}, \"fast\");
+    });
+
+    countries = jQuery('ul.country li');
+    var cities = $('ul.city li');
+    var first_country = countries.first().attr('class');
     taobaoShowCities(first_country);
-            $countries.click(function(){
+            countries.click(function(){
         taobaoShowCities(jQuery(this).attr('class'));
     });
-            $cities.click(function(){
+            cities.click(function(){
         taobaoChangeCity(jQuery(this).text());
     });
 });</script>";
@@ -321,7 +329,7 @@ jQuery(function(){
                 . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
                 . '<input type="text" name="' . $name . '" value="" class="text" />';
         if (!empty($param['post_code'])) {
-            $calc .= '<span><a href="javascript:void(0);" onclick="$(\'#info_' . $name . '\').slideToggle(\'slow\');" class="info"></span><div id="info_' . $name . '" class="calc_info_img" style="display:none;"><div><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></a></div></div>';
+            $calc .= '<a href="#" class="info calc"></a><div id="info_' . $name . '" class="calc_info_img" style="display:none;"><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></div>';
         }
         $calc .= '</div>';
     }
