@@ -24,7 +24,7 @@
 
             <?php else : ?>
 
-        <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+        <form id="form_one" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
                     <?php if ( $user_ID ) : ?>
 
@@ -56,7 +56,7 @@
                 <textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea requre"></textarea>
             </div>
             <div class="item">
-                <input name="submit" id="submit" type="submit" tabindex="5" value="<?php _e('Отправить'); ?>" class="cbutton" />
+                <input name="submit" id="submit1" type="submit" tabindex="5" value="<?php _e('Отправить'); ?>" class="cbutton" />
                         <?php comment_id_fields(); ?>
             </div>
                     <?php do_action('comment_form', $post->ID); ?>

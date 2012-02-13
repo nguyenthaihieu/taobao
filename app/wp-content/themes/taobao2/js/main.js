@@ -10,9 +10,29 @@ jQuery(function($) {
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
     })
 
-    $('.comments-wrap form').submit(function(){
+    $('#form_one').submit(function(){
+        if(!$('#author').val()) {
+            alert('Введите имя!');
+            return false;
+        }
+        if(!$('#email').val()) {
+            alert('Введите email!');
+            return false;
+        }
+        if(!$('#url').val()) {
+            alert('Введите город!');
+            return false;
+        }
         if(!$('#comment').val()) {
             alert('Введите комментарий!');
+            return false;
+        }
+
+    })
+
+        $('form > input.cbutton').click(function(){
+        if(!$('#solo-subscribe-email').val()) {
+            alert('Введите e-mail!');
             return false;
         }
     })
