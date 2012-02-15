@@ -3211,3 +3211,7 @@ div.calc_info_img img {
     postion: absolute;
     border:1px solid red;
 }
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
