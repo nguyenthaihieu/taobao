@@ -1438,3 +1438,8 @@ h3{
 #header nav.block-menu li.item2 div{
     background:none !important;
 }
+
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
