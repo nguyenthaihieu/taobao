@@ -145,7 +145,7 @@ function initScripts() {
         var workingDays = "<?php echo get_option('working_days', '1,2,3,4,5') ?>";
         var holidays = "<?php echo get_option('holidays', ''); ?>";
 
-        var clientIP = "<?php echo getRealIpAddr(); ?>";
+        var clientIP = "<?php echo (!empty($_SERVER['REMOTE_ADDR']))?$_SERVER['REMOTE_ADDR']:'127.0.0.1'; ?>";
         var blogUrl = "<?php bloginfo('url'); ?>";
 </script>
 <!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
