@@ -3187,6 +3187,7 @@ div.slaider-box div.slaide span.block{
 	margin:0 0 7px;
 }
 
+<<<<<<< HEAD
 span.wpcf7-not-valid-tip {
     position: absolute !important;
     top: 20% !important;
@@ -3198,12 +3199,12 @@ span.wpcf7-not-valid-tip {
     width: 171px !important;
     padding: 2px !important;
     margin: -5px 0px 0px 0px;
-}
-
+=======
 div.calc_info_img img {
     max-width: 300px;
     max-height: 300px;
     z-index:950;
     postion: absolute;
     border:1px solid red;
+>>>>>>> 82f54863604eb9fdcfc7846c463b336b1eff7548
 }
