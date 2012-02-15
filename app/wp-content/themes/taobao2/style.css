@@ -3200,6 +3200,10 @@ span.wpcf7-not-valid-tip {
     margin: -5px 0px 0px 0px;
 }
 
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
 div.calc_info_img img {
     max-width: 300px;
     max-height: 300px;
