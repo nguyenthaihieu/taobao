@@ -3199,3 +3199,8 @@ span.wpcf7-not-valid-tip {
     padding: 2px !important;
     margin: -5px 0px 0px 0px;
 }
+
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
