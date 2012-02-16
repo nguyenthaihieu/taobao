@@ -5,7 +5,6 @@ function taobao_set_country (code) {
 }
 
 jQuery(function($){
-    jQuery.cookie('country', '');
     clientIP = false;
     if(!$.cookie('country') && clientIP) {
         $.get("http://api.hostip.info/country.php?ip="+clientIP.toString(), function(data) {
