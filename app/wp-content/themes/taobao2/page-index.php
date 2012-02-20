@@ -72,7 +72,7 @@
 <section id="bg-main">
     <section id="main">
         <div class="block">
-<?php query_posts('post_type=optionstext&p=2707')?>
+<?php query_posts('post_type=page&p=5')?>
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();  ?>
             <div class="news">
@@ -89,7 +89,7 @@
 <div class="last">
     <div class="text">
         <div class="text-left">
-<?php query_posts('post_type=optionstext&p=2702')?>
+<?php wp_reset_query(); query_posts('post_type=optionstext&p=2702')?>
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();  ?>
             <div class="news">

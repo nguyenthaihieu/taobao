@@ -23,7 +23,7 @@ $morenumber="%";
                 <p>
                         <?php list($teaser, $junk) = explode('<!--more',$post->post_content);
     echo apply_filters('the_content', $teaser); ?>
-                    <a href="<?php the_permalink();?>">Есть решение!</a>
+                    <a href="<?php the_permalink();?>">Читать далее</a>
                 </p>
                 <div class="article">
                     <span class="label"><?php the_tags('', ', ', '<br />'); ?></span>

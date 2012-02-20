@@ -964,7 +964,6 @@ div.last div.text-left{
 
 div.last div.text-left p{
 	margin:0 0 5px;
-	font-size:11px;
 }
 
 div.last div.text-left strong{
@@ -3198,4 +3197,20 @@ span.wpcf7-not-valid-tip {
     width: 171px !important;
     padding: 2px !important;
     margin: -5px 0px 0px 0px;
+}
+
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
+div.calc_info_img img {
+    max-width: 300px;
+    max-height: 300px;
+    z-index:950;
+    postion: absolute;
+    border:1px solid red;
+}
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
 }
