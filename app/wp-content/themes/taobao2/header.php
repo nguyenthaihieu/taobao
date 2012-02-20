@@ -225,3 +225,10 @@
                     </div>
                 </header>
             </section>
+				<?php
+					if (is_front_page()) {
+						global $is_fp;
+						$is_fp = true;
+					}
+					
+				?>
