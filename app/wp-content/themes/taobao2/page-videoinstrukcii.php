@@ -24,7 +24,7 @@
                     <h2 class="video">Все видео</h2>
 
                     <ul class="video">
-                        <?php query_posts('post_type=video_slider&order=ASC'); ?>
+                        <?php query_posts('post_type=video_slider&order=ASCposts_per_page=999'); ?>
                         <?php while (have_posts()) : the_post(); ?>
                         <li>
                             <div class="foto">
