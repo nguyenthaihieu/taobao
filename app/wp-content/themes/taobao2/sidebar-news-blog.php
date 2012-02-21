@@ -1,4 +1,4 @@
-<h2>Новости в блоге</h2>
+<h2>Новое в блоге</h2>
 <ul>
     <?php
     query_posts('cat=4&showposts=4');
