@@ -1,37 +1,38 @@
 <?php get_header(); ?>
 <?php //var`s for comments
-$no="комментариев нет";
-$one="комментарий - 1";
-$more="комментариев - %";
-$onenumber="1";
-$morenumber="%";
+$no = "комментариев нет";
+$one = "комментарий - 1";
+$more = "комментариев - %";
+$onenumber = "1";
+$morenumber = "%";
 ?>
 
 <section id="container">
     <section id="content">
         <h2 class="title">Блог Taobao.ru.com</h2>
         <span class="post">Всего записей: <?php echo get_category('4')->category_count;?></span>
+
         <div class="top"></div>
         <div class="body">
             <div class="page">
                 <?php
                 query_posts('posts_per_page=1&category_name=blog');
                 ?>
-                <?php while(have_posts()) : the_post();
-    global $post;?>
+                <?php while (have_posts()) : the_post();
+                global $post;?>
                 <h2><a href="#"><?php the_title();?></a></h2>
                 <p>
-                        <?php list($teaser, $junk) = explode('<!--more',$post->post_content);
-    echo apply_filters('the_content', $teaser); ?>
+                    <?php list($teaser, $junk) = explode('<!--more', $post->post_content);
+                    echo apply_filters('the_content', $teaser); ?>
                     <a href="<?php the_permalink();?>">Читать далее</a>
                 </p>
                 <div class="article">
                     <span class="label"><?php the_tags('', ', ', '<br />'); ?></span>
-                    <a class="com"><?php comments_number("0",$onenumber,$morenumber);?></a>
-                    <span class="data"><?php the_time('d.m.Y');?></span>
-                    <?php endwhile;?>
-<?php wp_reset_query();?>
-                </div>
+                <a class="com"><?php comments_number("0", $onenumber, $morenumber);?></a>
+                <span class="data"><?php the_time('d.m.Y');?></span>
+                <?php endwhile;?>
+                <?php wp_reset_query();?>
+            </div>
                 <div class="all">
                     <div class="left-box">
                         <h2 class="post">Новые статьи</h2>
@@ -39,76 +40,83 @@ $morenumber="%";
                             <?php
                             query_posts('posts_per_page=6&category_name=blog');
                             ?>
-<?php while(have_posts()) : the_post();
-    global $post;
-    setup_postdata($post);?>
+                            <?php while (have_posts()) : the_post();
+                            global $post;
+                            setup_postdata($post);?>
                             <li>
                                 <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+
                                 <p><span><?php the_time('d.m.Y');?></span>
-                                    <span><?php comments_number($no,$one,$more);?></span></p>
+                                    <span><?php comments_number($no, $one, $more);?></span></p>
                             </li>
-<?php endwhile; ?>
-<?php wp_reset_query();?>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query();?>
                         </ul>
                     </div>
                     <div class="left-box right-box">
-<?php 
-query_posts('posts_per_page=5&category_name=polezno-pochitat');
-                            ?>
+                        <?php
+                        query_posts('posts_per_page=5&category_name=polezno-pochitat');
+                        ?>
                         <h2 class="read">Полезно почитать</h2>
                         <ul>
-<?php while(have_posts()) : the_post();
-    global $post;
-                                setup_postdata($post);?>
+                            <?php while (have_posts()) : the_post();
+                            global $post;
+                            setup_postdata($post);?>
                             <li>
                                 <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                                <p><span><?php the_time('d.m.Y');?><?php comments_number($no,$one,$more);?></span></p>
+
+                                <p><span><?php the_time('d.m.Y');?><?php comments_number($no, $one, $more);?></span></p>
                             </li>
-<?php endwhile;?>
-<?php wp_reset_query();?>
+                            <?php endwhile;?>
+                            <?php wp_reset_query();?>
                         </ul>
                     </div>
                 </div>
                 <div class="all">
-                    <div class="line-title">
-                        <?php if ( function_exists('wp_tag_cloud') ) : ?>
-                        <h2 class="tegi">Поиск статей по тегам</h2>
-                        <span><a href="<?php echo '?page_id=2717'; ?>" class="rig">все статьи</a> →</span>
+                <div class="line-title">
+                    <?php if (function_exists('wp_tag_cloud')) : ?>
+                    <h2 class="tegi">Поиск статей по тегам</h2>
+                    <span><a href="<?php echo '?page_id=2717'; ?>" class="rig">все статьи</a> →</span>
                     </div>
                     <div class="tegs">
-    <?php wp_tag_cloud( 'smallest=8&largest=22&number=25&taxonomy=post_tag' ); ?>
-<?php endif; ?>
-                    </div>
+    <?php wp_tag_cloud('smallest=8&largest=22&number=25&taxonomy=post_tag'); ?>
+                    <?php endif; ?>
+                </div>
                 </div>
                 <div class="all">
                     <h2 class="video">Это интересно</h2>
 
-<?php require_once "functions/slider-video-blog.php"; ?>
+                    <?php require_once "functions/slider-video-blog.php"; ?>
 
                 </div>
                 <div class="all">
                     <div class="line-title">
-                        <h2 class="list">Видеоинструкции</h2> <span><a href="<?php bloginfo('url') ?>/?page_id=2733 " class="rig">все видео</a> →</span>
+                        <h2 class="list">Видеоинструкции</h2> <span><a href="<?php bloginfo('url') ?>/?page_id=2733 "
+                                                                       class="rig">все видео</a> →</span>
                     </div>
                     <div class="left-box">
                         <ul>
                             <?php query_posts('post_type=video_slider&order=ASC');
                             $numberPosts = 1; ?>
                             <?php while (have_posts()) : the_post(); ?>
-    <?php if($numberPosts) { ?>
-        <?php $youtube = false;
-        if($url = get_post_meta($post->ID, "Youtube", true)) {
-                                                preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
-        }
-                                    ?>
-                            <li>
-                                <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
-                                      rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
-        <?php $numberPosts=$numberPosts-1; ?>
-                            </li>
-        <?php }else { ?>
-        <?php $numberPosts=$numberPosts+1;
-                                } ?>
+                            <?php if ($numberPosts) { ?>
+                                <?php $youtube = false;
+                                if ($url = get_post_meta($post->ID, "Youtube", true)) {
+                                    preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
+                                }
+                                ?>
+                                <li>
+                                    <p>
+                                        <a class="various fancybox iframe"
+                                           href="http://www.youtube.com/embed/<?php echo $youtube[1]; ?>?autoplay=1">
+                                            <?php the_title(); ?>
+                                        </a>
+                                    </p>
+                                    <?php $numberPosts = $numberPosts - 1; ?>
+                                </li>
+                                <?php } else { ?>
+                                <?php $numberPosts = $numberPosts + 1;
+                            } ?>
                             <?php endwhile; ?>
                             <?php wp_reset_query(); ?>
                         </ul>
@@ -116,24 +124,28 @@ query_posts('posts_per_page=5&category_name=polezno-pochitat');
                     <div class="left-box right-box">
                         <ul>
                             <?php query_posts('post_type=video_slider&order=ASC');
-$numberPosts = 0; ?>
-<?php while (have_posts()) : the_post(); ?>
-    <?php if($numberPosts) { ?>
-                                            <?php $youtube = false;
-        if($url = get_post_meta($post->ID, "Youtube", true)) {
-                                        preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
-                                    }
-                                    ?>
-                            <li>
-                                <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
-                                      rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
-        <?php $numberPosts=$numberPosts-1; ?>
-                            </li>
-        <?php }else { ?>
-        <?php $numberPosts=$numberPosts+1;
-    } ?>
-<?php endwhile; ?>
-<?php wp_reset_query(); ?>
+                            $numberPosts = 0; ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                            <?php if ($numberPosts) { ?>
+                                <?php $youtube = false;
+                                if ($url = get_post_meta($post->ID, "Youtube", true)) {
+                                    preg_match('%(?:youtube\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $youtube);
+                                }
+                                ?>
+                                <li>
+                                    <p>
+                                        <a class="various fancybox iframe"
+                                           href="http://www.youtube.com/embed/<?php echo $youtube[1]; ?>?autoplay=1">
+                                            <?php the_title(); ?>
+                                        </a>
+                                    </p>
+                                    <?php $numberPosts = $numberPosts - 1; ?>
+                                </li>
+                                <?php } else { ?>
+                                <?php $numberPosts = $numberPosts + 1;
+                            } ?>
+                            <?php endwhile; ?>
+                            <?php wp_reset_query(); ?>
                         </ul>
                     </div>
                 </div>
@@ -143,10 +155,10 @@ $numberPosts = 0; ?>
     </section>
     <div class="right">
         <div class="boxen">
-<?php get_sidebar('calc') ?>
+            <?php get_sidebar('calc') ?>
         </div>
         <div class="blog-gree">
-<?php get_sidebar('blog') ?>
+            <?php get_sidebar('blog') ?>
         </div>
     </div>
 </section>

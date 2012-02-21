@@ -203,6 +203,9 @@ function initScripts() {
     wp_register_script('valid',
             get_template_directory_uri() . '/js/valid.js',
             array('jquery'));
+    wp_register_script('various',
+        get_template_directory_uri() . '/js/jquery/fancybox/various.js',
+        array('jquery'));
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('timer');
@@ -221,6 +224,7 @@ function initScripts() {
     wp_enqueue_script('jquery.cookie');
     wp_enqueue_script('main');
     wp_enqueue_script('valid');
+    wp_enqueue_script('various');
 }
 add_action('wp_enqueue_scripts','initScripts');
 
