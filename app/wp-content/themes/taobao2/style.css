@@ -2720,7 +2720,7 @@ div.cuselText{
 }
 
 div.cusel-scroll-pane{
-	width:100%;
+	width:188px !important;
 	overflow:hidden;
 	height:346px;
 }
@@ -2756,6 +2756,7 @@ div.cusel-scroll-wrap span{
 div.wid100{
 	position:relative;
 }
+
 
 
 /*
@@ -2803,15 +2804,16 @@ div.wid100{
 	white-space: nowrap;
 	padding: 2px 15px 2px 5px; /* паддинг справа - это отступ текста от ползунка */
 	zoom: 1;
+    color:#000;
 }
 .cusel span:hover,
 .cusel .cuselOptHover { /* реакция оптиона на наведение */
-	background: #003399;
-	color: #fff;
+	background: #aea7ed;
+	color: #000;
 }
 .cusel .cuselActive { /* оформление активного оптиона в списке */
-	background: #CC0000;
-	color: #fff;
+	background: #e6e3df;
+	color: #000;
 	cursor: default;
 }
 
@@ -2837,9 +2839,25 @@ div.wid100{
 	styles for scrollbar
 */
 .cusel .cusel-scroll-wrap { /* контейнер для блока с прокруткой */
-	background:url(img/list.png) no-repeat;
+    border: 1px solid #696;
+    width: 200px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: #666 0px 2px 6px;
+    -moz-box-shadow: #666 0px 2px 6px;
+    box-shadow: #666 0px 2px 6px;
+    background: #F4F6EA;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F4F6EA), to(#FFFFFF));
+    background: -webkit-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -moz-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -ms-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -o-linear-gradient(#F4F6EA, #FFFFFF);
+    background: linear-gradient(#F4F6EA, #FFFFFF);
+    -pie-background: linear-gradient(#F4F6EA, #FFFFFF);
+    behavior: url(css/PIE.htc);
 	display: block;
-	height:346px;
+	max-height:346px;
 	visibility: hidden;
 	position: absolute;
 	left: 0;
@@ -2847,6 +2865,7 @@ div.wid100{
 	top: 100%;
 	min-width: 100%;
 	outline: medium none;
+    zoom:1;
 }
 .cusel .jScrollPaneContainer {
 	position: relative;

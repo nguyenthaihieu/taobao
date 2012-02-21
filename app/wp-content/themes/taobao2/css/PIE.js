@@ -1,17 +1,11 @@
-<!--
+/*
 PIE: CSS3 rendering for IE
 Version 1.0beta5
 http://css3pie.com
 Dual-licensed for use under the Apache License Version 2.0 or the General Public License (GPL) Version 2.
--->
-<PUBLIC:COMPONENT lightWeight="true">
-<!-- saved from url=(0014)about:internet -->
-<PUBLIC:ATTACH EVENT="oncontentready" FOR="element" ONEVENT="init()" />
-<PUBLIC:ATTACH EVENT="ondocumentready" FOR="element" ONEVENT="init()" />
-<PUBLIC:ATTACH EVENT="ondetach" FOR="element" ONEVENT="cleanup()" />
-
-<script type="text/javascript">
-var doc = element.document;var f=window.PIE;
+*/
+(function(){
+var doc = document;var f=window.PIE;
 if(!f){f=window.PIE={Q:"-pie-",nb:"Pie",La:"pie_",Ac:{TD:1,TH:1},cc:{TABLE:1,THEAD:1,TBODY:1,TFOOT:1,TR:1,INPUT:1,TEXTAREA:1,SELECT:1,OPTION:1,IMG:1,HR:1},fc:{A:1,INPUT:1,TEXTAREA:1,SELECT:1,BUTTON:1},Gd:{submit:1,button:1,reset:1},aa:function(){}};try{doc.execCommand("BackgroundImageCache",false,true)}catch(aa){}for(var X=4,Y=doc.createElement("div"),ca=Y.getElementsByTagName("i"),Z;Y.innerHTML="<!--[if gt IE "+ ++X+"]><i></i><![endif]--\>",ca[0];);f.V=X;if(X===6)f.Q=f.Q.replace(/^-/,"");f.Ba=doc.documentMode||
 f.V;Y.innerHTML='<v:shape adj="1"/>';Z=Y.firstChild;Z.style.behavior="url(#default#VML)";f.zc=typeof Z.adj==="object";(function(){var a,b=0,c={};f.p={Za:function(d){if(!a){a=doc.createDocumentFragment();a.namespaces.add("css3vml","urn:schemas-microsoft-com:vml")}return a.createElement("css3vml:"+d)},Aa:function(d){return d&&d._pieId||(d._pieId="_"+ ++b)},Eb:function(d){var e,g,i,j,h=arguments;e=1;for(g=h.length;e<g;e++){j=h[e];for(i in j)if(j.hasOwnProperty(i))d[i]=j[i]}return d},Rb:function(d,e,
 g){var i=c[d],j,h;if(i)Object.prototype.toString.call(i)==="[object Array]"?i.push([e,g]):e.call(g,i);else{h=c[d]=[[e,g]];j=new Image;j.onload=function(){i=c[d]={i:j.width,f:j.height};for(var k=0,n=h.length;k<n;k++)h[k][0].call(h[k][1],i);j.onload=null};j.src=d}}}})();f.Na={gc:function(a,b,c,d){function e(){k=i>=90&&i<270?b:0;n=i<180?c:0;l=b-k;q=c-n}function g(){for(;i<0;)i+=360;i%=360}var i=d.ra;d=d.zb;var j,h,k,n,l,q,s,m;if(d){d=d.coords(a,b,c);j=d.x;h=d.y}if(i){i=i.jd();g();e();if(!d){j=k;h=n}d=
@@ -91,6 +85,4 @@ I),new f.Gc(m,F,J,I),new f.Tb(m,F,J,I)];m.tagName==="IMG"&&w.push(new f.Pc(m,F,J
 B()}else Q||r()}function o(){b(m,j)}function u(){c(m,j,h)}function x(){b(m,h);f.lb.ba(y)}function y(){c(m,h);f.lb.Ha(y)}function z(){b(m,k)}function D(){c(m,k)}function G(){var w=event.propertyName;if(w==="className"||w==="id")v()}function E(){F.cb();for(var w=P.length;w--;)P[w].cb()}function B(){for(var w=P.length;w--;)P[w].hb();F.hb()}function A(w,C,K){w.attachEvent(C,K);U.push([w,C,K])}function L(){if(S){for(var w=U.length,C;w--;){C=U[w];C[0].detachEvent(C[1],C[2])}f.K.Ha(L);S=0;U=[]}}function N(){if(!W){var w,
 C;L();W=1;if(H){w=0;for(C=H.length;w<C;w++){H[w].ec=1;H[w].m()}}T&&f.Oa.Ha(t);f.Qa.Ha(t);H=F=J=P=m=null}}var H,I,F=new da(m),J,P,Q,R,S,U=[],V,W,T;this.Ed=r;this.update=t;this.m=N;this.qd=m}var e={},g=f.Q+"lazy-init",i=f.Q+"poll",j=f.La+"hover",h=f.La+"active",k=f.La+"focus",n=f.La+"first-child",l={background:1,bgColor:1,display:1},q={},s=[];d.yd=function(m){var r=f.p.Aa(m);return e[r]||(e[r]=new d(m))};d.m=function(m){m=f.p.Aa(m);var r=e[m];if(r){r.m();delete e[m]}};d.md=function(){var m=[],r;if(e){for(var p in e)if(e.hasOwnProperty(p)){r=
 e[p];m.push(r.qd);r.m()}e={}}return m};return d}();f.supportsVML=f.zc;f.attach=function(a){f.Ba<10&&f.zc&&f.kb.yd(a).Ed()};f.detach=function(a){f.kb.m(a)}};
-var $=element;function init(){var a=window.PIE;a&&doc.media!=="print"&&a.attach($)}function cleanup(){var a=window.PIE;if(a){a.detach($);$=0}}$.readyState==="complete"&&init();
-</script>
-</PUBLIC:COMPONENT>
+})();
