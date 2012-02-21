@@ -18,9 +18,6 @@
             <ul>
                 <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i.gif" alt="" title="" /></a></li>
                 <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i1.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_3_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/pen.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_4_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i3.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_5_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i4.gif" alt="" title="" /></a></li>
                 <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_6_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i5.gif" alt="" title="" /></a></li>
                 <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_7_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i6.gif" alt="" title="" /></a></li>
                 <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_8_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i7.gif" alt="" title="" /></a></li>
