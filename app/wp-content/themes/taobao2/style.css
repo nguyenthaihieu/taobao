@@ -120,7 +120,7 @@ div.width{
 }
 
 #header header.top{
-	width:970px;
+	width:950px;
 	margin:0 auto;	
 	display:block;
 }
@@ -3045,7 +3045,7 @@ div.ctnr{
 }
 
 div.form-1{
-	width:306px;
+	width:292px;
 	margin:40px auto 0;
 }
 
@@ -3234,4 +3234,8 @@ div.calc_info_img img {
 #container div.slider ul li img{
 	width:668px;
 	height:256px;
+}
+
+div.form-1 p{
+	font-size:11px;
 }
