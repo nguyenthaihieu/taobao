@@ -483,7 +483,6 @@ div.slaider-box span.next{
 div.slaider-box div.slaide{
 	width:841px;
 	overflow:hidden;
-	margin:-10px auto 0;
 	height:133px;
 }
 
@@ -1551,7 +1550,7 @@ h3{
 }
 
 #content div.work div.desk{
-	margin:0 0 15px;
+	margin:0 0 25px;
 	width:100%;
 	overflow:hidden;
 }
@@ -1764,6 +1763,7 @@ label.watermark{
 	width: 601px;
 	display: inline-block;
 	font-size:18px;
+    margin:0 0 0 12px;
 	padding:0 0 0 25px;
 }
 
@@ -1960,6 +1960,7 @@ label.watermark{
 	border-top: 1px dotted #000000;
     margin: -1px 0 0;
     overflow: hidden;
+    line-height: 20px;
     padding: 12px 0;
     width: 100%;
 }
@@ -2523,6 +2524,7 @@ h2 a{
 	width:293px;
 	float:left;
 	overflow:hidden;
+    margin:15px 0 0;
 }
 
 #content div.all div.right-box{
