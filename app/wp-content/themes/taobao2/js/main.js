@@ -1,6 +1,8 @@
 jQuery(function($) {
     initCounter();
     setInterval(initCounter, 1000);
+	initShow();
+	initPass();
     initCarousel();
     initSlider();
     initSelect();
@@ -10,32 +12,40 @@ jQuery(function($) {
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
     })
 
-    $('#form_one').submit(function(){
-        if(!$('#author').val()) {
-            alert('Введите имя!');
-            return false;
-        }
-        if(!$('#email').val()) {
-            alert('Введите email!');
-            return false;
-        }
-        if(!$('#url').val()) {
-            alert('Введите город!');
-            return false;
-        }
+    $('.comments-wrap form').submit(function(){
         if(!$('#comment').val()) {
             alert('Введите комментарий!');
             return false;
         }
-
     })
 
-        $('form > input.cbutton').click(function(){
-        if(!$('#solo-subscribe-email').val()) {
-            alert('Введите e-mail!');
-            return false;
-        }
-    })
+	function initShow(){
+		$('a.item1').click(
+			function(){
+				$('.form-reg').slideToggle('slow');
+				$('.form-reg-2').hide();
+			}
+		)
+		$('a.item2').click(
+			function(){
+				$('.form-reg-2').slideToggle('slow');
+				$('.form-reg').hide();
+			}
+		)
+	}
+	
+	function initPass(){
+		$('a.show').toggle(
+			function(){
+				$('input.pass').removeAttr('type');
+				$('input.pass').prop('type','text');
+			},
+			function(){
+				$('input.pass').removeAttr('type');
+				$('input.pass').prop('type','password');
+			}
+		)
+	}
 
     function initCarousel() {
         $("div.slaider-video").jCarouselLite({
@@ -151,9 +161,4 @@ jQuery(function($) {
 });
 $(function(){
     $('a[title=Каталог]').attr('target','_blank');
-
-    $('ul.reviews li').click(function() {
-        $(this).css('max-height','none');
-    });
-});
-
+})

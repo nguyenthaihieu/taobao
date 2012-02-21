@@ -12,6 +12,15 @@
   <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
 
         <?php wp_head(); ?>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {	
+				$(".various-map").fancybox({
+					'transitionIn'	: 'none',
+					'transitionOut'	: 'none'
+				});
+			
+			});
+		</script>
     </head>
     <body>
         <div class="soce">
@@ -43,8 +52,8 @@
                         </div>
                         <div class="item">
                             <label>Пароль:</label>
-                            <input type="password" class="text" />
-                            <label><a href="#" class="show">показать пароль</a></label>
+                            <input type="password" class="text pass" />
+                            <label><a href="javascript:void(0);" class="show">показать пароль</a></label>
                         </div>
                         <ul>
                             <li><input type="checkbox" class="chek" /> <span>Запомнить меня</span></li>
@@ -105,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p><a class="hid-form" href="javascript:void(0);" onclick="$('.form-reg-2').slideToggle('slow');"></a></p>
+                        <p><a class="hid-form" href="javascript:void(0);"></a></p>
                     </div>
                     <ul>
                         <li><input type="checkbox" class="chek" /> <span>Я согласен <a href="#">с условиями работы сервиса</a></span></li>
@@ -133,9 +142,9 @@
                             </span>
                         </div>
                         <div class="righ-box">
-                            <a href="javascript:void(0);" onclick="$('.form-reg').slideToggle('slow');" class="item1">Войти</a>
+                            <a href="javascript:void(0);" class="item1">Войти</a>
                             &Iota;
-                            <a href="javascript:void(0);" onclick="$('.form-reg-2').slideToggle('slow');">Зарегистрироваться</a>
+                            <a href="javascript:void(0);" class="item2">Зарегистрироваться</a>
                         </div>
                     </div>
                     <div class="box">

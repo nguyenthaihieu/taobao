@@ -3214,3 +3214,22 @@ div.calc_info_img img {
 	width:668px;
 	height:256px;
 }
+
+div.calc_info_img{
+    float:left;
+    margin:0 0 0 13px;
+    position:relative;
+}
+
+div.calc_info_img div {
+    left: -250px;
+    position: absolute;
+    top: 30px;
+    width: 460px;
+    z-index: 55;
+}
+
+div.calc_info_img div img{
+    height: auto;
+    width: 425px;
+}
