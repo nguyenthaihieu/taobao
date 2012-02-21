@@ -10,29 +10,58 @@ jQuery(function($) {
         translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
     })
 
-    $('#form_one').submit(function(){
-        if(!$('#author').val()) {
-            alert('Введите имя!');
-            return false;
-        }
-        if(!$('#email').val()) {
-            alert('Введите email!');
-            return false;
-        }
-        if(!$('#url').val()) {
-            alert('Введите город!');
-            return false;
-        }
-        if(!$('#comment').val()) {
-            alert('Введите комментарий!');
-            return false;
+    $('#form_one').submit(function () {
+        var returnValue = true;
+        if (!$('#author').val()) {
+            $('#valida-name').show();
+            returnValue = false;
         }
 
+        if (!$('#email').val()) {
+            $('#valida-email').text('Пожалуйста, заполните обязательные поля.');
+            $('#valida-email').show();
+            returnValue = false;
+        } else {
+            if (!isValidEmailAddress($('#email').val())) {
+                $('#valida-email').html('Некорректный e-mail адрес.');
+                $('#valida-email').show();
+                returnValue = false;
+            }
+        }
+        function isValidEmailAddress(emailAddress) {
+            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+            return pattern.test(emailAddress);
+        }
+
+
+        if (!$('#comment').val()) {
+            $('#valida-comment').show();
+
+            returnValue = false;
+        }
+        if (returnValue == false) {
+            return false;
+        }
+    })
+    $('#valida-name , #author').hover(function () {
+        $('#valida-name').hide();
+    })
+
+    $('#valida-email , #email').hover(function () {
+        $('#valida-email').hide();
+    })
+    $('#valida-comment , #comment').hover(function () {
+        $('#valida-comment').hide();
+    })
+    $('label[for=solo-subscribe-email] , #solo-subscribe-email').hover(function () {
+        $('label[for=solo-subscribe-email]').text('E-Mail:').attr('class','');
     })
 
         $('form > input.cbutton').click(function(){
         if(!$('#solo-subscribe-email').val()) {
-            alert('Введите e-mail!');
+            $('label[for=solo-subscribe-email]').text('Пожалуйста, заполните обязательные полe e-mail .').attr('class','red');
+//            $('a[title=Каталог]').attr('target','_blank');
+//           alert('Введите e-mail!');
             return false;
         }
     })

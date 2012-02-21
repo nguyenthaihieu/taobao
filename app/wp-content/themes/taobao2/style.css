@@ -3214,3 +3214,18 @@ div.calc_info_img img {
 	width:668px;
 	height:256px;
 }
+
+.valid{
+    display: inline-block;
+    top: 20%;
+    left: 20%;
+    z-index: 100;
+    background: white;
+    border: 1px solid red;
+    font-size: 10pt;
+    width: 303px;
+    padding: 1px;
+}
+.red{
+     color: red;
+}
