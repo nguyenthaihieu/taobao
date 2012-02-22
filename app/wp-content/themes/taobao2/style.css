@@ -2302,6 +2302,7 @@ div.slaide-page li{
 	width:23px;
 	height:23px;
 	float:left;
+	position:relative;
 }
 
 #content div.minus a.info:hover{
@@ -3239,3 +3240,22 @@ div.calc_info_img img {
 div.form-1 p{
 	font-size:11px;
 }
+
+#content div.item a.info:hover div.calc_info_img{
+	display:block !important;
+}
+
+div.calc_info_img {
+    display: none;
+    left: -113px;
+    padding: 10px 0 0;
+    position: absolute;
+    top: 22px;
+    z-index: 505;
+}
+
+
+
+
+
+
