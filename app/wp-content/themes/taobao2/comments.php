@@ -39,21 +39,24 @@
             <div class="item">
                 <label for="author"><?php _e('Name'); ?> <em>*</em></label>
                 <input type="text" name="author" id="author" class="text" value="<?php echo $comment_author; ?>" size="28" />
-
+                <span id="valida-name" class="valid" style="display: none;">Пожалуйста, заполните обязательные поля.</span>
             </div>
 
             <div class="item">
                 <label for="email"><?php _e('E-mail'); ?> <em>*</em></label>
                 <input type="text" name="email" id="email" class="text" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2"  />
+                <span id="valida-email" class="valid"  style="display: none;">Пожалуйста, заполните обязательные поля.</span>
             </div>
             <div class="item">
                 <label for="url"><?php _e('Город'); ?></label>
                 <input type="text" name="url" id="url" value="" size="28" tabindex="3" class="text requre" />
+
             </div>
                     <?php endif; ?>
             <div class="item">
-                <label for="comment"><?php _e('Коментарий'); ?></label>
+                <label for="comment"><?php _e('Коментарий'); ?></label><span id="valida-comment" class="valid"  style="display: none;" class="valid">Пожалуйста, заполните обязательные поля.</span>
                 <textarea name="comment" id="comment" cols="60" rows="10" tabindex="4" class="textarea requre"></textarea>
+
             </div>
             <div class="item">
                 <input name="submit" id="submit1" type="submit" tabindex="5" value="<?php _e('Отправить'); ?>" class="cbutton" />

@@ -120,7 +120,7 @@ div.width{
 }
 
 #header header.top{
-	width:970px;
+	width:950px;
 	margin:0 auto;	
 	display:block;
 }
@@ -483,7 +483,6 @@ div.slaider-box span.next{
 div.slaider-box div.slaide{
 	width:841px;
 	overflow:hidden;
-	margin:-10px auto 0;
 	height:133px;
 }
 
@@ -892,7 +891,7 @@ div.blog ul{
 div.blog ul li{
 	width:100%;
 	display:inline-block;
-	margin:0 0 4px;
+	margin:0 0 25px;
 	padding:3px 0;
 }
 
@@ -964,7 +963,6 @@ div.last div.text-left{
 
 div.last div.text-left p{
 	margin:0 0 5px;
-	font-size:11px;
 }
 
 div.last div.text-left strong{
@@ -1552,7 +1550,7 @@ h3{
 }
 
 #content div.work div.desk{
-	margin:0 0 15px;
+	margin:0 0 25px;
 	width:100%;
 	overflow:hidden;
 }
@@ -1765,6 +1763,7 @@ label.watermark{
 	width: 601px;
 	display: inline-block;
 	font-size:18px;
+    margin:0 0 0 12px;
 	padding:0 0 0 25px;
 }
 
@@ -1961,6 +1960,7 @@ label.watermark{
 	border-top: 1px dotted #000000;
     margin: -1px 0 0;
     overflow: hidden;
+    line-height: 20px;
     padding: 12px 0;
     width: 100%;
 }
@@ -2524,6 +2524,7 @@ h2 a{
 	width:293px;
 	float:left;
 	overflow:hidden;
+    margin:15px 0 0;
 }
 
 #content div.all div.right-box{
@@ -2689,7 +2690,7 @@ div.soce{
 	height:294px;
 	overflow:hidden;
 	position:fixed;
-	top:122px;
+	top:182px;
 	z-index:5;
 	left:0;
 }
@@ -2721,7 +2722,7 @@ div.cuselText{
 }
 
 div.cusel-scroll-pane{
-	width:100%;
+	width:188px !important;
 	overflow:hidden;
 	height:346px;
 }
@@ -2757,6 +2758,7 @@ div.cusel-scroll-wrap span{
 div.wid100{
 	position:relative;
 }
+
 
 
 /*
@@ -2804,15 +2806,16 @@ div.wid100{
 	white-space: nowrap;
 	padding: 2px 15px 2px 5px; /* паддинг справа - это отступ текста от ползунка */
 	zoom: 1;
+    color:#000;
 }
 .cusel span:hover,
 .cusel .cuselOptHover { /* реакция оптиона на наведение */
-	background: #003399;
-	color: #fff;
+	background: #aea7ed;
+	color: #000;
 }
 .cusel .cuselActive { /* оформление активного оптиона в списке */
-	background: #CC0000;
-	color: #fff;
+	background: #e6e3df;
+	color: #000;
 	cursor: default;
 }
 
@@ -2838,9 +2841,25 @@ div.wid100{
 	styles for scrollbar
 */
 .cusel .cusel-scroll-wrap { /* контейнер для блока с прокруткой */
-	background:url(img/list.png) no-repeat;
+    border: 1px solid #696;
+    width: 200px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: #666 0px 2px 6px;
+    -moz-box-shadow: #666 0px 2px 6px;
+    box-shadow: #666 0px 2px 6px;
+    background: #F4F6EA;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F4F6EA), to(#FFFFFF));
+    background: -webkit-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -moz-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -ms-linear-gradient(#F4F6EA, #FFFFFF);
+    background: -o-linear-gradient(#F4F6EA, #FFFFFF);
+    background: linear-gradient(#F4F6EA, #FFFFFF);
+    -pie-background: linear-gradient(#F4F6EA, #FFFFFF);
+    behavior: url(css/PIE.htc);
 	display: block;
-	height:346px;
+	max-height:346px;
 	visibility: hidden;
 	position: absolute;
 	left: 0;
@@ -2848,6 +2867,7 @@ div.wid100{
 	top: 100%;
 	min-width: 100%;
 	outline: medium none;
+    zoom:1;
 }
 .cusel .jScrollPaneContainer {
 	position: relative;
@@ -3025,7 +3045,7 @@ div.ctnr{
 }
 
 div.form-1{
-	width:306px;
+	width:292px;
 	margin:40px auto 0;
 }
 
@@ -3187,14 +3207,6 @@ div.slaider-box div.slaide span.block{
 	margin:0 0 7px;
 }
 
-<<<<<<< HEAD
-div.calc_info_img img {
-    max-width: 300px;
-    max-height: 300px;
-    z-index:950;
-    postion: absolute;
-    border:1px solid red;
-=======
 span.wpcf7-not-valid-tip {
     position: absolute !important;
     top: 20% !important;
@@ -3206,5 +3218,41 @@ span.wpcf7-not-valid-tip {
     width: 171px !important;
     padding: 2px !important;
     margin: -5px 0px 0px 0px;
->>>>>>> 2f80405eea527680dd102a890b48e407a49dfa1d
 }
+
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
+div.calc_info_img img {
+    max-width: 300px;
+    max-height: 300px;
+    z-index:950;
+    postion: absolute;
+    border:1px solid red;
+}
+#container div.slider ul li img{
+	width:668px;
+	height:256px;
+}
+
+<<<<<<< HEAD
+div.form-1 p{
+	font-size:11px;
+}
+=======
+.valid{
+    display: inline-block;
+    top: 20%;
+    left: 20%;
+    z-index: 100;
+    background: white;
+    border: 1px solid red;
+    font-size: 10pt;
+    width: 303px;
+    padding: 1px;
+}
+.red{
+     color: red;
+}
+>>>>>>> a8a1faaf8b787385223ef3346ea7675ab27735c2
