@@ -2687,12 +2687,13 @@ div.contact ul.contact li img{
 div.soce{
 	background:url(img/soc.png) no-repeat;
 	width:49px;
-	height:294px;
+	height:184px;
 	overflow:hidden;
 	position:fixed;
-	top:182px;
-	z-index:5;
 	left:0;
+	z-index:5;
+	top:50%;
+	margin:100px 0 0;
 }
 
 div.soce ul li{
