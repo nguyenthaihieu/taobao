@@ -28,10 +28,7 @@ jQuery(function($) {
                 returnValue = false;
             }
         }
-        function isValidEmailAddress(emailAddress) {
-            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-            return pattern.test(emailAddress);
-        }
+
 
 
         if (!$('#comment').val()) {
@@ -63,8 +60,21 @@ jQuery(function($) {
 //            $('a[title=Каталог]').attr('target','_blank');
 //           alert('Введите e-mail!');
             return false;
+        }else {
+            alert('1');
+            if (!isValidEmailAddress($('#solo-subscribe-email').val())) {
+                $('label[for=solo-subscribe-email]').html('Некорректный e-mail адрес.').attr('class','red');
+                $('label[for=solo-subscribe-email]').show();
+                alert('e');
+                return false;
+            }
         }
-    })
+    });
+
+    function isValidEmailAddress(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress);
+    }
 
     function initCarousel() {
         $("div.slaider-video").jCarouselLite({
