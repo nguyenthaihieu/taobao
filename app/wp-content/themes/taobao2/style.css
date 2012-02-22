@@ -120,7 +120,7 @@ div.width{
 }
 
 #header header.top{
-	width:950px;
+	width:970px;
 	margin:0 auto;	
 	display:block;
 }
@@ -483,6 +483,7 @@ div.slaider-box span.next{
 div.slaider-box div.slaide{
 	width:841px;
 	overflow:hidden;
+	margin:-10px auto 0;
 	height:133px;
 }
 
@@ -891,7 +892,7 @@ div.blog ul{
 div.blog ul li{
 	width:100%;
 	display:inline-block;
-	margin:0 0 25px;
+	margin:0 0 4px;
 	padding:3px 0;
 }
 
@@ -1550,7 +1551,7 @@ h3{
 }
 
 #content div.work div.desk{
-	margin:0 0 25px;
+	margin:0 0 15px;
 	width:100%;
 	overflow:hidden;
 }
@@ -2690,7 +2691,7 @@ div.soce{
 	height:294px;
 	overflow:hidden;
 	position:fixed;
-	top:182px;
+	top:122px;
 	z-index:5;
 	left:0;
 }
@@ -2722,7 +2723,7 @@ div.cuselText{
 }
 
 div.cusel-scroll-pane{
-	width:188px !important;
+	width:100%;
 	overflow:hidden;
 	height:346px;
 }
@@ -2810,12 +2811,12 @@ div.wid100{
 }
 .cusel span:hover,
 .cusel .cuselOptHover { /* реакция оптиона на наведение */
-	background: #aea7ed;
-	color: #000;
+	background: #003399;
+	color: #fff;
 }
 .cusel .cuselActive { /* оформление активного оптиона в списке */
-	background: #e6e3df;
-	color: #000;
+	background: #CC0000;
+	color: #fff;
 	cursor: default;
 }
 
@@ -3045,7 +3046,7 @@ div.ctnr{
 }
 
 div.form-1{
-	width:292px;
+	width:306px;
 	margin:40px auto 0;
 }
 
@@ -3252,4 +3253,23 @@ div.calc_info_img img {
 }
 div.form-1 p{
 	font-size:11px;
+}
+
+div.calc_info_img{
+    float:left;
+    margin:0 0 0 13px;
+    position:relative;
+}
+
+div.calc_info_img div {
+    left: -250px;
+    position: absolute;
+    top: 30px;
+    width: 460px;
+    z-index: 55;
+}
+
+div.calc_info_img div img{
+    height: auto;
+    width: 425px;
 }
