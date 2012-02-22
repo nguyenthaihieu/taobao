@@ -227,10 +227,14 @@ function initScripts()
         get_template_directory_uri() . '/js/main.js',
         array('jquery'));
     wp_register_script('valid',
+<<<<<<< HEAD
+        get_template_directory_uri() . '/js/valid.js',
+=======
             get_template_directory_uri() . '/js/valid.js',
             array('jquery'));
     wp_register_script('various',
         get_template_directory_uri() . '/js/jquery/fancybox/various.js',
+>>>>>>> taob-158
         array('jquery'));
 
     wp_enqueue_script('jquery');

@@ -15,11 +15,21 @@
         <p><?php _e('По вашему запросу ничего нет.'); ?></p>
         <?php endif; ?>
         </p>
+<<<<<<< HEAD
+=======
+        <?php wp_reset_query(); ?>
+        <?php rewind_posts(); ?>
+
+>>>>>>> taob-158
         <div class="all">
             <h2 class="video">Все видео</h2>
 
             <ul class="video">
+<<<<<<< HEAD
                 <?php query_posts('post_type=video_slider&order=ASC'); ?>
+=======
+                <?php query_posts('post_type=video_slider&order=ASCposts_per_page=999'); ?>
+>>>>>>> taob-158
                 <?php while (have_posts()) : the_post(); ?>
                 <li>
                     <div class="foto">
@@ -35,14 +45,26 @@
                         if (!empty($youtube)) {
                             ?>
 
+<<<<<<< HEAD
+                            <a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
+                               rel="wp-video-lightbox" title=""><img
+                                src="//i2.ytimg.com/vi/<?php echo $youtube[1]; ?>/default.jpg"
+                                alt="YouTube" width="183"/></a> <?php
+=======
                             <a class="various fancybox iframe" href="http://www.youtube.com/embed/<?php echo $youtube[1]; ?>?autoplay=1">
                                 <img src="//i2.ytimg.com/vi/<?php echo $youtube[1]; ?>/default.jpg"
                                      alt="YouTube" width="183"/></a> <?php
+>>>>>>> taob-158
 
                         } elseif ($vimeo) {
                             ?>
 
+<<<<<<< HEAD
+                            <a href="http://vimeo.com/?php echo $vimeo[3]; ?>?width=640&amp;height=480"
+                               rel="wp-video-lightbox" title="">
+=======
                             <a href="http://vimeo.com/?php echo $vimeo[3]; ?>?width=640&amp;height=480">
+>>>>>>> taob-158
                                 <img src="http://example.com/images/thumbnails/flash-logo.jpg"
                                      alt="YouTube" width="183"/></a>
                             <!--                            <iframe src="http://player.vimeo.com/video/-->
@@ -54,11 +76,16 @@
 
                     </div>
                     <div class="text-video">
+<<<<<<< HEAD
+                        <p><a href="http://www.youtube.com/watch?v=<?php echo $youtube[1]; ?>"
+                              rel="wp-video-lightbox" title=""><?php the_title(); ?></a></p>
+=======
                         <p>
                             <a class="various fancybox iframe" href="http://www.youtube.com/embed/<?php echo $youtube[1]; ?>?autoplay=1">
                                 <?php the_title(); ?>
                             </a>
                         </p>
+>>>>>>> taob-158
                     </div>
                 </li>
                 <?php endwhile; ?>
