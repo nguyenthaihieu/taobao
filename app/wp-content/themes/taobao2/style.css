@@ -2303,8 +2303,7 @@ div.slaide-page li{
 	width:23px;
 	height:23px;
 	float:left;
-	position:relative;
-}
+	position:relative;}
 
 #content div.minus a.info:hover{
 	background:url(./img/inf.png) no-repeat 0 100%;
@@ -3273,9 +3272,7 @@ div.calc_info_img div {
 div.calc_info_img div img{
     height: auto;
     width: 425px;
-}
-
-#content div.minus a.info:hover div.calc_info_img{
+}#content div.item a.info:hover div.calc_info_img{
 	display:block !important;
 }
 
@@ -3287,5 +3284,7 @@ div.calc_info_img {
     top: -221px;
     z-index: 505;
 }
+
+
 
 
