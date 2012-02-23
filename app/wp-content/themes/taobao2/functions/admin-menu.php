@@ -75,6 +75,54 @@ function my_custom_submenu_page_callback() {
                 <td><input type="checkbox" name="taobao_turn_online_consult" value="on"<?php if ('on' == get_option('taobao_turn_online_consult')) : ?> checked="checked"<?php endif; ?> />
                 </td>
             </tr>
+
+<!--            <th scope="row"><h3>Баннеры</h3>-->
+<!--            <th scope="row">-->
+<!---->
+<!--                <tr valign="top" class="top_banner">-->
+<!--            <th scope="row">Верхний (адрес баннера) 726 × 90</th>-->
+<!--            <td><input style="width:400px; height:25px;" type="text" name="top_banner_path"-->
+<!--                       value="--><?php //echo get_option('top_banner_path');?><!--"/>-->
+<!--            </td>-->
+
+            <th scope="row"><h3>Соц сети</h3>
+            <th scope="row">
+            <tr valign="top">
+                <th scope="row">cos0</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos0" value="<?php echo get_option('cos0');?>" />
+                </td>
+            </tr>
+            
+            <tr valign="top">
+                <th scope="row">cos1</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos1" value="<?php echo get_option('cos1');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">cos2</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos2" value="<?php echo get_option('cos2');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">cos3</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos3" value="<?php echo get_option('cos3');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">cos4</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos4" value="<?php echo get_option('cos4');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">cos5</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos5" value="<?php echo get_option('cos5');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">cos6</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos6" value="<?php echo get_option('cos6');?>" />
+                </td>
+            </tr>
         </table>
 
         <p class="submit">
