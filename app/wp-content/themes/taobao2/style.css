@@ -2303,6 +2303,7 @@ div.slaide-page li{
 	width:23px;
 	height:23px;
 	float:left;
+	position:relative;
 }
 
 #content div.minus a.info:hover{
@@ -3273,8 +3274,8 @@ div.calc_info_img div img{
     height: auto;
     width: 425px;
 }
-=======
-#content div.item a.info:hover div.calc_info_img{
+
+#content div.minus a.info:hover div.calc_info_img{
 	display:block !important;
 }
 
@@ -3288,8 +3289,3 @@ div.calc_info_img {
 }
 
 
-
-
-
-
->>>>>>> taob-18
