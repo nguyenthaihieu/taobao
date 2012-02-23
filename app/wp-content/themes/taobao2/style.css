@@ -3273,3 +3273,23 @@ div.calc_info_img div img{
     height: auto;
     width: 425px;
 }
+=======
+#content div.item a.info:hover div.calc_info_img{
+	display:block !important;
+}
+
+div.calc_info_img {
+    display: none;
+    left: -133px;
+    padding: 10px 0 0;
+    position: absolute;
+    top: -221px;
+    z-index: 505;
+}
+
+
+
+
+
+
+>>>>>>> taob-18

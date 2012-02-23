@@ -329,7 +329,7 @@ jQuery(function(){
                 . '<input type="hidden" name="' . $name . '_label" value="' . $param['label'] . '" />'
                 . '<input type="text" name="' . $name . '" value="" class="text" />';
         if (!empty($param['post_code'])) {
-            $calc .= '<a href="#" class="info calc"></a><div id="info_' . $name . '" class="calc_info_img" style="display:none;"><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></div>';
+            $calc .= '<a href="#" class="info"><div id="info_' . $name . '" class="calc_info_img"><img src="' . htmlspecialchars_decode($param['post_code']) . '" /></div></a>';
         }
         $calc .= '</div>';
     }
