@@ -3247,10 +3247,10 @@ div.form-1 p{
 
 div.calc_info_img {
     display: none;
-    left: -113px;
+    left: -133px;
     padding: 10px 0 0;
     position: absolute;
-    top: 22px;
+    top: -221px;
     z-index: 505;
 }
 
