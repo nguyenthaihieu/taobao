@@ -25,11 +25,16 @@
     <body>
         <div class="soce">
             <ul>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_2_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i1.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_6_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i5.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_7_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i6.gif" alt="" title="" /></a></li>
-                <li><a href="<?php echo get_post_meta(2701, '_simple_fields_fieldGroupID_6_fieldID_8_numInSet_0', true) ?>"><img src="<?php bloginfo('template_url'); ?>/img/i7.gif" alt="" title="" /></a></li>
+                <?php for ($i = 0; $i <= 6; $i++) {
+                if (get_option("cos$i")) {
+                    ?>
+                    <li><a href="<?php echo get_option("cos$i");?>"><img
+                        src="<?php bloginfo('template_url'); ?>/img/i<?php echo $i; ?>.gif" alt="" title=""/></a></li>
+                    <?php
+                }
+
+            } ?>
+
             </ul>
         </div>
         <div class="form-reg">

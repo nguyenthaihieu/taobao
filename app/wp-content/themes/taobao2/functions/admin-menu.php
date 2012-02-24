@@ -75,6 +75,45 @@ function my_custom_submenu_page_callback() {
                 <td><input type="checkbox" name="taobao_turn_online_consult" value="on"<?php if ('on' == get_option('taobao_turn_online_consult')) : ?> checked="checked"<?php endif; ?> />
                 </td>
             </tr>
+
+            <th scope="row"><h3>Соц сети</h3>
+            <th scope="row">
+            <tr valign="top">
+                <th scope="row">Facebook</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos0" value="<?php echo get_option('cos0');?>" />
+                </td>
+            </tr>
+            
+            <tr valign="top">
+                <th scope="row">Google plus </th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos1" value="<?php echo get_option('cos1');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Twitter</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos2" value="<?php echo get_option('cos2');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Tumblr</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos3" value="<?php echo get_option('cos3');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Vkontakte</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos4" value="<?php echo get_option('cos4');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Odnoklassniki</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos5" value="<?php echo get_option('cos5');?>" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Mail.ru</th></th>
+                <td><input style="width:400px; height:25px;" type="text" name="cos6" value="<?php echo get_option('cos6');?>" />
+                </td>
+            </tr>
         </table>
 
         <p class="submit">
