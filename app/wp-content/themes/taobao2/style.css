@@ -120,7 +120,7 @@ div.width{
 }
 
 #header header.top{
-	width:970px;
+	width:950px;
 	margin:0 auto;	
 	display:block;
 }
@@ -483,7 +483,6 @@ div.slaider-box span.next{
 div.slaider-box div.slaide{
 	width:841px;
 	overflow:hidden;
-	margin:-10px auto 0;
 	height:133px;
 }
 
@@ -892,7 +891,7 @@ div.blog ul{
 div.blog ul li{
 	width:100%;
 	display:inline-block;
-	margin:0 0 4px;
+	margin:0 0 25px;
 	padding:3px 0;
 }
 
@@ -1551,7 +1550,7 @@ h3{
 }
 
 #content div.work div.desk{
-	margin:0 0 15px;
+	margin:0 0 25px;
 	width:100%;
 	overflow:hidden;
 }
@@ -2303,7 +2302,7 @@ div.slaide-page li{
 	width:23px;
 	height:23px;
 	float:left;
-	position:relative;}
+}
 
 #content div.minus a.info:hover{
 	background:url(./img/inf.png) no-repeat 0 100%;
@@ -2688,13 +2687,16 @@ div.contact ul.contact li img{
 div.soce{
 	background:url(img/soc.png) no-repeat;
 	width:49px;
-	height:294px;
+	height:184px;
 	overflow:hidden;
 	position:fixed;
-	top:122px;
-	z-index:5;
 	left:0;
+	z-index:5;
+	top:50%;
+	margin:-100px 0 0;
 }
+
+
 
 div.soce ul li{
 	margin:9px 0 0 7px;
@@ -2723,7 +2725,7 @@ div.cuselText{
 }
 
 div.cusel-scroll-pane{
-	width:100%;
+	width:188px !important;
 	overflow:hidden;
 	height:346px;
 }
@@ -2811,12 +2813,12 @@ div.wid100{
 }
 .cusel span:hover,
 .cusel .cuselOptHover { /* реакция оптиона на наведение */
-	background: #003399;
-	color: #fff;
+	background: #aea7ed;
+	color: #000;
 }
 .cusel .cuselActive { /* оформление активного оптиона в списке */
-	background: #CC0000;
-	color: #fff;
+	background: #e6e3df;
+	color: #000;
 	cursor: default;
 }
 
@@ -3046,7 +3048,7 @@ div.ctnr{
 }
 
 div.form-1{
-	width:306px;
+	width:292px;
 	margin:40px auto 0;
 }
 
@@ -3272,6 +3274,7 @@ div.calc_info_img div {
 div.calc_info_img div img{
     height: auto;
     width: 425px;
+    
 }#content div.item a.info:hover div.calc_info_img{
 	display:block !important;
 }
@@ -3280,7 +3283,7 @@ div.calc_info_img {
     display: none;
     left: -133px;
     padding: 10px 0 0;
-    position: absolute;
+    position: relative;
     top: -221px;
     z-index: 505;
 }
