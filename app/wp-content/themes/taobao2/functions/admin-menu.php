@@ -79,18 +79,18 @@ function my_custom_submenu_page_callback() {
             <th scope="row"><h3>Соц сети</h3>
             <th scope="row">
             <tr valign="top">
-                <th scope="row">cos0</th></th>
+                <th scope="row">Facebook</th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos0" value="<?php echo get_option('cos0');?>" />
                 </td>
             </tr>
             
             <tr valign="top">
-                <th scope="row">cos1</th></th>
+                <th scope="row">Google plus </th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos1" value="<?php echo get_option('cos1');?>" />
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row">cos2</th></th>
+                <th scope="row">Twitter</th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos2" value="<?php echo get_option('cos2');?>" />
                 </td>
             </tr>
@@ -100,17 +100,17 @@ function my_custom_submenu_page_callback() {
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row">cos4</th></th>
+                <th scope="row">Vkontakte</th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos4" value="<?php echo get_option('cos4');?>" />
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row">cos5</th></th>
+                <th scope="row">Odnoklassniki</th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos5" value="<?php echo get_option('cos5');?>" />
                 </td>
             </tr>
             <tr valign="top">
-                <th scope="row">cos6</th></th>
+                <th scope="row">Mail.ru</th></th>
                 <td><input style="width:400px; height:25px;" type="text" name="cos6" value="<?php echo get_option('cos6');?>" />
                 </td>
             </tr>
