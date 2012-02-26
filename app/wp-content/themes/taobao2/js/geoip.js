@@ -5,19 +5,12 @@ function taobao_set_country (code) {
 }
 
 jQuery(function($){
-    clientIP = false;
     if(!$.cookie('country') && clientIP) {
-        $.get("http://api.hostip.info/country.php?ip="+clientIP.toString(), function(data) {
-            if(data && data != 'XX') {
-                taobao_set_country(data);
-                $.cookie('country', data);
+        $.getJSON(       "http://api.ipinfodb.com/v3/ip-country/?key=e4f0f83a5d2fb23efda0b1765d51e28bb84ad0320f8fb3bbded5dfecdb63cd6c&ip="+clientIP.toString()+"&format=json", function(data) {
+            if(data.countryCode) {
+                taobao_set_country(data.countryCode);
+                $.cookie('country', data.countryCode);
             }
         })
-    } else {
-        if (!$.cookie('country')) {
-            $.cookie('country', taobao_set_country($('#search_country').val()));
-        } else {
-            taobao_set_country($.cookie('country'));
-        }
     }
 })
