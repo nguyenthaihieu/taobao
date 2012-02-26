@@ -56,18 +56,16 @@ jQuery(function($) {
         $('label[for=solo-subscribe-email]').text('E-Mail:').attr('class','');
     })
 
-        $('form > input.cbutton').click(function(){
+    $('div.comments-subscribe > form > input.cbutton').click(function(){
         if(!$('#solo-subscribe-email').val()) {
             $('label[for=solo-subscribe-email]').text('Пожалуйста, заполните обязательные полe e-mail .').attr('class','red');
 //            $('a[title=Каталог]').attr('target','_blank');
 //           alert('Введите e-mail!');
             return false;
         }else {
-            alert('1');
             if (!isValidEmailAddress($('#solo-subscribe-email').val())) {
                 $('label[for=solo-subscribe-email]').html('Некорректный e-mail адрес.').attr('class','red');
                 $('label[for=solo-subscribe-email]').show();
-                alert('e');
                 return false;
             }
         }
@@ -78,7 +76,7 @@ jQuery(function($) {
         return pattern.test(emailAddress);
     }
 
-    $('.comments-wrap form').submit(function(){
+    $('#form_one').submit(function(){
         if(!$('#comment').val()) {
             alert('Введите комментарий!');
             return false;

@@ -64,7 +64,7 @@
             </div>
                     <?php do_action('comment_form', $post->ID); ?>
         </form>
-                <?php  show_manual_subscription_form(); ?>
+                <div class="comments-subscribe"><?php  show_manual_subscription_form(); ?></div>
             <?php endif; ?>
     </div>
     <!-- You can start editing here. -->
