@@ -292,34 +292,6 @@ register_taxonomy('messages-slider-category',
     )
 );
 
-
-function shortcode_calculation()
-{
-    ?>
-<div class="t3">
-    <div class="alamo">
-        <h2>Расчет</h2>
-
-        <div class="calculator"><span><?php echo get_option('procent', '15');?><em>%</em></span>
-            <span><?php echo get_option('taobao_cny', 'N.A.');?></span></div>
-        <ul class="inform">
-            <li>- доставка по Китаю выбирается EMS;</li>
-            <li><span class="num"><?php echo get_option('procent', '15');?>%</span> - наша комиссия, которая может
-                изменяться на 5-10 % (для оптовиков и посредников);
-            </li>
-            <li><span class="num"><?php echo get_option('taobao_cny', 'N.A.');?></span> - внутренний курс юаня нашей
-                компании;
-            </li>
-            <li>- 300 руб /кг – тарифы компании карго из Хэйхэ (Китай) до Благовещенска (Россия).</li>
-        </ul>
-    </div>
-</div>
-<?php
-    //return true;
-}
-
-add_shortcode('calculation', 'shortcode_calculation');
-
 function PriceCalculatorFun()
 {
     ?>

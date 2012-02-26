@@ -2129,20 +2129,20 @@ div.slaide-page li{
 }
 
 #content div.calculator{
-	width:100%;
-	overflow:hidden;
-	background:url(./img/calul.gif) no-repeat;
-	height:115px;
+    overflow:hidden;
+    /* background:url(./img/calul.gif) no-repeat; */
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #content div.calculator span {
-    color: #000;
+    /* color: #000;
     float: left;
     font-size: 24px;
     line-height: 35px;
     margin: 0 79px 0 105px;
     text-align: center;
-    width: 60px;
+    width: 60px; */
 }
 #content div.calculator i{
 	font-size:14px;

@@ -165,11 +165,18 @@ function submenu_calculator_callback () {
     <?php
 }
 
+$calculator_params = NULL;
+
 /**
  * Функция возвращает список всех созданных полей калькулятора
  * @return mixed Массив созданных полей калькулятора
  */
 function calculator_get_params () {
+    global $calculator_params;
+    if (!is_null($calculator_params)) {
+        return $calculator_params;
+    }
+    
     global $wpdb;
     $query = "SELECT `option_name`, `option_value` FROM wp_options WHERE "
             . "`option_name` LIKE 'calculator_p%' ORDER BY `option_name`;";
@@ -185,6 +192,8 @@ function calculator_get_params () {
                 "post_code" => $options[0]);
     }
 
+    $calculator_params = $new_params;
+    
     return $new_params;
 }
 
@@ -413,3 +422,33 @@ jQuery(function(){
 }
 
 add_shortcode('taobaocalc', 'shortcode_taobao_calc');
+
+function shortcode_calculation()
+{
+    $city_coast = "Доставка по региону";
+    $formula = get_option('calculator_formula');
+    $params = calculator_get_params();
+
+    // Вставляем в формулу параметры
+    $cny = get_option('taobao_cny');
+    foreach ($params as $slug => $value) {
+        if (preg_match("/^p[0-9]+$/", $slug)) {
+            $value = $value['label'];
+            $value = trim($value);
+            if (empty($value)) {
+                $value = 0;
+            }
+            $formula = str_replace($slug, "<span>" . $value . "</span>", $formula);
+        }
+    }
+
+    $formula = str_replace("y", "<span>" . $cny . "</span>", $formula);
+    $formula = str_replace("c", "<span>" . $city_coast . "</span>", $formula);
+
+    $formula_elements = explode(" ", $formula);
+
+
+    return $formula;
+}
+
+add_shortcode('calculation', 'shortcode_calculation');
