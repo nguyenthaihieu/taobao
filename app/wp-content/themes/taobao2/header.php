@@ -9,6 +9,7 @@
         <title><?php wp_title() ?></title>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery/fancybox/jquery.fancybox-1.3.4.css" type="text/css"/>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/all.css" type="text/css"/>
   <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>css/ie7.css" media="screen"/><![endif]-->
 
         <?php wp_head(); ?>
@@ -24,20 +25,23 @@
     </head>
     <body>
         <div class="soce">
-            <ul>
-                <?php for ($i = 0; $i <= 6; $i++) {
-                if (get_option("cos$i")) {
-                    ?>
-                    <li><a href="<?php echo get_option("cos$i");?>"><img
-                        src="<?php bloginfo('template_url'); ?>/img/i<?php echo $i; ?>.gif" alt="" title=""/></a></li>
-                    <?php
-                }
-
-            } ?>
-
-            </ul>
+			<div class="soc-top"></div>
+			<div class="soc-body">
+	            <ul>
+	                <?php for ($i = 0; $i <= 6; $i++) {
+	                if (get_option("cos$i")) {
+	                    ?>
+	                    <li><a href="<?php echo get_option("cos$i");?>"><img
+	                        src="<?php bloginfo('template_url'); ?>/img/i<?php echo $i; ?>.gif" alt="" title=""/></a></li>
+	                    <?php
+	                }
+	
+	           		} ?>	
+	            </ul>
+			</div>
+			<div class="soc-bottom"></div>
         </div>
-        <div class="form-reg">
+        <!--<div class="form-reg">
             <div class="shadow"></div>
             <div class="ctnr">
                 <form action="" method="post">
@@ -124,7 +128,7 @@
                     </ul>
                 </form>
             </div>
-        </div>
+        </div>-->
         <div class="width">
             <section id="header">
                 <header class="top">
