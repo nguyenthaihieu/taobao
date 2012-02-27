@@ -17,8 +17,12 @@
         <label>Затем нажмите "Поиск на <br/> Taobao" и у вас откроется <br/> страница с результатами
             поиска.</label>
         <form action="http://search8.taobao.com/search" method="get"  target='_blank'>
+<input type="hidden" value="mm_10011550_2325296_9002527" id="pid" name="pid">
+<input type="hidden" value="0" id="unid" name="unid">
+<input type="hidden" value="63" id="mode" name="mode">
+
             <input type="text" class="text" id="target" name=q />
-            <input type="submit" class="sub" value="Поиск на Taobao.com"/>
+            <input id="ssb" type="submit" class="sub" value="Поиск на Taobao.com"/>
     </div>
     <div class="item">
         <a href="<?php bloginfo('url') ?>/?page_id=2733">Видеоинструкция</a>

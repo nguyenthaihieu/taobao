@@ -57,7 +57,7 @@
 <!--})();-->
 <!--</script>-->
 <?php wp_footer(); ?>
-<script src="http://api.ipinfodb.com/v3/ip-country/?key=e4f0f83a5d2fb23efda0b1765d51e28bb84ad0320f8fb3bbded5dfecdb63cd6c&ip=<?php echo getRealIpAddr(); ?>&format=json&callback=countryCallback"></script>
+<script src="http://api.ipinfodb.com/v3/ip-city/?key=e4f0f83a5d2fb23efda0b1765d51e28bb84ad0320f8fb3bbded5dfecdb63cd6c&ip=<?php echo getRealIpAddr(); ?>&format=json&callback=countryCallback"></script>
 })
 </body>
 </html>
