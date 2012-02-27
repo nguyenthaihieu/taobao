@@ -151,8 +151,9 @@ function getRealIpAddr()
         $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
     }
     else {
-        $ip = $_SERVER['REMOTE_ADDR'];
+       $ip = getenv('REMOTE_ADDR');
     }
+    
     return $ip;
 }
 
