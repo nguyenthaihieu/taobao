@@ -9,7 +9,7 @@ jQuery(function($) {
     initTabs();
     initTabs2();
     $('#do').click(function(){
-        translate_bing($('#source').val(), 'ru', 'en', function(dat){$('#target').val(dat)});
+        translate_bing($('#source').val(), 'ru', 'zh-CN', function(dat){$('#target').val(dat)});
     })
 
     $('#form_one').submit(function () {
