@@ -41,7 +41,7 @@
 			</div>
 			<div class="soc-bottom"></div>
         </div>
-        <!--<div class="form-reg">
+        <div class="form-reg">
             <div class="shadow"></div>
             <div class="ctnr">
                 <form action="" method="post">
@@ -128,7 +128,7 @@
                     </ul>
                 </form>
             </div>
-        </div>-->
+        </div>
         <div class="width">
             <section id="header">
                 <header class="top">
@@ -147,11 +147,13 @@
                                 </select>
                             </span>
                         </div>
+						<!--
                         <div class="righ-box">
                             <a href="javascript:void(0);" class="item1">Войти</a>
                             &Iota;
                             <a href="javascript:void(0);" class="item2">Зарегистрироваться</a>
                         </div>
+						-->
                     </div>
                     <div class="box">
                         <div id="counter" class="number">
