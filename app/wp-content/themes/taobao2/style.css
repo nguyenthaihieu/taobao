@@ -2314,10 +2314,11 @@ div.slaide-page li{
 	float:left;
 }
 
-select{
+/* select{
 	left: -9999px;
     position: absolute;
 }
+*/
 
 #content div.item span.sel_left{
 	background:url(./img/span-left.png) no-repeat;

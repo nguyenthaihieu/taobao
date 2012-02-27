@@ -5,7 +5,7 @@ jQuery(function($) {
 	initPass();
     initCarousel();
     initSlider();
-    initSelect();
+    //initSelect();
     initTabs();
     initTabs2();
     $('#do').click(function(){
@@ -199,24 +199,6 @@ jQuery(function($) {
         jQuery('dt.ta1').click();
     }
 
-    function initSelect() {
-        var currentCountry = $.cookie('country');
-        $("#search_country").val(currentCountry);
-
-        $("#search_country").live('change', function(){
-            var currentCountry = $(this).val();
-            $.cookie('country', currentCountry);
-        })
-
-        var params = {
-            changedEl: "#search_country",
-            visRows: 16,
-            scrollArrows: true
-        }
-
-        cuSel(params);
-    }
-
 
     function initCounter() {
         $('#counter').load(blogUrl + '/?timer');
@@ -226,3 +208,6 @@ jQuery(function($) {
 $(function(){
     $('a[title=Каталог]').attr('target','_blank');
 })
+
+
+
